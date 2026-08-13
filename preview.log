@@ -1,0 +1,16 @@
+ WARN  Unsupported engine: wanted: {"node":"22.12.0"} (current: {"node":"v24.14.0","pnpm":"9.15.9"})
+
+> chew-jetty@1.0.0 preview C:\Users\Administrator\Documents\GitHub\马来西亚\chew‑jetty
+> astro preview "--port" "4322"
+
+[2m10:53:16[22m [34m[@astrojs/cloudflare][39m Enabling sessions with Cloudflare KV with the "SESSION" KV binding.
+[2m10:53:16[22m [34m[@astrojs/cloudflare][39m If you see the error "Invalid binding `SESSION`" in your build output, you need to add the binding to your wrangler config file.
+[preview] The @astrojs/cloudflare adapter does not support the preview command.
+  [1mLocation:[22m
+    [4mC:\Users\Administrator\Documents\GitHub\马来西亚\chew‑jetty\node_modules\.pnpm\astro@5.18.2_@types+node@24.13.3_jiti@1.21.7_rollup@4.62.4_typescript@5.8.3_yaml@2.9.0\node_modules\astro\dist\core\preview\index.js:44:11[24m
+  [1mStack trace:[22m
+[2m    at preview (file:///C:/Users/Administrator/Documents/GitHub/%E9%A9%AC%E6%9D%A5%E8%A5%BF%E4%BA%9A/chew%E2%80%91jetty/node_modules/.pnpm/astro@5.18.2_@types+node@24.13.3_jiti@1.21.7_rollup@4.62.4_typescript@5.8.3_yaml@2.9.0/node_modules/astro/dist/core/preview/index.js:44:11)
+    at async runCommand (file:///C:/Users/Administrator/Documents/GitHub/%E9%A9%AC%E6%9D%A5%E8%A5%BF%E4%BA%9A/chew%E2%80%91jetty/node_modules/.pnpm/astro@5.18.2_@types+node@24.13.3_jiti@1.21.7_rollup@4.62.4_typescript@5.8.3_yaml@2.9.0/node_modules/astro/dist/cli/index.js:215:22)[22m
+ ELIFECYCLE  Command failed with exit code 1.
+
+c:\Users\Administrator\Documents\GitHub\马来西亚\chew‑jetty>

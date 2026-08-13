@@ -1,0 +1,71 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  theme: {
+    extend: {
+      colors: {
+        ocean: {
+          DEFAULT: '#0B3C49',
+          50: '#E6F2F4',
+          100: '#C2E0E6',
+          200: '#8CC2CC',
+          300: '#55A3B2',
+          400: '#2E7D87',
+          500: '#1A5D68',
+          600: '#0B3C49',
+          700: '#082D37',
+          800: '#051E25',
+          900: '#020F12',
+        },
+        wood: {
+          DEFAULT: '#7A4F2E',
+          50: '#F5EDE6',
+          100: '#E6D3C3',
+          200: '#CDA88C',
+          300: '#B58A66',
+          400: '#966B48',
+          500: '#7A4F2E',
+          600: '#5E3B22',
+          700: '#422816',
+          800: '#27170D',
+          900: '#120A06',
+        },
+        lantern: {
+          DEFAULT: '#C62B2B',
+          50: '#FDEAEA',
+          100: '#F8C2C2',
+          200: '#F18A8A',
+          300: '#E85D5D',
+          400: '#D83F3F',
+          500: '#C62B2B',
+          600: '#9E2020',
+          700: '#761616',
+          800: '#4F0E0E',
+          900: '#270707',
+        },
+        sand: {
+          DEFAULT: '#F7F2E8',
+          50: '#FDFBF7',
+          100: '#F7F2E8',
+          200: '#E8DCC6',
+          300: '#D9C6A4',
+          400: '#CAB082',
+          500: '#BB9A60',
+        },
+        ink: '#1A1A1A',
+      },
+      fontFamily: {
+        display: ['"Playfair Display"', 'Georgia', 'serif'],
+        body: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      boxShadow: {
+        'card': '0 4px 24px rgba(11, 60, 73, 0.08)',
+        'float': '0 12px 40px rgba(11, 60, 73, 0.16)',
+      },
+      backgroundImage: {
+        'grain': "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E\")",
+      },
+    },
+  },
+  plugins: [],
+};

@@ -1,0 +1,35 @@
+
+ ⛅️ wrangler 4.122.0
+────────────────────
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mIt seems that you have run `wrangler deploy` on a Pages project, `wrangler pages deploy` should be used instead. Proceeding will likely produce unwanted results.[0m
+
+
+? Are you sure that you want to proceed?
+🤖 Using fallback value in non-interactive context: yes
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mMissing entry-point to Worker script or to assets directory[0m
+
+  
+  If there is code to deploy, you can either:
+  - Specify an entry-point to your Worker script via the command line (ex: `pnpm wrangler deploy src/index.ts`)
+  - Or add the following to your "wrangler.toml" file:
+  
+  ```
+  main = "src/index.ts"
+  
+  ```
+  
+  
+  If are uploading a directory of assets, you can either:
+  - Specify the path to the directory of assets via the command line: (ex: `pnpm wrangler deploy --assets=./dist`)
+  - Or add the following to your "wrangler.toml" file:
+  
+  ```
+  [assets]
+  directory = "./dist"
+  
+  ```
+  
+
+
+🪵  Logs were written to "C:\Users\Administrator\AppData\Roaming\xdg.config\.wrangler\logs\wrangler-2026-08-13_02-57-18_942.log"
