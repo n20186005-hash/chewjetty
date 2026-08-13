@@ -1,10 +1,9 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { SITE } from '@/consts';
 
-const pageTitle = 'Dasar Privasi & Kuki | Chew Jetty';
+const pageTitle = '隐私政策 | Chew Jetty';
 const pageDescription =
-  'Dasar privasi dan kuki untuk laman panduan Chew Jetty — maklumat tentang Google Analytics, penyimpanan tempatan dan cara kami melindungi data anda.';
+  'Chew Jetty 旅游指南网站的隐私政策——我们收集哪些信息、如何使用这些信息、涉及的第三方服务以及您在 GDPR 下享有的权利。';
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
@@ -12,84 +11,78 @@ const pageDescription =
     <div class="mx-auto max-w-3xl">
       <a href="/" class="inline-flex items-center gap-2 text-sm font-semibold text-ocean hover:text-lantern">
         <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
-        Kembali ke laman utama
+        返回首页
       </a>
-      <h1 class="mt-6 font-display text-4xl font-bold text-ocean">Dasar Privasi & Kuki</h1>
-      <p class="mt-4 text-sm text-ink/60">Kemas kini terakhir: 13 Ogos 2026</p>
+      <h1 class="mt-6 font-display text-4xl font-bold text-ocean">隐私政策</h1>
+      <p class="mt-4 text-sm text-ink/60">最后更新时间：2026年8月</p>
 
       <div class="mt-8 space-y-10 text-ink/80">
         <div>
-          <h2 class="font-display text-2xl font-bold text-ocean">1. Pengenalan</h2>
+          <h2 class="font-display text-2xl font-bold text-ocean">我们收集的信息</h2>
           <p class="mt-3 leading-relaxed">
-            {SITE.name} ialah laman panduan pelancong yang tidak berorientasikan keuntungan dan bukan laman rasmi mana-mana pihak berkuasa.
-            Kami menghormati privasi anda dan mengumpul data peribadi yang minimum. Laman ini tidak memerlukan pendaftaran akaun dan tidak
-            mengumpul nama, alamat e-mel, atau maklumat pengenalan diri yang lain melalui borang.
-          </p>
-        </div>
-
-        <div>
-          <h2 class="font-display text-2xl font-bold text-ocean">2. Google Analytics (GA4)</h2>
-          <p class="mt-3 leading-relaxed">
-            Laman ini menggunakan Google Analytics (ID: G-HXM22WWPKP) untuk memahami corak trafik secara agregat — contohnya halaman yang
-            paling banyak dilawati, negara pelawat dan jenis peranti. Google Analytics menggunakan kuki dan teknologi penjejakan lain yang
-            mengumpul data tanpa nama seperti alamat IP (dipendekkan), jenis pelayar dan cap masa. Data ini digunakan semata-mata untuk
-            menambah baik kandungan laman.
-          </p>
-          <p class="mt-3 leading-relaxed">
-            Google memproses data ini mengikut <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="text-ocean underline hover:text-lantern">Dasar Privasi Google</a>. Anda boleh memilih untuk tidak
-            dikesan dengan memasang <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" class="text-ocean underline hover:text-lantern">pelanjutan penyekatan Google Analytics</a>.
-          </p>
-        </div>
-
-        <div>
-          <h2 class="font-display text-2xl font-bold text-ocean">3. Penyimpanan Tempatan (localStorage)</h2>
-          <p class="mt-3 leading-relaxed">
-            Ciri "Senarai Perjalanan Saya" menyimpan pilihan anda (item yang ditandakan) dalam penyimpanan tempatan pelayar anda. Data ini
-            tidak pernah dihantar ke pelayan kami atau pihak ketiga, dan boleh dipadamkan pada bila-bila masa melalui butang "Tetapkan
-            semula" atau dengan membersihkan data pelayar.
-          </p>
-        </div>
-
-        <div>
-          <h2 class="font-display text-2xl font-bold text-ocean">4. Kuki</h2>
-          <p class="mt-3 leading-relaxed">
-            Kuki ialah fail teks kecil yang disimpan pada peranti anda. Laman ini menggunakan kuki berikut:
+            我们仅收集提供服务所必需的最低限度数据。这些数据可能包括：
           </p>
           <ul class="mt-4 space-y-3">
             <li class="rounded-2xl bg-ocean-50 p-4">
-              <p class="font-semibold text-ocean">Kuki analitik (Google Analytics)</p>
-              <p class="mt-1 text-sm">Mengukur penggunaan laman secara agregat. Kuki ini boleh dikawal melalui penyekatan pelanjutan GA di atas.</p>
+              <p class="font-semibold text-ocean">浏览数据</p>
+              <p class="mt-1 text-sm">IP 地址、浏览器类型、访问页面</p>
             </li>
             <li class="rounded-2xl bg-ocean-50 p-4">
-              <p class="font-semibold text-ocean">Kuki keperluan asas</p>
-              <p class="mt-1 text-sm">Diperlukan untuk fungsi asas laman, seperti mengekalkan pilihan senarai perjalanan anda dalam sesi yang sama.</p>
+              <p class="font-semibold text-ocean">Cookie 和类似技术</p>
+              <p class="mt-1 text-sm">用于改善网站功能、衡量流量和使用情况（详见 Cookie 设置页面）。</p>
+            </li>
+            <li class="rounded-2xl bg-ocean-50 p-4">
+              <p class="font-semibold text-ocean">您自愿提供的信息</p>
+              <p class="mt-1 text-sm">您通过联系表格或电子邮件自愿提供的任何信息。</p>
             </li>
           </ul>
-          <p class="mt-4 leading-relaxed">
-            Anda boleh memadam atau menyekat kuki pada bila-bila masa melalui tetapan pelayar anda (panduan: Chrome, Firefox, Safari, Edge).
-            Menyekat kuki analitik tidak akan menjejaskan fungsi laman ini.
-          </p>
         </div>
 
         <div>
-          <h2 class="font-display text-2xl font-bold text-ocean">5. Pautan Pihak Ketiga</h2>
-          <p class="mt-3 leading-relaxed">
-            Laman ini mengandungi pautan ke Google Maps dan sumber rujukan lain. Kami tidak bertanggungjawab ke atas amalan privasi laman
-            pihak ketiga tersebut. Sila semak dasar privasi mereka secara berasingan.
-          </p>
+          <h2 class="font-display text-2xl font-bold text-ocean">我们如何使用您的信息</h2>
+          <p class="mt-3 leading-relaxed">我们使用收集到的信息用于：</p>
+          <ul class="mt-4 space-y-3">
+            <li class="rounded-2xl bg-ocean-50 p-4">改善网站内容和用户体验</li>
+            <li class="rounded-2xl bg-ocean-50 p-4">分析流量和使用模式</li>
+            <li class="rounded-2xl bg-ocean-50 p-4">回应请求</li>
+            <li class="rounded-2xl bg-ocean-50 p-4">遵守我们的法律义务</li>
+          </ul>
         </div>
 
         <div>
-          <h2 class="font-display text-2xl font-bold text-ocean">6. Perubahan Dasar Ini</h2>
+          <h2 class="font-display text-2xl font-bold text-ocean">第三方服务</h2>
           <p class="mt-3 leading-relaxed">
-            Kami mungkin mengemas kini dasar ini dari semasa ke semasa. Sebarang perubahan akan dipaparkan di halaman ini dengan tarikh
-            kemas kini terkini. Dengan terus menggunakan laman ini, anda bersetuju dengan dasar yang dinyatakan di sini.
+            我们的网站可能会使用第三方服务，例如谷歌地图（用于嵌入式地图和位置数据）、谷歌分析（用于流量分析）和
+            Unsplash（用于图片）。这些服务均有各自的隐私政策。
           </p>
+          <ul class="mt-4 space-y-3">
+            <li class="rounded-2xl bg-ocean-50 p-4">
+              <p class="font-semibold text-ocean">谷歌地图</p>
+              <p class="mt-1 text-sm">用于嵌入式地图和位置数据。</p>
+            </li>
+            <li class="rounded-2xl bg-ocean-50 p-4">
+              <p class="font-semibold text-ocean">谷歌分析</p>
+              <p class="mt-1 text-sm">用于流量分析。</p>
+            </li>
+            <li class="rounded-2xl bg-ocean-50 p-4">
+              <p class="font-semibold text-ocean">Unsplash</p>
+              <p class="mt-1 text-sm">用于网站图片。</p>
+            </li>
+          </ul>
         </div>
 
-        <p class="rounded-2xl bg-sand p-6 text-sm leading-relaxed">
-          Soalan lanjut tentang privasi? Sila rujuk bahagian <a href="/#sumber" class="text-ocean underline hover:text-lantern">Rujukan &amp; Sumber</a> di laman utama untuk mendapatkan maklumat lanjut.
-        </p>
+        <div>
+          <h2 class="font-display text-2xl font-bold text-ocean">您的权利</h2>
+          <p class="mt-3 leading-relaxed">
+            根据《通用数据保护条例》（GDPR）及相关法规，您享有以下权利：
+          </p>
+          <ul class="mt-4 space-y-3">
+            <li class="rounded-2xl bg-ocean-50 p-4">访问您的个人数据</li>
+            <li class="rounded-2xl bg-ocean-50 p-4">要求更正或删除</li>
+            <li class="rounded-2xl bg-ocean-50 p-4">反对处理</li>
+            <li class="rounded-2xl bg-ocean-50 p-4">向监管机构提出投诉</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
