@@ -1,0 +1,57 @@
+---
+import { SITE, KEY_INFO } from '@/consts';
+---
+
+<footer class="relative mt-auto bg-ocean text-sand">
+  <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+    <div class="grid gap-10 md:grid-cols-3">
+      <div>
+        <div class="flex items-center gap-3">
+          <img src="/favicon.svg" alt="" width="44" height="44" class="rounded-lg" />
+          <span class="font-display text-2xl font-bold">{SITE.name}</span>
+        </div>
+        <p class="mt-4 max-w-sm text-sand/80">
+          {SITE.description}
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-display text-lg font-semibold">Hubungi / Alamat</h3>
+        <address class="mt-4 not-italic text-sand/80">
+          {KEY_INFO[0].value}<br />
+          George Town, Pulau Pinang<br />
+          Malaysia
+        </address>
+        <a
+          href={SITE.mapsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-4 inline-flex items-center gap-2 font-medium text-lantern-300 hover:text-white"
+        >
+          Lihat di Google Maps
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+      </div>
+
+      <div>
+        <h3 class="font-display text-lg font-semibold">Pautan Pantas</h3>
+        <ul class="mt-4 space-y-2 text-sand/80">
+          <li><a href="#info-penting" class="hover:text-white">Info Penting</a></li>
+          <li><a href="#makanan" class="hover:text-white">Makanan</a></li>
+          <li><a href="#pengangkutan" class="hover:text-white">Pengangkutan</a></li>
+          <li><a href="#galeri" class="hover:text-white">Galeri</a></li>
+          <li><a href="#faq" class="hover:text-white">Soalan Lazim</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 border-t border-white/10 pt-6 text-sm text-sand/70">
+      <p class="mb-2">
+        Penafian: Laman web ini bukan laman web rasmi Chew Jetty. Ia disediakan sebagai pandungan pelancong bebas. Maklumat tertakluk kepada perubahan; sila sahkan terus dengan pihak berkuasa tempatan atau Google Maps sebelum melawat.
+      </p>
+      <p>&copy; {new Date().getFullYear()} {SITE.name}. Hak cipta terpelihara.</p>
+    </div>
+  </div>
+</footer>

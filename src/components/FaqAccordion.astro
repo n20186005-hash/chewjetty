@@ -1,0 +1,45 @@
+---
+import { FAQS } from '@/consts';
+---
+
+<div class="space-y-4">
+  {FAQS.map((faq) => (
+    <details
+      class="group rounded-2xl border border-wood-200 bg-white shadow-card transition open:border-ocean-200 open:shadow-float"
+      data-faq
+    >
+      <summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-5 text-left">
+        <span class="font-display text-lg font-semibold text-ink group-open:text-ocean">
+          {faq.question}
+        </span>
+        <span
+          class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-ocean-50 text-ocean transition group-open:rotate-180 group-open:bg-ocean group-open:text-white"
+          aria-hidden="true"
+        >
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </span>
+      </summary>
+      <div class="px-6 pb-5 text-ink/80 leading-relaxed">
+        {faq.answer}
+      </div>
+    </details>
+  ))}
+</div>
+
+<script is:inline>
+  (function () {
+    const details = document.querySelectorAll('details[data-faq]');
+    details.forEach((el) => {
+      el.addEventListener('click', (e) => {
+        const target = e.currentTarget;
+        if (target && target.tagName === 'DETAILS') {
+          details.forEach((other) => {
+            if (other !== target) other.removeAttribute('open');
+          });
+        }
+      });
+    });
+  })();
+</script>

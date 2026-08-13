@@ -1,0 +1,108 @@
+---
+import { SITE } from '@/consts';
+
+const sections = [
+  { id: 'info-penting', label: 'Info Penting' },
+  { id: 'makanan', label: 'Makanan' },
+  { id: 'pengangkutan', label: 'Pengangkutan' },
+  { id: 'berhampiran', label: 'Berhampiran' },
+  { id: 'tiket-parkir', label: 'Tiket & Parkir' },
+  { id: 'galeri', label: 'Galeri' },
+  { id: 'senarai', label: 'Senarai' },
+  { id: 'faq', label: 'FAQ' },
+];
+---
+
+<header class="fixed inset-x-0 top-0 z-40 border-b border-wood-200/40 bg-sand/90 backdrop-blur-md">
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+    <a href="#" class="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-lantern rounded-lg">
+      <img src="/favicon.svg" alt="" width="40" height="40" class="rounded-lg shadow-card" />
+      <span class="font-display text-xl font-bold text-ocean sm:text-2xl">{SITE.name}</span>
+    </a>
+
+    <nav aria-label="Navigasi utama" class="hidden md:flex md:items-center md:gap-1">
+      {sections.map((s) => (
+        <a
+          href={`#${s.id}`}
+          class="rounded-full px-3 py-2 text-sm font-medium text-ink/80 transition hover:bg-ocean-50 hover:text-ocean"
+        >
+          {s.label}
+        </a>
+      ))}
+    </nav>
+
+    <a
+      href={SITE.mapsUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-primary hidden text-sm sm:inline-flex"
+    >
+      Buka Peta
+      <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.55-4.55M19.55 5.45L15 10m4.55-4.55V10M4 20h16" />
+      </svg>
+    </a>
+
+    <button
+      id="menu-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      class="inline-flex items-center justify-center rounded-lg p-2 text-ocean hover:bg-ocean-50 md:hidden"
+    >
+      <span class="sr-only">Buka menu</span>
+      <svg id="menu-icon-open" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <svg id="menu-icon-close" class="hidden h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden border-t border-wood-200/40 bg-sand md:hidden">
+    <nav class="flex flex-col px-4 py-3" aria-label="Navigasi mudah alih">
+      {sections.map((s) => (
+        <a
+          href={`#${s.id}`}
+          class="rounded-lg px-3 py-2 text-base font-medium text-ink/80 hover:bg-ocean-50 hover:text-ocean"
+        >
+          {s.label}
+        </a>
+      ))}
+      <a
+        href={SITE.mapsUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-2 rounded-lg bg-lantern px-4 py-2 text-center font-semibold text-white"
+      >
+        Buka Peta
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script is:inline>
+  (function () {
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    const openIcon = document.getElementById('menu-icon-open');
+    const closeIcon = document.getElementById('menu-icon-close');
+    if (!toggle || !menu || !openIcon || !closeIcon) return;
+
+    function setOpen(open) {
+      toggle.setAttribute('aria-expanded', String(open));
+      menu.classList.toggle('hidden', !open);
+      openIcon.classList.toggle('hidden', open);
+      closeIcon.classList.toggle('hidden', !open);
+    }
+
+    toggle.addEventListener('click', () => {
+      setOpen(toggle.getAttribute('aria-expanded') !== 'true');
+    });
+
+    menu.querySelectorAll('a').forEach((a) => {
+      a.addEventListener('click', () => setOpen(false));
+    });
+  })();
+</script>

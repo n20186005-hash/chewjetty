@@ -1,0 +1,48 @@
+---
+import { SITE } from '@/consts';
+
+const {
+  title = SITE.title,
+  description = SITE.description,
+  image = '/gallery/chew-jetty-12.jpg',
+  canonical = Astro.url.pathname,
+} = Astro.props;
+
+const site = Astro.site;
+const canonicalUrl = site ? new URL(canonical, site).toString() : canonical;
+const ogImage = site ? new URL(image, site).toString() : image;
+const ogType = 'website';
+const locale = SITE.locale;
+const language = SITE.lang;
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content={Astro.generator} />
+
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+<meta name="language" content={language} />
+
+{site && <link rel="canonical" href={canonicalUrl} />}
+
+<link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicon-16.png" sizes="16x16" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+<meta property="og:type" content={ogType} />
+<meta property="og:locale" content={locale} />
+<meta property="og:site_name" content={SITE.name} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+{site && <meta property="og:url" content={canonicalUrl} />}
+<meta property="og:image" content={ogImage} />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+
+{site && <link rel="sitemap" type="application/xml" href={new URL('/sitemap-index.xml', site).toString()} />}

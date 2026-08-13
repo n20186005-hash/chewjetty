@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Disallow: /*.DS_Store
+Disallow: /node_modules/
