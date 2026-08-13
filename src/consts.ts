@@ -233,3 +233,122 @@ export const GALLERY: ReadonlyArray<{ src: string; alt: string }> = Array.from({
   src: `/gallery/chew-jetty-${i + 1}.jpg`,
   alt: `Gambar Chew Jetty, George Town (${i + 1})`,
 }));
+
+export const HISTORY_TIMELINE = [
+  {
+    year: 'Pertengahan abad ke-19',
+    title: 'Penghijrahan orang Hokkien dari Fujian',
+    text: 'Nenek moyang keluarga Chew berhijrah dari Kampung Xinglingshe, Daerah TongAn, Quanzhou, Fujian, China ke George Town. Mereka bekerja sebagai kuli pelabuhan, nelayan dan peniaga kecil di sepanjang Pengkalan Weld.',
+  },
+  {
+    year: 'Akhir abad ke-19',
+    title: 'Pembinaan jeti puak — "satu nama keluarga, satu jeti"',
+    text: 'Kerabat daripada nama keluarga yang sama membina jambatan kayu memanjang ke laut dan mendirikan rumah palafit di kedua-dua belahnya. Konsep sebegini dianggap antara yang terakhir seumpamanya di dunia; dahulunya terdapat beberapa buah jeti puak, kini enam yang kekal termasuk Chew Jetty.',
+  },
+  {
+    year: 'Abad ke-20',
+    title: 'Kehidupan turun-temurun di atas air',
+    text: 'Berpuluh-puluh keluarga membesarkan anak di atas jeti. Kampung atas air ini lengkap dengan tokong, kedai runcit dan tempat berlabuh bot nelayan. Sebahagian jeti lain dibongkar dari semasa ke semasa bagi memberi laluan kepada pembangunan bandar.',
+  },
+  {
+    year: '7 Julai 2008',
+    title: 'Pengiktirafan Tapak Warisan Dunia UNESCO',
+    text: 'George Town, bersama-sama dengan Melaka, diiktiraf sebagai Tapak Warisan Dunia UNESCO ("Historic Cities of the Straits of Malacca"). Jeti-jeti puak termasuk Chew Jetty diiktiraf sebagai warisan hidup yang dilindungi di bawah zon teras tapak warisan.',
+  },
+  {
+    year: 'Hari ini',
+    title: 'Komuniti hidup di tengah-tengah pelancongan',
+    text: 'Kira-kira 75 unit rumah masih didiami. Penduduk meneruskan rutin harian — mencuci, menjemur pakaian, membaiki bot — sambil berkongsi ruang jeti dengan pelancong dari seluruh dunia.',
+  },
+] as const;
+
+export const FOLK_FAITH = {
+  title: 'Kepercayaan & Pesta Tradisi',
+  intro:
+    'Kehidupan penduduk jeti berakar pada kepercayaan masyarakat Hokkien. Beberapa perayaan dan amalan masih diamalkan secara turun-temurun sehingga kini.',
+  items: [
+    {
+      title: 'Pai Thian Kong (拜天公) — Hari jadi Maharaja Jade',
+      text: 'Pada malam sebelum hari ke-9 Tahun Baru Cina, masyarakat Hokkien meraikan hari jadi Thian Kong (Maharaja Jade) dengan upacara besar. Di hadapan Chew Jetty, satu meja panjang disusun penuh dengan korban — babi panggang yang disalut kertas merah, buah-buahan, dulang hadiah dan kertas sembahyang. Upacara kolektif ini dianggap antara perayaan paling meriah di Pulau Pinang.',
+    },
+    {
+      title: 'Tokong di hujung jeti',
+      text: 'Di hujung jeti terdapat tokong kecil yang didedikasikan kepada dewa laut seperti Mazu (Mak Co), dewi pelindung nelayan. Penduduk dan nelayan berdoa di sini sebelum memulakan perjalanan ke laut — sebuah amalan yang berusia lebih satu abad.',
+    },
+    {
+      title: 'Pesta Hantu Lapar (Zhong Yuan)',
+      text: 'Pada bulan ke-7 kalendar Cina, penduduk mengadakan upacara menghormati roh nenek moyang: membakar kertas sembahyang, menyediakan hidangan korban, dan kadangkala menganjurkan persembahan opera atau wayang di kawasan jeti.',
+    },
+    {
+      title: 'Tahun Baru Cina & Chap Goh Meh',
+      text: 'Semasa Tahun Baru Cina, jeti dihiasi lampu dan sepanduk merah. Pada Chap Goh Meh (malam ke-15), perayaan besar dengan pertunjukan bunga api dan perarakan diadakan di sepanjang Weld Quay, menarik ribuan pengunjung.',
+    },
+  ],
+} as const;
+
+export const ARCHITECTURE = {
+  title: 'Seni Bina Rumah Palafit',
+  intro:
+    'Bentuk seni bina Chew Jetty lahir daripada keperluan hidup di muara laut — sederhana tetapi penuh kebijaksanaan adaptasi.',
+  features: [
+    {
+      title: 'Tiang kayu ke dasar laut',
+      text: 'Rumah-rumah didirikan di atas tiang kayu yang ditanam terus ke dasar laut. Ketika air pasang, paras air boleh naik hingga hampir ke lantai rumah.',
+    },
+    {
+      title: 'Laluan kayu berjalin',
+      text: 'Jambatan utama terdiri daripada papan kayu berjalin yang memanjang lebih 300 meter. Sebahagian laluan telah diperluas dan diberi bumbung bagi keselesaan penduduk dan peniaga.',
+    },
+    {
+      title: 'Ruang komuniti yang lengkap',
+      text: 'Di atas jeti wujud tokong, gerai, tempat menjemur pakaian, tempat mandi, serta pangkalan bot — sebuah kampung lengkap yang terapung di atas air.',
+    },
+    {
+      title: 'Pemeliharaan warisan',
+      text: 'Sebagai sebahagian Tapak Warisan Dunia, sebarang pengubahsuaian dan pembaikan tertakluk kepada garis panduan pemuliharaan George Town World Heritage Incorporated untuk mengekalkan ciri asalnya.',
+    },
+  ],
+} as const;
+
+export const FILM_SITES = [
+  {
+    title: 'Ice Kacang Puppy Love (初恋红豆冰, 2010)',
+    text: 'Filem tempatan ikonik arahan Aniu yang dirakam sebahagian besarnya di Chew Jetty. Rumah penyanyi Eric Moo (巫启贤) di 59A Chew Jetty menjadi antara lokasi penggambaran. Kejayaan filem ini memperkenalkan jeti kepada khalayak yang lebih luas.',
+  },
+  {
+    title: 'Penggambaran filem, drama & iklan',
+    text: 'Suasana unik kampung atas air menjadikan Chew Jetty pilihan penggambaran pelbagai filem, drama televisyen, video muzik dan iklan daripada produksi tempatan dan luar negara sepanjang tahun.',
+  },
+] as const;
+
+export const VISITOR_ETIQUETTE = {
+  title: 'Etika Pelawat',
+  intro:
+    'Chew Jetty ialah rumah kepada kira-kira 75 keluarga. Ia bukan taman tema — penduduk benar-benar tinggal di sini. Hormati ruang mereka supaya hubungan harmoni antara penduduk dan pelancong dapat dikekalkan.',
+  items: [
+    'Layanlah jeti sebagai kejiranan kediaman; kekalkan suasana tenang, terutamanya awal pagi dan lewat petang.',
+    'Jangan mengambil gambar penduduk secara peribadi, bahagian dalam rumah, atau barang peribadi tanpa kebenaran.',
+    'Jangan memasuki rumah atau halaman peribadi penduduk; kekal di laluan awam.',
+    'Buang sampah ke dalam tong yang disediakan dan bawa pulang sampah anda sendiri.',
+    'Laluan kayu boleh menjadi licin selepas hujan — berjalan dengan berhati-hati dan pakai kasut yang sesuai.',
+    'Di tokong, elakkan bising dan ikuti amalan serta pantang larang tempatan.',
+  ],
+} as const;
+
+export const SOURCES = [
+  {
+    label: 'UNESCO World Heritage Centre',
+    url: 'https://whc.unesco.org/en/list/1223/',
+    note: 'Melaka and George Town: Historic Cities of the Straits of Malacca',
+  },
+  {
+    label: 'George Town World Heritage Incorporated (GTWHI)',
+    url: 'https://gtwhi.com.my/',
+    note: 'Penerbitan rasmi mengenai sejarah dan pemuliharaan jeti-jeti puak George Town',
+  },
+  {
+    label: 'Google Maps',
+    url: SITE.mapsUrl,
+    note: 'Maklumat lokasi, waktu operasi dan ulasan pengunjung',
+  },
+] as const;

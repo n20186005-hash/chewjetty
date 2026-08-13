@@ -14,7 +14,7 @@ interface Props {
 const {
   title = SITE.title,
   description = SITE.description,
-  image = '/gallery/chew-jetty-12.jpg',
+  image = '/gallery/chew-jetty-14.jpg',
 } = Astro.props;
 
 const site = Astro.site;
@@ -46,6 +46,7 @@ const openingHours = {
 const aggregateRating = {
   '@type': 'AggregateRating',
   ratingValue: '4.1',
+  reviewCount: '8000',
   bestRating: '5',
   worstRating: '1',
 };
@@ -61,26 +62,9 @@ const touristAttractionLd = {
   geo,
   openingHoursSpecification: [openingHours],
   aggregateRating,
-  priceRange: '$$',
   touristType: ['Cultural tourist', 'Family visitor', 'Photographer', 'History enthusiast'],
   isAccessibleForFree: true,
   sameAs: [SITE.mapsUrl],
-};
-
-const localBusinessLd = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: SITE.name,
-  description: SITE.description,
-  url: baseUrl,
-  image: imageUrl,
-  address,
-  geo,
-  openingHoursSpecification: [openingHours],
-  aggregateRating,
-  priceRange: '$$',
-  paymentAccepted: 'Cash, Card (selected shops)',
-  currenciesAccepted: 'MYR',
 };
 
 const faqPageLd = {
@@ -103,7 +87,6 @@ const faqPageLd = {
     <BaseHead title={title} description={description} image={image} />
     <GA4 />
     <script is:inline type="application/ld+json" set:html={JSON.stringify(touristAttractionLd)}></script>
-    <script is:inline type="application/ld+json" set:html={JSON.stringify(localBusinessLd)}></script>
     <script is:inline type="application/ld+json" set:html={JSON.stringify(faqPageLd)}></script>
   </head>
   <body class="flex min-h-screen flex-col bg-sand font-body text-ink">

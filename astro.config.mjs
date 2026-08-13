@@ -3,9 +3,10 @@ import tailwind from '@astrojs/tailwind';
 import cloudflare from '@astrojs/cloudflare';
 import sitemap from '@astrojs/sitemap';
 
-// Domain boleh ditetapkan kemudian di sini sahaja.
-// Jika kosong, canonical / OG / sitemap akan degradasi dengan anggun tanpa menulis domain palsu.
-const SITE_URL = process.env.CURRENT_SITE_DOMAIN || '';
+// Domain utama: chewjetty.org.
+// Boleh di-override semasa build dengan pemboleh ubah persekitaran CURRENT_SITE_DOMAIN
+// (cth: CURRENT_SITE_DOMAIN=https://staging.example.com npm run build).
+const SITE_URL = process.env.CURRENT_SITE_DOMAIN || 'https://chewjetty.org';
 
 export default defineConfig({
   output: 'static',

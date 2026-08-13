@@ -12,9 +12,15 @@ import {
   NEARBY_ATTRACTIONS,
   GALLERY,
   ITINERARY_ITEMS,
+  HISTORY_TIMELINE,
+  FOLK_FAITH,
+  ARCHITECTURE,
+  FILM_SITES,
+  VISITOR_ETIQUETTE,
+  SOURCES,
 } from '@/consts';
 
-const heroImage = '/gallery/chew-jetty-12.jpg';
+const heroImage = '/gallery/chew-jetty-14.jpg';
 ---
 
 <BaseLayout title={SITE.title} description={SITE.description} image={heroImage}>
@@ -27,7 +33,6 @@ const heroImage = '/gallery/chew-jetty-12.jpg';
         class="h-full w-full object-cover"
         loading="eager"
         decoding="async"
-        fetchpriority="high"
       />
       <div class="absolute inset-0 bg-gradient-to-b from-ocean/80 via-ocean/50 to-sand"></div>
     </div>
@@ -121,6 +126,86 @@ const heroImage = '/gallery/chew-jetty-12.jpg';
           loading="lazy"
           decoding="async"
         />
+      </div>
+    </div>
+  </section>
+
+  {/* History timeline */}
+  <section id="sejarah" class="bg-ocean-50 px-4 py-20 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-5xl">
+      <div class="mb-14 text-center">
+        <h2 class="font-display text-3xl font-bold text-ocean sm:text-4xl">Sejarah & Warisan</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-ink/70">
+          Dari penghijrahan orang Hokkien pada abad ke-19 hingga pengiktirafan UNESCO, berikut adalah perjalanan sejarah Chew Jetty.
+        </p>
+      </div>
+      <ol class="relative ml-3 space-y-10 border-l-2 border-ocean-300 pl-8">
+        {HISTORY_TIMELINE.map((item) => (
+          <li class="relative">
+            <span class="absolute -left-[44px] top-1 h-6 w-6 rounded-full bg-lantern ring-4 ring-white" aria-hidden="true"></span>
+            <p class="text-sm font-bold uppercase tracking-wide text-lantern">{item.year}</p>
+            <h3 class="mt-1 font-display text-xl font-bold text-ocean">{item.title}</h3>
+            <p class="mt-2 leading-relaxed text-ink/80">{item.text}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  {/* Culture: folk faith, architecture, filming */}
+  <section id="budaya" class="px-4 py-20 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-6xl space-y-20">
+      <div>
+        <div class="mb-10 text-center">
+          <h2 class="font-display text-3xl font-bold text-ocean sm:text-4xl">{FOLK_FAITH.title}</h2>
+          <p class="mx-auto mt-4 max-w-2xl text-ink/70">{FOLK_FAITH.intro}</p>
+        </div>
+        <div class="grid gap-6 md:grid-cols-2">
+          {FOLK_FAITH.items.map((item, i) => (
+            <div class="card relative overflow-hidden">
+              <span class="absolute right-5 top-4 font-display text-5xl font-bold text-ocean-100 select-none" aria-hidden="true">
+                {String(i + 1).padStart(2, '0')}
+              </span>
+              <h3 class="relative font-display text-xl font-bold text-ocean">{item.title}</h3>
+              <p class="relative mt-3 leading-relaxed text-ink/80">{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <div class="mb-10 text-center">
+          <h2 class="font-display text-3xl font-bold text-ocean sm:text-4xl">{ARCHITECTURE.title}</h2>
+          <p class="mx-auto mt-4 max-w-2xl text-ink/70">{ARCHITECTURE.intro}</p>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {ARCHITECTURE.features.map((f) => (
+            <div class="rounded-2xl bg-ocean-50 p-6 shadow-card">
+              <h3 class="font-display text-lg font-bold text-ocean">{f.title}</h3>
+              <p class="mt-2 text-sm leading-relaxed text-ink/80">{f.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <div class="mb-10 text-center">
+          <h2 class="font-display text-3xl font-bold text-ocean sm:text-4xl">Lokasi Penggambaran</h2>
+          <p class="mx-auto mt-4 max-w-2xl text-ink/70">Suasana unik kampung atas air menjadikan Chew Jetty pilihan para pembikin filem tempatan dan antarabangsa.</p>
+        </div>
+        <div class="grid gap-6 md:grid-cols-2">
+          {FILM_SITES.map((f) => (
+            <div class="card flex gap-4">
+              <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-lantern text-white">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" /></svg>
+              </div>
+              <div>
+                <h3 class="font-display text-lg font-bold text-ocean">{f.title}</h3>
+                <p class="mt-2 text-ink/80">{f.text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   </section>
@@ -294,6 +379,26 @@ const heroImage = '/gallery/chew-jetty-12.jpg';
     </div>
   </section>
 
+  {/* Visitor etiquette */}
+  <section id="etika" class="bg-wood-50 px-4 py-20 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-4xl">
+      <div class="mb-12 text-center">
+        <h2 class="font-display text-3xl font-bold text-ocean sm:text-4xl">{VISITOR_ETIQUETTE.title}</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-ink/70">{VISITOR_ETIQUETTE.intro}</p>
+      </div>
+      <ul class="space-y-3">
+        {VISITOR_ETIQUETTE.items.map((item) => (
+          <li class="flex items-start gap-4 rounded-2xl bg-white p-5 shadow-card">
+            <span class="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-lantern text-white">
+              <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+            </span>
+            <p class="text-ink/80">{item}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
   {/* Itinerary */}
   <section id="senarai" class="bg-sand px-4 py-20 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-4xl">
@@ -332,7 +437,7 @@ const heroImage = '/gallery/chew-jetty-12.jpg';
       </div>
       <div class="overflow-hidden rounded-3xl shadow-float">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.0279263081957!2d100.33719201213927!3d5.412717494543811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304ac38d0fb545e7%3A0xc1b12a535798fa94!2z5aeT5ZGo5qGl!5e0!3m2!1sms!2smy!4v1786584457500!5m2!1sms!2smy"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.0279263081957!2d100.33719201213927!3d5.412717494543811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304ac38d0fb545e7%3A0xc1b12a535798fa94!2z5aeT5ZGo5qGl!5e0!3m2!1szh-CN!2sus!4v1786584457500!5m2!1szh-CN!2sus"
           width="100%"
           height="480"
           style="border:0;"
@@ -361,6 +466,34 @@ const heroImage = '/gallery/chew-jetty-12.jpg';
         <p class="mx-auto mt-4 max-w-xl text-ink/70">Jawapan ringkas untuk persoalan lazim sebelum anda melawat Chew Jetty.</p>
       </div>
       <FaqAccordion />
+    </div>
+  </section>
+
+  {/* Sources */}
+  <section id="sumber" class="bg-ocean-50 px-4 py-20 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl">
+      <div class="mb-10 text-center">
+        <h2 class="font-display text-3xl font-bold text-ocean sm:text-4xl">Rujukan & Sumber</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-ink/70">Maklumat dalam laman ini disusun daripada sumber yang boleh disemak berikut. Laman ini ialah panduan bebas dan bukan laman rasmi Chew Jetty.</p>
+      </div>
+      <ul class="space-y-3">
+        {SOURCES.map((s) => (
+          <li>
+            <a
+              href={s.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group flex items-center justify-between gap-4 rounded-2xl bg-white p-5 shadow-card transition hover:-translate-y-0.5 hover:shadow-float"
+            >
+              <div>
+                <p class="font-semibold text-ocean group-hover:text-lantern">{s.label}</p>
+                <p class="mt-1 text-sm text-ink/60">{s.note}</p>
+              </div>
+              <svg class="h-5 w-5 flex-shrink-0 text-ocean-300 transition group-hover:text-lantern" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+            </a>
+          </li>
+        ))}
+      </ul>
     </div>
   </section>
 
