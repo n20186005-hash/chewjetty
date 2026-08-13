@@ -1,0 +1,7 @@
+# Exclude the Worker script directory from Static Assets uploads.
+# The Worker entry is already referenced via `main` in wrangler.toml.
+# NOTE: Astro copies public/ → dist/, so this lands at dist/.assetsignore.
+_worker.js
+
+# Pages-specific file, not used by Workers Static Assets.
+_routes.json
