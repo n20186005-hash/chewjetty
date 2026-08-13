@@ -1,0 +1,16 @@
+---
+import HomePage from '@/components/HomePage.astro';
+import { LANGUAGES } from '@/i18n/ui';
+
+// Laman utama untuk bahasa bukan lalai (en, zh). Bahasa lalai (ms) dikendalikan
+// oleh src/pages/index.astro supaya URL / kekal sebagai laman utama.
+export function getStaticPaths() {
+  return LANGUAGES.filter((l) => l.code !== 'ms').map((lang) => ({
+    params: { lang: lang.code },
+  }));
+}
+
+const { lang } = Astro.params;
+---
+
+<HomePage lang={lang} />

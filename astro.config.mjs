@@ -12,6 +12,13 @@ export default defineConfig({
   output: 'static',
   adapter: cloudflare({ imageService: 'cloudflare' }),
   site: SITE_URL || undefined,
+  i18n: {
+    defaultLocale: 'ms',
+    locales: ['ms', 'en', 'zh'],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
   integrations: [
     tailwind(),
     SITE_URL ? sitemap() : null,

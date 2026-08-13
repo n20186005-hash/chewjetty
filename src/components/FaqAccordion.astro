@@ -1,9 +1,13 @@
 ---
-import { FAQS } from '@/consts';
+interface Props {
+  items: { question: string; answer: string }[];
+}
+
+const { items } = Astro.props;
 ---
 
 <div class="space-y-4">
-  {FAQS.map((faq) => (
+  {items.map((faq) => (
     <details
       class="group rounded-2xl border border-wood-200 bg-white shadow-card transition open:border-ocean-200 open:shadow-float"
       data-faq

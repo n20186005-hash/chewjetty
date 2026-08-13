@@ -1,0 +1,493 @@
+{
+  "site": {
+    "title": "Chew Jetty | Travel Guide to George Town, Penang",
+    "description": "Discover everything about Chew Jetty, a heritage stilt village on water in George Town, Penang. Transport info, nearby food, photo gallery, FAQs & trip checklist."
+  },
+  "header": {
+    "ariaNav": "Main navigation",
+    "ariaMobileNav": "Mobile navigation",
+    "openMenu": "Open menu",
+    "openMap": "Open Map",
+    "sections": [
+      { "id": "info-penting", "label": "Key Info" },
+      { "id": "sejarah", "label": "History" },
+      { "id": "budaya", "label": "Culture" },
+      { "id": "makanan", "label": "Food" },
+      { "id": "pengangkutan", "label": "Transport" },
+      { "id": "berhampiran", "label": "Nearby" },
+      { "id": "galeri", "label": "Gallery" },
+      { "id": "senarai", "label": "Checklist" },
+      { "id": "faq", "label": "FAQ" }
+    ]
+  },
+  "hero": {
+    "badge": "UNESCO World Heritage Site",
+    "title": "Chew Jetty",
+    "subtitle": "Chew Jetty is one of the surviving Chinese clan jetties in George Town, Penang. Its wooden boardwalk stretching into the sea, stilt houses, and red lanterns make it a must-visit destination.",
+    "ctaMaps": "Open Google Maps",
+    "ctaGallery": "View Gallery",
+    "imgAlt": "View of Chew Jetty, a wooden boardwalk stretching into the sea"
+  },
+  "keyInfo": [
+    { "label": "Address", "value": "Weld Quay, 10300 George Town, Penang, Malaysia" },
+    { "label": "Opening Hours", "value": "Daily 09:00 – 21:00" },
+    { "label": "Entry Fee", "value": "Free" },
+    { "label": "Recommended Duration", "value": "1 – 2 hours" },
+    { "label": "Google Maps Rating", "value": "4.1 / 5" },
+    { "label": "Coordinates", "value": "5.4127° N, 100.3398° E" }
+  ],
+  "intro": {
+    "title": "A Heritage Water Village",
+    "p1": "Chew Jetty was built in the mid-19th century by the ancestors of the Chew clan who migrated from Xinglingshe Village, TongAn District, Quanzhou, Fujian, China. It is one of six surviving clan jetties in George Town.",
+    "p2": "The jetty consists of two sections with a combined length of over 300 metres and houses around 75 units of stilt homes. Each house is built on wooden pillars above the water, forming a unique water village that is part of the George Town UNESCO World Heritage Site.",
+    "bullets": [
+      "A living witness to Hokkien Chinese immigrant history",
+      "Stilt houses, a shrine and souvenir stalls",
+      "Filming location of a popular movie"
+    ],
+    "imgAlt": "Perspective view of the Chew Jetty wooden boardwalk lined with stilt houses"
+  },
+  "history": {
+    "title": "History & Heritage",
+    "intro": "From Hokkien migration in the 19th century to UNESCO recognition, here is the historical journey of Chew Jetty.",
+    "timeline": [
+      {
+        "year": "Mid-19th century",
+        "title": "Hokkien migration from Fujian",
+        "text": "The ancestors of the Chew family migrated from Xinglingshe Village, TongAn District, Quanzhou, Fujian, China to George Town. They worked as port coolies, fishermen and small traders along Weld Quay."
+      },
+      {
+        "year": "Late 19th century",
+        "title": "Construction of the clan jetty — \"one surname, one jetty\"",
+        "text": "Clans sharing the same surname built wooden jetties stretching into the sea and set up stilt houses on both sides. This concept is considered among the last of its kind in the world; several clan jetties once existed, with six remaining today including Chew Jetty."
+      },
+      {
+        "year": "20th century",
+        "title": "Generations of life on water",
+        "text": "Dozens of families raised children on the jetty. The water village was complete with a shrine, sundry shops and mooring for fishing boats. Other jetties were dismantled over time to make way for urban development."
+      },
+      {
+        "year": "7 July 2008",
+        "title": "UNESCO World Heritage recognition",
+        "text": "George Town, together with Melaka, was inscribed as a UNESCO World Heritage Site (\"Historic Cities of the Straits of Malacca\"). The clan jetties, including Chew Jetty, are recognised as living heritage protected under the core zone of the heritage site."
+      },
+      {
+        "year": "Today",
+        "title": "A living community in the midst of tourism",
+        "text": "Around 75 units of homes are still occupied. Residents continue their daily routines — washing, drying clothes, repairing boats — while sharing the jetty space with visitors from around the world."
+      }
+    ]
+  },
+  "folkFaith": {
+    "title": "Beliefs & Traditional Festivals",
+    "intro": "The life of the jetty residents is rooted in Hokkien folk beliefs. Several festivals and practices are still carried on from generation to generation.",
+    "items": [
+      {
+        "title": "Pai Thian Kong — Birthday of the Jade Emperor",
+        "text": "On the eve of the 9th day of the Chinese New Year, the Hokkien community celebrates the birthday of Thian Kong (Jade Emperor) with a grand ceremony. In front of Chew Jetty, a long table is laid with offerings — roasted pigs wrapped in red paper, fruits, gift platters and joss paper. This collective ritual is considered one of the most vibrant celebrations in Penang."
+      },
+      {
+        "title": "Shrine at the end of the jetty",
+        "text": "At the end of the jetty stands a small shrine dedicated to the sea goddess Mazu (Mak Co), protector of fishermen. Residents and fishermen pray here before setting out to sea — a practice over a century old."
+      },
+      {
+        "title": "Hungry Ghost Festival",
+        "text": "In the 7th lunar month, residents hold rituals to honour ancestral spirits: burning joss paper, preparing sacrificial offerings, and occasionally staging opera or wayang performances near the jetty."
+      },
+      {
+        "title": "Chinese New Year & Chap Goh Meh",
+        "text": "During Chinese New Year, the jetty is decorated with lanterns and red banners. On Chap Goh Meh (15th night), grand celebrations with fireworks and processions take place along Weld Quay, attracting thousands of visitors."
+      }
+    ]
+  },
+  "architecture": {
+    "title": "Stilt House Architecture",
+    "intro": "The architectural form of Chew Jetty was born from the need to live at the river mouth — simple yet full of adaptive wisdom.",
+    "features": [
+      {
+        "title": "Wooden pillars into the seabed",
+        "text": "Houses are raised on wooden pillars driven directly into the seabed. During high tide, the water level can rise to almost the floor level of the houses."
+      },
+      {
+        "title": "Interwoven wooden walkways",
+        "text": "The main jetty consists of interwoven wooden planks extending over 300 metres. Parts of the walkway have been widened and roofed for the comfort of residents and shopkeepers."
+      },
+      {
+        "title": "A complete community space",
+        "text": "On the jetty one finds a shrine, stalls, clothes-drying areas, washing areas, and a boat mooring — a complete village floating on water."
+      },
+      {
+        "title": "Heritage conservation",
+        "text": "As part of a World Heritage Site, any renovation and repair is subject to the conservation guidelines of George Town World Heritage Incorporated to preserve its original character."
+      }
+    ]
+  },
+  "film": {
+    "title": "Filming Locations",
+    "intro": "The unique atmosphere of the water village makes Chew Jetty a favourite of local and international filmmakers.",
+    "sites": [
+      {
+        "title": "Ice Kacang Puppy Love (2010)",
+        "text": "An iconic local film directed by Aniu, largely shot on Chew Jetty. The house of singer Eric Moo at 59A Chew Jetty was among the filming locations. The film's success introduced the jetty to a wider audience."
+      },
+      {
+        "title": "Films, dramas & commercials",
+        "text": "The unique water-village atmosphere makes Chew Jetty a preferred filming location for various films, TV dramas, music videos and commercials by local and international productions throughout the year."
+      }
+    ]
+  },
+  "bestTime": {
+    "title": "Best Time & Visit Tips",
+    "intro": "Chew Jetty offers a different atmosphere throughout the day. Mornings are good for quiet photos, while late afternoons offer beautiful sunset light.",
+    "periods": [
+      {
+        "time": "Morning (09:00 – 11:00)",
+        "description": "Lower crowd levels, ideal for photos of the wooden boardwalk without the crowds. The weather is also more comfortable.",
+        "rating": "Highly recommended"
+      },
+      {
+        "time": "Midday (12:00 – 15:00)",
+        "description": "Shops and food stalls are busy, but the weather may be hot. Do bring a hat and sunscreen.",
+        "rating": "Crowded"
+      },
+      {
+        "time": "Late afternoon (17:00 – 19:30)",
+        "description": "Soft light, snack stalls open, and you can watch the sunset over the water.",
+        "rating": "Highly recommended"
+      }
+    ],
+    "duration": "1 – 2 hours is enough for a leisurely walk, photos, and an afternoon drink by the water."
+  },
+  "ticketInfo": {
+    "title": "Tickets & Fees",
+    "intro": "Chew Jetty is a living neighbourhood open to the public. You can walk along the wooden boardwalk and enjoy the waterfront atmosphere without any entry fee.",
+    "items": [
+      { "label": "Jetty access", "price": "Free", "note": "24-hour access to the main walkway; shops open 09:00–21:00" },
+      { "label": "Self-guided visit", "price": "Free", "note": "No official guided tour packages on the jetty" },
+      { "label": "Photography", "price": "Free", "note": "Take photos of views, boats and stilt houses" },
+      { "label": "Public restrooms", "price": "Free / small donation", "note": "Depending on local facilities" }
+    ]
+  },
+  "parkingInfo": {
+    "title": "Parking Information",
+    "intro": "George Town is always busy. Parking near Chew Jetty is limited, so plan ahead or use public transport.",
+    "options": [
+      {
+        "name": "Street parking",
+        "detail": "Available along Beach Street / Weld Quay. Spaces are limited and usually require parking coupons (RM0.60–RM2.00 per hour on weekdays)."
+      },
+      {
+        "name": "Paid car parks nearby",
+        "detail": "Several private lots exist within 5–10 minutes' walk. Rates are usually RM3–RM5 for short stays."
+      },
+      {
+        "name": "Free CAT bus line",
+        "detail": "Rapid Penang's free CAT (Central Area Transit) bus stops nearby. This is the best option to avoid driving stress."
+      }
+    ],
+    "tips": [
+      "Avoid driving into George Town on weekends and public holidays if possible.",
+      "If coming from Butterworth, the ferry to George Town is easier than driving across the bridge."
+    ]
+  },
+  "food": {
+    "title": "Food Nearby",
+    "intro": "Don't miss the chance to try Penang's iconic dishes before or after visiting the jetty.",
+    "spots": [
+      {
+        "name": "Penang Asam Laksa",
+        "description": "A sour, fish-based laksa that is Penang's iconic dish. Available at stalls near the jetty and Balik Pulau Road.",
+        "tags": ["Iconic dish", "Nearby"]
+      },
+      {
+        "name": "Char Koay Teow",
+        "description": "Flat rice noodles fried with beansprouts, prawns, cockles and egg over a fierce flame for that \"wok hei\" flavour.",
+        "tags": ["Must try", "Street food"]
+      },
+      {
+        "name": "Penang Cendol",
+        "description": "A cold dessert with green jelly noodles, coconut milk, palm sugar and shaved ice — the perfect antidote to hot weather.",
+        "tags": ["Dessert", "Refreshing"]
+      },
+      {
+        "name": "Hainanese Chicken Rice",
+        "description": "Simple yet delicious Hainanese chicken rice, easily found in coffee shops around George Town.",
+        "tags": ["Coffee shop", "Casual"]
+      },
+      {
+        "name": "Nyonya Kuih",
+        "description": "A variety of colourful traditional kuih reflecting Penang's Baba Nyonya heritage.",
+        "tags": ["Traditional", "Snack"]
+      },
+      {
+        "name": "Wantan Mee",
+        "description": "Yellow noodles with greens, wantan dumplings, and roast pork or chicken.",
+        "tags": ["Noodles", "Local"]
+      }
+    ]
+  },
+  "transport": {
+    "title": "Detailed Transport",
+    "intro": "Chew Jetty is easily accessible from the airport, the mainland, or anywhere in George Town.",
+    "modes": [
+      {
+        "mode": "From Penang International Airport (PEN)",
+        "icon": "plane",
+        "summary": "About 20 km away; 30–45 minutes depending on traffic.",
+        "options": [
+          "Grab / Taxi: Easiest option, around RM25–RM40.",
+          "Rapid Penang Bus 401E: From the airport to George Town; alight near Weld Quay, then walk."
+        ]
+      },
+      {
+        "mode": "Rapid Penang Bus",
+        "icon": "bus",
+        "summary": "Multiple routes connect George Town. Stop near Weld Quay and walk 5 minutes.",
+        "options": [
+          "Free CAT: Free city-centre shuttle with a stop near the jetty.",
+          "Routes 10, 11, 12, 101, 102, 103, 104, 201, 202, 203, 204, 301, 302, 303, 401, 401E, 502."
+        ]
+      },
+      {
+        "mode": "Penang Ferry",
+        "icon": "ferry",
+        "summary": "From Butterworth to George Town via the Penang Ferry. Suitable for travellers from the mainland.",
+        "options": [
+          "Walk from Swettenham Pier to Weld Quay (10–15 minutes).",
+          "Continue with the free CAT bus for a free ride to the jetty."
+        ]
+      },
+      {
+        "mode": "Grab / Taxi",
+        "icon": "taxi",
+        "summary": "Most comfortable, especially at night or with family.",
+        "options": [
+          "Set the destination as \"Chew Jetty, Weld Quay, George Town\".",
+          "Taxi services can also be booked at hotels or on the street."
+        ]
+      }
+    ]
+  },
+  "nearby": {
+    "title": "Nearby Attractions",
+    "intro": "Combine your visit to Chew Jetty with George Town heritage attractions within walking distance.",
+    "attractions": [
+      {
+        "name": "Armenian Street Street Art",
+        "distance": "5 min walk",
+        "description": "Iconic murals by Ernest Zacharevic and the atmosphere of George Town's heritage lanes."
+      },
+      {
+        "name": "Khoo Kongsi (Leong San Tong)",
+        "distance": "10 min walk",
+        "description": "A Chinese clanhouse adorned with intricate wood carvings and majestic Chinese architecture."
+      },
+      {
+        "name": "Fort Cornwallis",
+        "distance": "12 min walk",
+        "description": "An 18th-century fort with landmark cannons and a historic park."
+      },
+      {
+        "name": "Kapitan Keling Mosque",
+        "distance": "12 min walk",
+        "description": "A beautiful Mughal-style mosque and one of George Town's historic religious landmarks."
+      },
+      {
+        "name": "Little India",
+        "distance": "10 min walk",
+        "description": "Spice shops, jewellery, Indian food, and colourful temples."
+      },
+      {
+        "name": "Other Clan Jetties",
+        "distance": "Adjacent",
+        "description": "Explore Tan Jetty, Lee Jetty and Lim Jetty for a different perspective on the water villages."
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Photo Gallery",
+    "intro": "See the atmosphere, wooden architecture, traditional boats and colours of life at Chew Jetty.",
+    "altPrefix": "Photo of Chew Jetty, George Town",
+    "openLabel": "Open photo",
+    "lightboxLabel": "Large photo view"
+  },
+  "etiquette": {
+    "title": "Visitor Etiquette",
+    "intro": "Chew Jetty is home to around 75 families. It is not a theme park — residents genuinely live here. Respect their space so the harmonious relationship between residents and tourists can be maintained.",
+    "items": [
+      "Treat the jetty as a residential neighbourhood; keep the atmosphere calm, especially in the early morning and late evening.",
+      "Do not take photos of residents personally, inside their homes, or of personal belongings without permission.",
+      "Do not enter residents' homes or private yards; stay on public walkways.",
+      "Dispose of rubbish in the bins provided and take your own rubbish with you.",
+      "Wooden walkways can be slippery after rain — walk carefully and wear suitable shoes.",
+      "At the shrine, avoid noise and follow local customs and taboos."
+    ]
+  },
+  "itinerary": {
+    "title": "My Trip Checklist",
+    "intro": "Tick off the activities you want to do. Data is stored only in your browser and not sent anywhere.",
+    "items": [
+      { "id": "walk-jetty", "title": "Walk along the wooden boardwalk" },
+      { "id": "visit-shrine", "title": "Visit the shrine at the end of the jetty" },
+      { "id": "try-laksa", "title": "Try Penang Asam Laksa" },
+      { "id": "char-koay-teow", "title": "Eat Char Koay Teow" },
+      { "id": "sunset-photo", "title": "Take sunset photos" },
+      { "id": "clan-jetties", "title": "Visit neighbouring Tan Jetty & Lee Jetty" },
+      { "id": "street-art", "title": "Explore Armenian Street street art" },
+      { "id": "khoo-kongsi", "title": "See Khoo Kongsi" }
+    ],
+    "countLabel": "selected",
+    "reset": "Reset",
+    "empty": "No items selected yet."
+  },
+  "map": {
+    "title": "Chew Jetty Location",
+    "intro": "Weld Quay, George Town, Penang — next to the other clan jetties.",
+    "iframeTitle": "Chew Jetty map on Google Maps",
+    "cta": "Directions to Chew Jetty"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "intro": "Quick answers to common questions before you visit Chew Jetty.",
+    "items": [
+      {
+        "question": "Is Chew Jetty open to the public?",
+        "answer": "Yes, Chew Jetty is a living residential community open to visitors. The main walkway can be accessed at any time, but shops and stalls usually operate from 09:00 to 21:00."
+      },
+      {
+        "question": "How much does it cost to enter Chew Jetty?",
+        "answer": "There is no entry fee. Chew Jetty is free to visit. You only pay if you buy food, drinks, or souvenirs from local shops."
+      },
+      {
+        "question": "How much time should I spend at Chew Jetty?",
+        "answer": "Most visitors spend 1 to 2 hours. Add extra time if you want to relax at a waterfront cafe or take many photos."
+      },
+      {
+        "question": "Is there parking near Chew Jetty?",
+        "answer": "There is street parking and a few private lots nearby. However, spaces are limited; the free CAT bus or Grab are more convenient options."
+      },
+      {
+        "question": "How do I get to Chew Jetty from Penang Airport?",
+        "answer": "Options include Grab/taxi (30–45 minutes), or Rapid Penang Bus 401E to George Town followed by a short walk."
+      },
+      {
+        "question": "Can I watch the sunset at Chew Jetty?",
+        "answer": "Yes, the end section of the jetty offers open-water views and is a popular spot to enjoy the sunset."
+      }
+    ]
+  },
+  "sources": {
+    "title": "References & Sources",
+    "intro": "Information on this page is compiled from the following verifiable sources. This page is an independent guide and not the official page of Chew Jetty.",
+    "items": [
+      {
+        "label": "UNESCO World Heritage Centre",
+        "url": "https://whc.unesco.org/en/list/1223/",
+        "note": "Melaka and George Town: Historic Cities of the Straits of Malacca"
+      },
+      {
+        "label": "George Town World Heritage Incorporated (GTWHI)",
+        "url": "https://gtwhi.com.my/",
+        "note": "Official publications on the history and conservation of George Town's clan jetties"
+      },
+      {
+        "label": "Google Maps",
+        "url": "https://maps.app.goo.gl/fa5EV5aNcFuW1jhL8",
+        "note": "Location info, opening hours and visitor reviews"
+      }
+    ]
+  },
+  "legal": {
+    "backHome": "Back to Home",
+    "updatedAt": "Last updated: August 2026",
+    "privacy": {
+      "title": "Privacy Policy",
+      "metaTitle": "Privacy Policy | Chew Jetty",
+      "metaDescription": "Privacy policy of the Chew Jetty travel guide website — the information we collect, how we use it, third-party services and your rights under GDPR.",
+      "sections": [
+        {
+          "heading": "Information We Collect",
+          "intro": "We only collect the minimum data required to provide our services. This data may include:",
+          "items": [
+            { "title": "Browsing data", "text": "IP address, browser type, pages visited" },
+            { "title": "Cookies and similar technologies", "text": "Used to improve website functionality and measure traffic and usage (see the Cookie Settings page)." },
+            { "title": "Information you provide voluntarily", "text": "Any information you voluntarily provide through a contact form or email." }
+          ]
+        },
+        {
+          "heading": "How We Use Your Information",
+          "intro": "We use the information we collect to:",
+          "items": [
+            "Improve website content and user experience",
+            "Analyse traffic and usage patterns",
+            "Respond to requests",
+            "Comply with our legal obligations"
+          ]
+        },
+        {
+          "heading": "Third-Party Services",
+          "intro": "Our website may use third-party services, such as Google Maps (for embedded maps and location data), Google Analytics (for traffic analysis) and Unsplash (for images). These services each have their own privacy policies.",
+          "items": [
+            { "title": "Google Maps", "text": "For embedded maps and location data." },
+            { "title": "Google Analytics", "text": "For traffic analysis." },
+            { "title": "Unsplash", "text": "For website images." }
+          ]
+        },
+        {
+          "heading": "Your Rights",
+          "intro": "Under the General Data Protection Regulation (GDPR) and related legislation, you have the right to:",
+          "items": [
+            "Access your personal data",
+            "Request correction or deletion",
+            "Object to processing",
+            "Lodge a complaint with a supervisory authority"
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "metaTitle": "Terms of Service | Chew Jetty",
+      "metaDescription": "Terms of service of the Chew Jetty travel guide website — content use, information accuracy, intellectual property and limitation of liability.",
+      "intro": "By accessing and using this website, you agree to be bound by these terms of service.",
+      "sections": [
+        { "heading": "Content Use", "text": "All content on this website is provided for reference only. We are an independent third-party travel information website and are not affiliated with any tourist attraction, government agency or commercial operator." },
+        { "heading": "Information Accuracy", "text": "We strive to provide accurate and up-to-date information but cannot guarantee its completeness or accuracy. Schedules, conditions and services may change without prior notice. Please verify important information through official channels before travelling." },
+        { "heading": "Intellectual Property", "text": "The design and original content of this website are protected by copyright. Images from Unsplash are used under its licence. Use of Google Maps data complies with Google's terms of service." },
+        { "heading": "Limitation of Liability", "text": "This website is provided \"as is\" without any warranties. We are not liable for any losses caused by the use of the information on this website, including but not limited to travel decisions made based on the content of this website." }
+      ]
+    },
+    "cookie": {
+      "title": "Cookie Settings",
+      "metaTitle": "Cookie Settings | Chew Jetty",
+      "metaDescription": "Cookie settings for the Chew Jetty website — manage necessary cookies, analytics cookies, preference cookies and marketing cookies.",
+      "intro": "We use cookies to improve your browsing experience. You can manage your preferences below.",
+      "alwaysActive": "Always active",
+      "labelOn": "Active",
+      "labelOff": "Inactive",
+      "consentTitle": "Consent Management",
+      "consentDesc": "You can change your cookie settings at any time. Please note that disabling certain cookies may affect website functionality.",
+      "saveBtn": "Save Preferences",
+      "rejectBtn": "Reject All",
+      "savedMsg": "Your preferences have been saved.",
+      "categories": [
+        { "id": "necessary", "name": "Necessary Cookies", "desc": "These cookies are essential for the website to function properly and cannot be disabled.", "alwaysActive": true },
+        { "id": "analytics", "name": "Analytics Cookies", "desc": "These cookies help us understand how visitors interact with our website by collecting anonymous usage data.", "checked": true, "subName": "Google Analytics", "subDesc": "It collects anonymous information about how visitors use our website." },
+        { "id": "preferences", "name": "Preference Cookies", "desc": "These cookies remember your settings, such as language and theme preferences.", "checked": true, "subName": "User Preferences", "subDesc": "Saves your language preference and website settings." },
+        { "id": "marketing", "name": "Marketing Cookies", "desc": "These cookies are used to display relevant ads and measure the effectiveness of advertising campaigns.", "checked": false, "subName": "Personalised Ads", "subDesc": "It can show you relevant ads based on your interests." }
+      ]
+    }
+  },
+  "footer": {
+    "contactTitle": "Contact / Address",
+    "viewOnMaps": "View on Google Maps",
+    "quickLinks": "Quick Links",
+    "legalLinks": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Settings"
+    },
+    "disclaimer": "Disclaimer: This website is not the official website of Chew Jetty. It is provided as an independent travel guide. Information is subject to change; please verify directly with local authorities or Google Maps before visiting.",
+    "copyright": "All rights reserved."
+  }
+}

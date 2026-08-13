@@ -1,0 +1,14 @@
+---
+import LegalPage from '@/components/LegalPage.astro';
+import { LANGUAGES } from '@/i18n/ui';
+
+export function getStaticPaths() {
+  return LANGUAGES.filter((l) => l.code !== 'ms').map((lang) => ({
+    params: { lang: lang.code },
+  }));
+}
+
+const { lang } = Astro.params;
+---
+
+<LegalPage lang={lang} type="privacy" />

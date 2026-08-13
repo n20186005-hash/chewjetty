@@ -3,66 +3,49 @@ import BaseHead from '@/components/BaseHead.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import GA4 from '@/components/GA4.astro';
-import { SITE, FAQS } from '@/consts';
+import { SITE, ADDRESS, GEO, OPENING_HOURS, AGGREGATE_RATING, TOURIST_TYPES } from '@/consts';
+import { getTranslation } from '@/i18n';
+import { LANGUAGES, type Lang } from '@/i18n/ui';
 
 interface Props {
+  lang: Lang;
   title?: string;
   description?: string;
   image?: string;
+  canonical?: string;
+  pathname?: string;
 }
 
 const {
-  title = SITE.title,
-  description = SITE.description,
+  lang,
+  title,
+  description,
   image = '/gallery/chew-jetty-14.jpg',
+  canonical,
+  pathname,
 } = Astro.props;
+
+const t = getTranslation(lang);
+const metaTitle = title ?? t.site.title;
+const metaDescription = description ?? t.site.description;
+const current = LANGUAGES.find((l) => l.code === lang) ?? LANGUAGES[0];
 
 const site = Astro.site;
 const baseUrl = site ? new URL('/', site).toString() : '/';
 const imageUrl = site ? new URL(image, site).toString() : image;
 
-const address = {
-  '@type': 'PostalAddress',
-  streetAddress: 'Pengkalan Weld',
-  addressLocality: 'George Town',
-  addressRegion: 'Pulau Pinang',
-  postalCode: '10300',
-  addressCountry: 'MY',
-};
-
-const geo = {
-  '@type': 'GeoCoordinates',
-  latitude: '5.4127175',
-  longitude: '100.3397723',
-};
-
-const openingHours = {
-  '@type': 'OpeningHoursSpecification',
-  dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-  opens: '09:00',
-  closes: '21:00',
-};
-
-const aggregateRating = {
-  '@type': 'AggregateRating',
-  ratingValue: '4.1',
-  reviewCount: '8000',
-  bestRating: '5',
-  worstRating: '1',
-};
-
 const touristAttractionLd = {
   '@context': 'https://schema.org',
   '@type': 'TouristAttraction',
   name: SITE.name,
-  description: SITE.description,
+  description: metaDescription,
   url: baseUrl,
   image: imageUrl,
-  address,
-  geo,
-  openingHoursSpecification: [openingHours],
-  aggregateRating,
-  touristType: ['Cultural tourist', 'Family visitor', 'Photographer', 'History enthusiast'],
+  address: ADDRESS,
+  geo: GEO,
+  openingHoursSpecification: [OPENING_HOURS],
+  aggregateRating: AGGREGATE_RATING,
+  touristType: [...TOURIST_TYPES],
   isAccessibleForFree: true,
   sameAs: [SITE.mapsUrl],
 };
@@ -70,7 +53,7 @@ const touristAttractionLd = {
 const faqPageLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: FAQS.map((faq) => ({
+  mainEntity: t.faq.items.map((faq) => ({
     '@type': 'Question',
     name: faq.question,
     acceptedAnswer: {
@@ -82,18 +65,25 @@ const faqPageLd = {
 ---
 
 <!doctype html>
-<html lang={SITE.lang}>
+<html lang={current.htmlLang}>
   <head>
-    <BaseHead title={title} description={description} image={image} />
+    <BaseHead
+      title={metaTitle}
+      description={metaDescription}
+      image={image}
+      lang={lang}
+      canonical={canonical}
+      pathname={pathname}
+    />
     <GA4 />
     <script is:inline type="application/ld+json" set:html={JSON.stringify(touristAttractionLd)}></script>
     <script is:inline type="application/ld+json" set:html={JSON.stringify(faqPageLd)}></script>
   </head>
   <body class="flex min-h-screen flex-col bg-sand font-body text-ink">
-    <Header />
+    <Header lang={lang} />
     <main class="flex-1">
       <slot />
     </main>
-    <Footer />
+    <Footer lang={lang} />
   </body>
 </html>

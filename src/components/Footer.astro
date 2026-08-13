@@ -1,5 +1,16 @@
 ---
-import { SITE, KEY_INFO } from '@/consts';
+import { SITE } from '@/consts';
+import { getTranslation } from '@/i18n';
+import { getLocalizedPath, type Lang } from '@/i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = getTranslation(lang);
+const keyInfo = t.keyInfo;
+const footer = t.footer;
 ---
 
 <footer class="relative mt-auto bg-ocean text-sand">
@@ -11,16 +22,14 @@ import { SITE, KEY_INFO } from '@/consts';
           <span class="font-display text-2xl font-bold">{SITE.name}</span>
         </div>
         <p class="mt-4 max-w-sm text-sand/80">
-          {SITE.description}
+          {t.site.description}
         </p>
       </div>
 
       <div>
-        <h3 class="font-display text-lg font-semibold">Hubungi / Alamat</h3>
+        <h3 class="font-display text-lg font-semibold">{footer.contactTitle}</h3>
         <address class="mt-4 not-italic text-sand/80">
-          {KEY_INFO[0].value}<br />
-          George Town, Pulau Pinang<br />
-          Malaysia
+          {keyInfo[0].value}
         </address>
         <a
           href={SITE.mapsUrl}
@@ -28,7 +37,7 @@ import { SITE, KEY_INFO } from '@/consts';
           rel="noopener noreferrer"
           class="mt-4 inline-flex items-center gap-2 font-medium text-lantern-300 hover:text-white"
         >
-          Lihat di Google Maps
+          {footer.viewOnMaps}
           <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
           </svg>
@@ -36,26 +45,26 @@ import { SITE, KEY_INFO } from '@/consts';
       </div>
 
       <div>
-        <h3 class="font-display text-lg font-semibold">Pautan Pantas</h3>
+        <h3 class="font-display text-lg font-semibold">{footer.quickLinks}</h3>
         <ul class="mt-4 space-y-2 text-sand/80">
-          <li><a href="#info-penting" class="hover:text-white">Info Penting</a></li>
-          <li><a href="#makanan" class="hover:text-white">Makanan</a></li>
-          <li><a href="#pengangkutan" class="hover:text-white">Pengangkutan</a></li>
-          <li><a href="#galeri" class="hover:text-white">Galeri</a></li>
-          <li><a href="#faq" class="hover:text-white">Soalan Lazim</a></li>
+          <li><a href="#info-penting" class="hover:text-white">{t.header.sections[0].label}</a></li>
+          <li><a href="#makanan" class="hover:text-white">{t.header.sections[3].label}</a></li>
+          <li><a href="#pengangkutan" class="hover:text-white">{t.header.sections[4].label}</a></li>
+          <li><a href="#galeri" class="hover:text-white">{t.header.sections[6].label}</a></li>
+          <li><a href="#faq" class="hover:text-white">{t.faq.title}</a></li>
         </ul>
       </div>
     </div>
 
     <div class="mt-12 border-t border-white/10 pt-6 text-sm text-sand/70">
       <p class="mb-2">
-        Penafian: Laman web ini bukan laman web rasmi Chew Jetty. Ia disediakan sebagai pandungan pelancong bebas. Maklumat tertakluk kepada perubahan; sila sahkan terus dengan pihak berkuasa tempatan atau Google Maps sebelum melawat.
+        {footer.disclaimer}
       </p>
-      <p>&copy; {new Date().getFullYear()} {SITE.name}. Hak cipta terpelihara.</p>
+      <p>&copy; {new Date().getFullYear()} {SITE.name}. {footer.copyright}</p>
       <p class="mt-2 space-x-4">
-        <a href="/privacy-policy" class="underline decoration-white/40 underline-offset-4 hover:text-white">隐私政策</a>
-        <a href="/terms-of-service" class="underline decoration-white/40 underline-offset-4 hover:text-white">服务条款</a>
-        <a href="/cookie-settings" class="underline decoration-white/40 underline-offset-4 hover:text-white">Cookie 设置</a>
+        <a href={getLocalizedPath(lang, '/privacy-policy')} class="underline decoration-white/40 underline-offset-4 hover:text-white">{footer.legalLinks.privacy}</a>
+        <a href={getLocalizedPath(lang, '/terms-of-service')} class="underline decoration-white/40 underline-offset-4 hover:text-white">{footer.legalLinks.terms}</a>
+        <a href={getLocalizedPath(lang, '/cookie-settings')} class="underline decoration-white/40 underline-offset-4 hover:text-white">{footer.legalLinks.cookies}</a>
       </p>
     </div>
   </div>

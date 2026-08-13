@@ -1,0 +1,36 @@
+---
+import { LANGUAGES, getLocalizedPath, isLang, langLabel, langSwitcherAria } from '../i18n/ui';
+
+interface Props {
+  currentLang: string;
+  pathname: string;
+}
+
+const { currentLang, pathname } = Astro.props;
+
+// Buang awalan bahasa (jika ada) daripada pathname untuk dapatkan laluan asas.
+const segments = pathname.split('/').filter(Boolean);
+const baseSegments = segments.length > 0 && isLang(segments[0]) ? segments.slice(1) : segments;
+const basePath = baseSegments.length > 0 ? `/${baseSegments.join('/')}` : '/';
+---
+
+<nav class="relative inline-flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-1 py-1 backdrop-blur-sm" aria-label={langSwitcherAria[currentLang]}>
+  {
+    LANGUAGES.map((lang) => {
+      const active = lang.code === currentLang;
+      const href = getLocalizedPath(lang.code, basePath);
+      return (
+        <a
+          href={href}
+          class={active
+            ? 'rounded-full bg-white px-3 py-1.5 text-xs font-semibold text-slate-900 transition'
+            : 'rounded-full px-3 py-1.5 text-xs font-medium text-white/80 hover:bg-white/15 hover:text-white transition'}
+          aria-current={active ? 'true' : undefined}
+          lang={lang.htmlLang}
+        >
+          {langLabel[lang.code]}
+        </a>
+      );
+    })
+  }
+</nav>

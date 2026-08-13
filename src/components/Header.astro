@@ -1,27 +1,31 @@
 ---
 import { SITE } from '@/consts';
+import { getTranslation } from '@/i18n';
+import type { Lang } from '@/i18n/ui';
+import LanguageSwitcher from '@/components/LanguageSwitcher.astro';
 
-const sections = [
-  { id: 'info-penting', label: 'Info Penting' },
-  { id: 'sejarah', label: 'Sejarah' },
-  { id: 'budaya', label: 'Budaya' },
-  { id: 'makanan', label: 'Makanan' },
-  { id: 'pengangkutan', label: 'Pengangkutan' },
-  { id: 'berhampiran', label: 'Berhampiran' },
-  { id: 'galeri', label: 'Galeri' },
-  { id: 'senarai', label: 'Senarai' },
-  { id: 'faq', label: 'FAQ' },
-];
+interface Props {
+  lang: Lang;
+  pathname?: string;
+}
+
+const { lang, pathname = Astro.url.pathname } = Astro.props;
+const t = getTranslation(lang);
+const sections = t.header.sections;
 ---
 
 <header class="fixed inset-x-0 top-0 z-40 border-b border-wood-200/40 bg-sand/90 backdrop-blur-md">
   <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-    <a href="#" class="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-lantern rounded-lg">
+    <a href="/" class="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-lantern rounded-lg">
       <img src="/favicon.svg" alt="" width="40" height="40" class="rounded-lg shadow-card" />
       <span class="font-display text-xl font-bold text-ocean sm:text-2xl">{SITE.name}</span>
     </a>
 
-    <nav aria-label="Navigasi utama" class="hidden md:flex md:items-center md:gap-1">
+    <div class="hidden items-center gap-2 md:flex">
+      <LanguageSwitcher currentLang={lang} pathname={pathname} />
+    </div>
+
+    <nav aria-label={t.header.ariaNav} class="hidden lg:flex lg:items-center lg:gap-1">
       {sections.map((s) => (
         <a
           href={`#${s.id}`}
@@ -38,7 +42,7 @@ const sections = [
       rel="noopener noreferrer"
       class="btn-primary hidden text-sm sm:inline-flex"
     >
-      Buka Peta
+      {t.header.openMap}
       <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.55-4.55M19.55 5.45L15 10m4.55-4.55V10M4 20h16" />
       </svg>
@@ -49,9 +53,9 @@ const sections = [
       type="button"
       aria-expanded="false"
       aria-controls="mobile-menu"
-      class="inline-flex items-center justify-center rounded-lg p-2 text-ocean hover:bg-ocean-50 md:hidden"
+      class="inline-flex items-center justify-center rounded-lg p-2 text-ocean hover:bg-ocean-50 lg:hidden"
     >
-      <span class="sr-only">Buka menu</span>
+      <span class="sr-only">{t.header.openMenu}</span>
       <svg id="menu-icon-open" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
@@ -61,8 +65,11 @@ const sections = [
     </button>
   </div>
 
-  <div id="mobile-menu" class="hidden border-t border-wood-200/40 bg-sand md:hidden">
-    <nav class="flex flex-col px-4 py-3" aria-label="Navigasi mudah alih">
+  <div id="mobile-menu" class="hidden border-t border-wood-200/40 bg-sand lg:hidden">
+    <nav class="flex flex-col px-4 py-3" aria-label={t.header.ariaMobileNav}>
+      <div class="mb-2 px-3 pt-1">
+        <LanguageSwitcher currentLang={lang} pathname={pathname} />
+      </div>
       {sections.map((s) => (
         <a
           href={`#${s.id}`}
@@ -77,7 +84,7 @@ const sections = [
         rel="noopener noreferrer"
         class="mt-2 rounded-lg bg-lantern px-4 py-2 text-center font-semibold text-white"
       >
-        Buka Peta
+        {t.header.openMap}
       </a>
     </nav>
   </div>

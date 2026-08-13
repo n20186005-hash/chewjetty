@@ -1,19 +1,34 @@
 ---
 import { SITE } from '@/consts';
+import { buildAlternates, LANGUAGES, type Lang } from '@/i18n/ui';
+
+interface Props {
+  title: string;
+  description: string;
+  lang: Lang;
+  image?: string;
+  canonical?: string;
+  /** Pathname semasa (untuk membina alternates hreflang). */
+  pathname?: string;
+}
 
 const {
-  title = SITE.title,
-  description = SITE.description,
+  title,
+  description,
+  lang,
   image = '/gallery/chew-jetty-14.jpg',
   canonical = Astro.url.pathname,
+  pathname = canonical,
 } = Astro.props;
 
 const site = Astro.site;
 const canonicalUrl = site ? new URL(canonical, site).toString() : canonical;
 const ogImage = site ? new URL(image, site).toString() : image;
 const ogType = 'website';
-const locale = SITE.locale;
-const language = SITE.lang;
+const current = LANGUAGES.find((l) => l.code === lang) ?? LANGUAGES[0];
+const locale = current.code === 'zh' ? 'zh_CN' : current.code === 'ms' ? 'ms_MY' : 'en_US';
+const htmlLang = current.htmlLang;
+const alternates = buildAlternates(pathname);
 ---
 
 <meta charset="UTF-8" />
@@ -23,9 +38,15 @@ const language = SITE.lang;
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
-<meta name="language" content={language} />
+<meta name="language" content={htmlLang} />
 
 {site && <link rel="canonical" href={canonicalUrl} />}
+
+{site &&
+  alternates.map((alt) => (
+    <link rel="alternate" hreflang={alt.code === 'zh' ? 'zh-CN' : alt.code} href={new URL(alt.url, site).toString()} />
+  ))}
+{site && <link rel="alternate" hreflang="x-default" href={new URL(alternates[0]?.url ?? '/', site).toString()} />}
 
 <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
 <link rel="icon" type="image/png" href="/favicon-16.png" sizes="16x16" />
