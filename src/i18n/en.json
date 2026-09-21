@@ -1,7 +1,7 @@
 {
   "site": {
-    "title": "Chew Jetty | Travel Guide to George Town, Penang",
-    "description": "Discover everything about Chew Jetty, a heritage stilt village on water in George Town, Penang. Transport info, nearby food, photo gallery, FAQs & trip checklist."
+    "title": "Chew Jetty Penang: Opening Hours, History, Food & Guide",
+    "description": "Visit Chew Jetty in George Town, Penang — a UNESCO World Heritage water village of stilt houses. Opening hours (daily 09:00–21:00), free entry, history, nearby street food and transport tips."
   },
   "header": {
     "ariaNav": "Main navigation",
@@ -70,6 +70,11 @@
         "year": "7 July 2008",
         "title": "UNESCO World Heritage recognition",
         "text": "George Town, together with Melaka, was inscribed as a UNESCO World Heritage Site (\"Historic Cities of the Straits of Malacca\"). The clan jetties, including Chew Jetty, are recognised as living heritage protected under the core zone of the heritage site."
+      },
+      {
+        "year": "5 September 2026",
+        "title": "Nearby fire — Chew Jetty unscathed",
+        "text": "A dawn blaze destroyed about 10 tightly packed wooden workshops by the sea, less than 50 metres from the jetty entrance. Firefighters saved Chew Jetty itself, which was unaffected and remains open to visitors; the Penang state government has pledged help for the affected shop owners."
       },
       {
         "year": "Today",
@@ -371,6 +376,10 @@
         "answer": "Options include Grab/taxi (30–45 minutes), or Rapid Penang Bus 401E to George Town followed by a short walk."
       },
       {
+        "question": "Is Chew Jetty still open after the September 2026 fire?",
+        "answer": "Yes. The fire on 5 September 2026 broke out at wooden workshops less than 50 metres from the jetty entrance. Chew Jetty itself was not affected and has been confirmed safe and open as usual — the boardwalk, shrine and shops all continue to welcome visitors."
+      },
+      {
         "question": "Can I watch the sunset at Chew Jetty?",
         "answer": "Yes, the end section of the jetty offers open-water views and is a popular spot to enjoy the sunset."
       }
@@ -394,6 +403,11 @@
         "label": "Google Maps",
         "url": "https://maps.app.goo.gl/fa5EV5aNcFuW1jhL8",
         "note": "Location info, opening hours and visitor reviews"
+      },
+      {
+        "label": "The Star",
+        "url": "https://www.thestar.com.my/news/nation/2026/09/06/firemen-race-to-save-chew-jetty-from-blaze",
+        "note": "Report on the 5 September 2026 fire at nearby wooden workshops — Chew Jetty itself unaffected"
       }
     ]
   },

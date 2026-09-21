@@ -1,7 +1,7 @@
 {
   "site": {
-    "title": "Chew Jetty (Jeti Chew) | Panduan Pelancong George Town, Pulau Pinang",
-    "description": "Ketahui segalanya tentang Chew Jetty (Jeti Chew), jambatan kampung atas air warisan di George Town, Pulau Pinang. Maklumat pengangkutan, makanan berhampiran, galeri foto, soalan lazim & senarai perjalanan."
+    "title": "Chew Jetty Pulau Pinang: Waktu Operasi, Sejarah & Panduan",
+    "description": "Lawati Chew Jetty (Jeti Chew) di George Town — kampung atas air warisan UNESCO. Waktu operasi setiap hari 09:00–21:00, percuma, sejarah, makanan berhampiran dan tip pengangkutan."
   },
   "header": {
     "ariaNav": "Navigasi utama",
@@ -70,6 +70,11 @@
         "year": "7 Julai 2008",
         "title": "Pengiktirafan Tapak Warisan Dunia UNESCO",
         "text": "George Town, bersama-sama dengan Melaka, diiktiraf sebagai Tapak Warisan Dunia UNESCO (\"Historic Cities of the Straits of Malacca\"). Jeti-jeti puak termasuk Chew Jetty diiktiraf sebagai warisan hidup yang dilindungi di bawah zon teras tapak warisan."
+      },
+      {
+        "year": "5 September 2026",
+        "title": "Kebakaran berhampiran — Chew Jetty selamat",
+        "text": "Kebakaran awal pagi memusnahkan kira-kira 10 bengkel kayu berhampiran laut, kurang 50 meter dari pintu masuk jeti. Pasukan bomba berjaya menyelamatkan Chew Jetty itu sendiri yang tidak terjejas dan kekal dibuka kepada pelawat; kerajaan negeri Pulau Pinang berikrar membantu pemilik kedai yang terkesan."
       },
       {
         "year": "Hari ini",
@@ -371,6 +376,10 @@
         "answer": "Pilihan termasuk Grab/teksi (30–45 minit), atau bas Rapid Penang 401E ke George Town diikuti dengan berjalan kaki singkat."
       },
       {
+        "question": "Adakah Chew Jetty masih dibuka selepas kebakaran September 2026?",
+        "answer": "Ya. Kebakaran pada 5 September 2026 berlaku di bengkel kayu kurang 50 meter dari pintu masuk jeti. Chew Jetty itu sendiri tidak terjejas dan telah disahkan selamat serta dibuka seperti biasa — jambatan kayu, tokong dan kedai-kedai terus menyambut pelawat."
+      },
+      {
         "question": "Bolehkah saya melihat matahari terbenam di Chew Jetty?",
         "answer": "Ya, bahagian hujung jeti menawarkan pemandangan air terbuka dan adalah lokasi yang popular untuk menikmati matahari terbenam."
       }
@@ -394,6 +403,11 @@
         "label": "Google Maps",
         "url": "https://maps.app.goo.gl/fa5EV5aNcFuW1jhL8",
         "note": "Maklumat lokasi, waktu operasi dan ulasan pengunjung"
+      },
+      {
+        "label": "The Star",
+        "url": "https://www.thestar.com.my/news/nation/2026/09/06/firemen-race-to-save-chew-jetty-from-blaze",
+        "note": "Laporan kebakaran 5 September 2026 di bengkel kayu berhampiran — Chew Jetty sendiri tidak terjejas"
       }
     ]
   },
