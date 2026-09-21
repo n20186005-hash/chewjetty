@@ -1,6 +1,6 @@
 ---
 import { SITE } from '@/consts';
-import { buildAlternates, LANGUAGES, type Lang } from '@/i18n/ui';
+import { buildAlternates, buildHreflangLinks, LANGUAGES, type Lang } from '@/i18n/ui';
 
 interface Props {
   title: string;
@@ -10,6 +10,8 @@ interface Props {
   canonical?: string;
   /** Pathname semasa (untuk membina alternates hreflang). */
   pathname?: string;
+  /** Imej LCP yang perlu dipraload (cth. imej hero laman utama). */
+  preloadImage?: string;
 }
 
 const {
@@ -19,6 +21,7 @@ const {
   image = '/gallery/chew-jetty-14.jpg',
   canonical = Astro.url.pathname,
   pathname = canonical,
+  preloadImage,
 } = Astro.props;
 
 const site = Astro.site;
@@ -29,6 +32,7 @@ const current = LANGUAGES.find((l) => l.code === lang) ?? LANGUAGES[0];
 const locale = current.code === 'zh' ? 'zh_CN' : current.code === 'ms' ? 'ms_MY' : 'en_US';
 const htmlLang = current.htmlLang;
 const alternates = buildAlternates(pathname);
+const hreflangLinks = buildHreflangLinks(pathname);
 ---
 
 <meta charset="UTF-8" />
@@ -43,10 +47,12 @@ const alternates = buildAlternates(pathname);
 {site && <link rel="canonical" href={canonicalUrl} />}
 
 {site &&
-  alternates.map((alt) => (
-    <link rel="alternate" hreflang={alt.code === 'zh' ? 'zh-CN' : alt.code} href={new URL(alt.url, site).toString()} />
+  hreflangLinks.map((link) => (
+    <link rel="alternate" hreflang={link.hreflang} href={new URL(link.url, site).toString()} />
   ))}
 {site && <link rel="alternate" hreflang="x-default" href={new URL(alternates[0]?.url ?? '/', site).toString()} />}
+
+{preloadImage && <link rel="preload" as="image" href={preloadImage} />}
 
 <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
 <link rel="icon" type="image/png" href="/favicon-16.png" sizes="16x16" />
@@ -60,10 +66,12 @@ const alternates = buildAlternates(pathname);
 <meta property="og:description" content={description} />
 {site && <meta property="og:url" content={canonicalUrl} />}
 <meta property="og:image" content={ogImage} />
+<meta property="og:image:alt" content={title} />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={ogImage} />
+<meta name="twitter:image:alt" content={title} />
 
 {site && <link rel="sitemap" type="application/xml" href={new URL('/sitemap-index.xml', site).toString()} />}

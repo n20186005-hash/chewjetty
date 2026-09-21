@@ -1,7 +1,7 @@
 export const LANGUAGES = [
-  { code: 'ms', label: 'Bahasa Melayu', htmlLang: 'ms', dir: 'ltr' },
-  { code: 'en', label: 'English', htmlLang: 'en', dir: 'ltr' },
-  { code: 'zh', label: '中文', htmlLang: 'zh-CN', dir: 'ltr' },
+  { code: 'ms', label: 'Bahasa Melayu', htmlLang: 'ms', hreflangs: ['ms-MY', 'ms'], dir: 'ltr' },
+  { code: 'en', label: 'English', htmlLang: 'en', hreflangs: ['en'], dir: 'ltr' },
+  { code: 'zh', label: '中文', htmlLang: 'zh-CN', hreflangs: ['zh-Hans', 'zh-Hant', 'zh'], dir: 'ltr' },
 ] as const;
 
 export type Lang = (typeof LANGUAGES)[number]['code'];
@@ -35,6 +35,23 @@ export function buildAlternates(pathname: string): { code: string; url: string }
   }
   if (basePath === '') basePath = '/';
   return LANGUAGES.map((l) => ({ code: l.code, url: getLocalizedPath(l.code, basePath) }));
+}
+
+/**
+ * Senarai pasangan hreflang -> URL bagi sesuatu pathname.
+ * Setiap bahasa boleh mempunyai lebih daripada satu kod hreflang
+ * (cth: zh -> zh-Hans, zh-Hant, zh) supaya Google dapat memadankan
+ * varian tulisan Cina ringkas / tradisional.
+ */
+export function buildHreflangLinks(pathname: string): { hreflang: string; url: string }[] {
+  const alternates = buildAlternates(pathname);
+  const links: { hreflang: string; url: string }[] = [];
+  alternates.forEach((alt, index) => {
+    for (const hreflang of LANGUAGES[index]?.hreflangs ?? []) {
+      links.push({ hreflang, url: alt.url });
+    }
+  });
+  return links;
 }
 
 /** Label bahasa untuk ditunjukkan dalam pemilih bahasa. */

@@ -3,9 +3,9 @@ import BaseHead from '@/components/BaseHead.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import GA4 from '@/components/GA4.astro';
-import { SITE, ADDRESS, GEO, OPENING_HOURS, AGGREGATE_RATING, TOURIST_TYPES } from '@/consts';
+import { SITE, SITE_NAMES, SITE_ALT_NAMES, ADDRESS, GEO, OPENING_HOURS, AGGREGATE_RATING, TOURIST_TYPES } from '@/consts';
 import { getTranslation } from '@/i18n';
-import { LANGUAGES, type Lang } from '@/i18n/ui';
+import { getLocalizedPath, LANGUAGES, type Lang } from '@/i18n/ui';
 
 interface Props {
   lang: Lang;
@@ -14,6 +14,12 @@ interface Props {
   image?: string;
   canonical?: string;
   pathname?: string;
+  /** Imej LCP (hero) untuk dipraload — hanya laman dengan imej besar di atas fold. */
+  preloadImage?: string;
+  /** Benar jika badan halaman benar-benar memaparkan senarai FAQ (skema FAQPage). */
+  hasFaq?: boolean;
+  /** Label halaman semasa untuk BreadcrumbList (halaman bukan laman utama). */
+  breadcrumb?: string;
 }
 
 const {
@@ -23,6 +29,9 @@ const {
   image = '/gallery/chew-jetty-14.jpg',
   canonical,
   pathname,
+  preloadImage,
+  hasFaq = false,
+  breadcrumb,
 } = Astro.props;
 
 const t = getTranslation(lang);
@@ -31,36 +40,80 @@ const metaDescription = description ?? t.site.description;
 const current = LANGUAGES.find((l) => l.code === lang) ?? LANGUAGES[0];
 
 const site = Astro.site;
+const currentPath = canonical ?? pathname ?? Astro.url.pathname;
 const baseUrl = site ? new URL('/', site).toString() : '/';
+const pageUrl = site ? new URL(currentPath, site).toString() : currentPath;
 const imageUrl = site ? new URL(image, site).toString() : image;
+const homeUrl = site ? new URL(getLocalizedPath(lang, '/'), site).toString() : getLocalizedPath(lang, '/');
+
+const attractionName = SITE_NAMES[lang] ?? SITE.name;
+const attractionAltName = SITE_ALT_NAMES[lang] ?? SITE.shortTitle;
+
+const organizationLd = {
+  '@type': 'Organization',
+  '@id': `${baseUrl}#organization`,
+  name: SITE.name,
+  url: baseUrl,
+};
+
+const websiteLd = {
+  '@type': 'WebSite',
+  '@id': `${baseUrl}#website`,
+  url: baseUrl,
+  name: SITE.name,
+  inLanguage: current.htmlLang,
+  publisher: { '@id': `${baseUrl}#organization` },
+};
 
 const touristAttractionLd = {
-  '@context': 'https://schema.org',
   '@type': 'TouristAttraction',
-  name: SITE.name,
+  '@id': `${pageUrl}#attraction`,
+  name: attractionName,
+  alternateName: attractionAltName,
   description: metaDescription,
-  url: baseUrl,
+  url: pageUrl,
   image: imageUrl,
+  inLanguage: current.htmlLang,
   address: ADDRESS,
   geo: GEO,
   openingHoursSpecification: [OPENING_HOURS],
   aggregateRating: AGGREGATE_RATING,
   touristType: [...TOURIST_TYPES],
   isAccessibleForFree: true,
+  publicAccess: true,
   sameAs: [SITE.mapsUrl],
+  mainEntityOfPage: { '@id': `${baseUrl}#website` },
 };
 
-const faqPageLd = {
+const faqPageLd = hasFaq
+  ? {
+      '@type': 'FAQPage',
+      '@id': `${pageUrl}#faq`,
+      mainEntity: t.faq.items.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer,
+        },
+      })),
+    }
+  : null;
+
+const breadcrumbLd = breadcrumb
+  ? {
+      '@type': 'BreadcrumbList',
+      '@id': `${pageUrl}#breadcrumb`,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: attractionName, item: homeUrl },
+        { '@type': 'ListItem', position: 2, name: breadcrumb, item: pageUrl },
+      ],
+    }
+  : null;
+
+const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: t.faq.items.map((faq) => ({
-    '@type': 'Question',
-    name: faq.question,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: faq.answer,
-    },
-  })),
+  '@graph': [organizationLd, websiteLd, touristAttractionLd, faqPageLd, breadcrumbLd].filter(Boolean),
 };
 ---
 
@@ -74,10 +127,10 @@ const faqPageLd = {
       lang={lang}
       canonical={canonical}
       pathname={pathname}
+      preloadImage={preloadImage}
     />
     <GA4 />
-    <script is:inline type="application/ld+json" set:html={JSON.stringify(touristAttractionLd)}></script>
-    <script is:inline type="application/ld+json" set:html={JSON.stringify(faqPageLd)}></script>
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
   </head>
   <body class="flex min-h-screen flex-col bg-sand font-body text-ink">
     <Header lang={lang} />

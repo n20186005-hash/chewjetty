@@ -21,6 +21,15 @@ export default defineConfig({
   },
   integrations: [
     tailwind(),
-    SITE_URL ? sitemap() : null,
+    // Sitemap dengan alternates hreflang (ms / en / zh) supaya Google dapat
+    // memetakan versi bahasa yang setara.
+    SITE_URL
+      ? sitemap({
+          i18n: {
+            defaultLocale: 'ms',
+            locales: { ms: 'ms-MY', en: 'en', zh: 'zh-CN' },
+          },
+        })
+      : null,
   ].filter(Boolean),
 });

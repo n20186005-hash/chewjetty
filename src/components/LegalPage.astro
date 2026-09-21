@@ -15,7 +15,7 @@ const legal = t.legal;
 const content = type === 'privacy' ? legal.privacy : type === 'terms' ? legal.terms : legal.cookie;
 ---
 
-<BaseLayout lang={lang} title={content.metaTitle} description={content.metaDescription} pathname={Astro.url.pathname}>
+<BaseLayout lang={lang} title={content.metaTitle} description={content.metaDescription} pathname={Astro.url.pathname} breadcrumb={content.title}>
   <section class="px-4 pb-20 pt-28 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-3xl">
       <a href={getLocalizedPath(lang, '/')} class="inline-flex items-center gap-2 text-sm font-semibold text-ocean hover:text-lantern">

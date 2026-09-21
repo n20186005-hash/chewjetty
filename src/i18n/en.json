@@ -1,7 +1,7 @@
 {
   "site": {
-    "title": "Chew Jetty Penang: Opening Hours, History, Food & Guide",
-    "description": "Visit Chew Jetty in George Town, Penang — a UNESCO World Heritage water village of stilt houses. Opening hours (daily 09:00–21:00), free entry, history, nearby street food and transport tips."
+    "title": "Chew Jetty Penang: Heritage, Opening Hours, Food & Visiting Guide",
+    "description": "Plan your visit to Chew Jetty, George Town Penang: opening hours (daily 09:00–21:00), free entry, clan jetty history, street food, sunset views and transport tips."
   },
   "header": {
     "ariaNav": "Main navigation",
@@ -36,6 +36,7 @@
     { "label": "Google Maps Rating", "value": "4.1 / 5" },
     { "label": "Coordinates", "value": "5.4127° N, 100.3398° E" }
   ],
+  "keyInfoTitle": "Chew Jetty Opening Hours, Entry Fee & Key Info",
   "intro": {
     "title": "A Heritage Water Village",
     "p1": "Chew Jetty was built in the mid-19th century by the ancestors of the Chew clan who migrated from Xinglingshe Village, TongAn District, Quanzhou, Fujian, China. It is one of six surviving clan jetties in George Town.",
@@ -82,6 +83,19 @@
         "text": "Around 75 units of homes are still occupied. Residents continue their daily routines — washing, drying clothes, repairing boats — while sharing the jetty space with visitors from around the world."
       }
     ]
+  },
+  "fireUpdate": {
+    "navLabel": "Fire Update",
+    "title": "Chew Jetty Fire: What Happened & Is It Still Open?",
+    "intro": "Search interest in \"Chew Jetty fire\" spiked after a blaze near the jetty. Here is what actually happened on 5 September 2026 and the current situation for visitors.",
+    "statusLabel": "Open as usual",
+    "points": [
+      "The fire broke out at dawn in about 10 tightly packed wooden workshops by the sea, less than 50 metres from the jetty entrance.",
+      "Firefighters stopped the flames from spreading; the boardwalk, stilt houses and shrine of Chew Jetty were not damaged.",
+      "Chew Jetty stays open daily from 09:00 to 21:00, with shops and stalls operating as normal.",
+      "The affected block is a separate row of workshops — follow on-site barriers and any instructions from residents."
+    ],
+    "note": "Source: news reports on the 5 September 2026 fire. This is an independent travel guide — check official announcements before you travel if conditions change."
   },
   "folkFaith": {
     "title": "Beliefs & Traditional Festivals",
@@ -196,7 +210,7 @@
     ]
   },
   "food": {
-    "title": "Food Nearby",
+    "title": "Chew Jetty Street Food & Food Nearby",
     "intro": "Don't miss the chance to try Penang's iconic dishes before or after visiting the jetty.",
     "spots": [
       {
@@ -355,6 +369,10 @@
     "title": "Frequently Asked Questions",
     "intro": "Quick answers to common questions before you visit Chew Jetty.",
     "items": [
+      {
+        "question": "What are Chew Jetty's opening hours?",
+        "answer": "Shops, stalls and cafés on Chew Jetty generally open daily from 09:00 to 21:00, while the wooden boardwalk itself can be walked at any time. For softer light and fewer crowds, come between 09:00 and 11:00 or after 17:00."
+      },
       {
         "question": "Is Chew Jetty open to the public?",
         "answer": "Yes, Chew Jetty is a living residential community open to visitors. The main walkway can be accessed at any time, but shops and stalls usually operate from 09:00 to 21:00."

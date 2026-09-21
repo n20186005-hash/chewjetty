@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "Chew Jetty Pulau Pinang: Waktu Operasi, Sejarah & Panduan",
-    "description": "Lawati Chew Jetty (Jeti Chew) di George Town — kampung atas air warisan UNESCO. Waktu operasi setiap hari 09:00–21:00, percuma, sejarah, makanan berhampiran dan tip pengangkutan."
+    "description": "Rancang lawatan ke Chew Jetty (Jeti Chew), George Town Pulau Pinang: waktu operasi setiap hari 09:00–21:00, masuk percuma, sejarah jeti puak, makanan tempatan, pemandangan matahari terbenam dan tip pengangkutan."
   },
   "header": {
     "ariaNav": "Navigasi utama",
@@ -36,6 +36,7 @@
     { "label": "Penilaian Google Maps", "value": "4.1 / 5" },
     { "label": "Koordinat", "value": "5.4127° N, 100.3398° E" }
   ],
+  "keyInfoTitle": "Waktu Operasi, Yuran Masuk & Info Penting Chew Jetty",
   "intro": {
     "title": "Kampung Atas Air Warisan Cina",
     "p1": "Chew Jetty dibina pada pertengahan abad ke-19 oleh nenek moyang keluarga Chew yang berhijrah dari Kampung Xinglingshe, Daerah TongAn, Quanzhou, Fujian, China. Ia merupakan salah satu daripada enam jeti puak di George Town yang masih kekal hingga kini.",
@@ -82,6 +83,19 @@
         "text": "Kira-kira 75 unit rumah masih didiami. Penduduk meneruskan rutin harian — mencuci, menjemur pakaian, membaiki bot — sambil berkongsi ruang jeti dengan pelancong dari seluruh dunia."
       }
     ]
+  },
+  "fireUpdate": {
+    "navLabel": "Info Kebakaran",
+    "title": "Kebakaran Chew Jetty: Apa Yang Berlaku & Masih Dibuka?",
+    "intro": "Ramai pelawat bimbang Chew Jetty ditutup selepas kebakaran berhampiran. Ini situasi sebenar peristiwa 5 September 2026 dan status semasa untuk pelawat.",
+    "statusLabel": "Dibuka seperti biasa",
+    "points": [
+      "Kebakaran berlaku pada awal pagi di kira-kira 10 bengkel kayu yang padat di tepi laut, kurang 50 meter dari pintu masuk jeti.",
+      "Anggota bomba berjaya menghalang api daripada merebak; laluan papan, rumah palafit dan tokong di Chew Jetty tidak rosak.",
+      "Chew Jetty kekal dibuka setiap hari 09:00–21:00, dengan kedai dan gerai beroperasi seperti biasa.",
+      "Kawasan terbabit ialah deretan bengkel yang berasingan — ikut halangan di tapak dan arahan penduduk."
+    ],
+    "note": "Sumber: laporan berita kebakaran 5 September 2026. Ini panduan pelancongan bebas — semak pengumuman rasmi sebelum melawat jika keadaan berubah."
   },
   "folkFaith": {
     "title": "Kepercayaan & Pesta Tradisi",
@@ -196,7 +210,7 @@
     ]
   },
   "food": {
-    "title": "Makanan Berhampiran",
+    "title": "Makanan & Street Food Sekitar Chew Jetty",
     "intro": "Jangan lepaskan peluang untuk mencuba hidangan ikonik Pulau Pinang sebelum atau selepas melawat jeti.",
     "spots": [
       {
@@ -355,6 +369,10 @@
     "title": "Soalan Lazim",
     "intro": "Jawapan ringkas untuk persoalan lazim sebelum anda melawat Chew Jetty.",
     "items": [
+      {
+        "question": "Berapa waktu operasi Chew Jetty?",
+        "answer": "Kedai, gerai dan kafe di Chew Jetty lazimnya beroperasi setiap hari dari 09:00 hingga 21:00, manakala laluan papan kayu boleh dilalui pada bila-bila masa. Untuk cahaya lebih lembut dan kurang sesak, datang antara 09:00–11:00 atau selepas 17:00."
+      },
       {
         "question": "Adakah Chew Jetty dibuka kepada orang ramai?",
         "answer": "Ya, Chew Jetty ialah komuniti kediaman hidup yang dibuka kepada pelancong. Laluan utama boleh dilalui pada bila masa, tetapi kedai dan gerai biasanya beroperasi dari 09:00 hingga 21:00."

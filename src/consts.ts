@@ -7,6 +7,20 @@ export const SITE = {
   ga4Id: 'G-HXM22WWPKP',
 } as const;
 
+// Nama tersetempat untuk data berstruktur (JSON-LD) mengikut bahasa halaman.
+export const SITE_NAMES: Record<string, string> = {
+  ms: 'Chew Jetty',
+  en: 'Chew Jetty',
+  zh: '姓周桥',
+};
+
+// Nama alternatif (nama carian biasa) untuk JSON-LD alternateName.
+export const SITE_ALT_NAMES: Record<string, string> = {
+  ms: 'Jeti Chew, Pulau Pinang',
+  en: 'Chew Jetty Penang',
+  zh: '槟城姓周桥 Chew Jetty',
+};
+
 // Data berstruktur (JSON-LD) yang bebas bahasa.
 export const ADDRESS = {
   '@type': 'PostalAddress',

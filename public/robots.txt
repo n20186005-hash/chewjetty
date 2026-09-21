@@ -3,3 +3,5 @@ Allow: /
 
 Disallow: /*.DS_Store
 Disallow: /node_modules/
+
+Sitemap: https://chewjetty.org/sitemap-index.xml
