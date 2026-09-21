@@ -31,7 +31,10 @@ export function buildAlternates(pathname: string): { code: string; url: string }
   const segments = clean.split('/').filter(Boolean);
   let basePath = clean;
   if (segments.length > 0 && isLang(segments[0])) {
-    basePath = `/${segments.slice(1).join('/')}`;
+    // 保留语言段之后的原路径（含结尾斜杠），使 hreflang 与 canonical 一致
+    const afterLang = clean.indexOf('/', 1);
+    basePath = afterLang >= 0 ? clean.slice(afterLang) : '/';
+    if (basePath === '') basePath = '/';
   }
   if (basePath === '') basePath = '/';
   return LANGUAGES.map((l) => ({ code: l.code, url: getLocalizedPath(l.code, basePath) }));
