@@ -1,7 +1,7 @@
 ---
 import { SITE } from '@/consts';
 import { getTranslation } from '@/i18n';
-import type { Lang } from '@/i18n/ui';
+import { getLocalizedPath, type Lang } from '@/i18n/ui';
 import LanguageSwitcher from '@/components/LanguageSwitcher.astro';
 
 interface Props {
@@ -16,7 +16,7 @@ const sections = t.header.sections;
 
 <header class="fixed inset-x-0 top-0 z-40 border-b border-wood-200/40 bg-sand/90 backdrop-blur-md">
   <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-    <a href="/" class="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-lantern rounded-lg">
+    <a href={getLocalizedPath(lang, '/')} class="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-lantern rounded-lg">
       <img src="/favicon.svg" alt="" width="40" height="40" class="rounded-lg shadow-card" />
       <span class="font-display text-xl font-bold text-ocean sm:text-2xl">{SITE.name}</span>
     </a>
@@ -28,7 +28,7 @@ const sections = t.header.sections;
     <nav aria-label={t.header.ariaNav} class="hidden lg:flex lg:items-center lg:gap-1">
       {sections.map((s) => (
         <a
-          href={`#${s.id}`}
+          href={`${getLocalizedPath(lang, '/')}#${s.id}`}
           class="rounded-full px-3 py-2 text-sm font-medium text-ink/80 transition hover:bg-ocean-50 hover:text-ocean"
         >
           {s.label}
@@ -72,7 +72,7 @@ const sections = t.header.sections;
       </div>
       {sections.map((s) => (
         <a
-          href={`#${s.id}`}
+          href={`${getLocalizedPath(lang, '/')}#${s.id}`}
           class="rounded-lg px-3 py-2 text-base font-medium text-ink/80 hover:bg-ocean-50 hover:text-ocean"
         >
           {s.label}

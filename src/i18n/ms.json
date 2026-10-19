@@ -1,7 +1,7 @@
 {
   "site": {
-    "title": "Chew Jetty Pulau Pinang: Waktu Operasi, Sejarah & Panduan",
-    "description": "Rancang lawatan ke Chew Jetty (Jeti Chew), George Town Pulau Pinang: waktu operasi setiap hari 09:00–21:00, masuk percuma, sejarah jeti puak, makanan tempatan, pemandangan matahari terbenam dan tip pengangkutan."
+    "title": "Chew Jetty Pulau Pinang: Waktu, Arah & Panduan Lawatan",
+    "description": "Lawati Chew Jetty di Pengkalan Weld, George Town: waktu yang disenaraikan, kemasukan umum percuma, arah perjalanan, warisan jeti dan adab pelawat."
   },
   "header": {
     "ariaNav": "Navigasi utama",
@@ -9,15 +9,42 @@
     "openMenu": "Buka menu",
     "openMap": "Buka Peta",
     "sections": [
-      { "id": "info-penting", "label": "Info Penting" },
-      { "id": "sejarah", "label": "Sejarah" },
-      { "id": "budaya", "label": "Budaya" },
-      { "id": "makanan", "label": "Makanan" },
-      { "id": "pengangkutan", "label": "Pengangkutan" },
-      { "id": "berhampiran", "label": "Berhampiran" },
-      { "id": "galeri", "label": "Galeri" },
-      { "id": "senarai", "label": "Senarai" },
-      { "id": "faq", "label": "FAQ" }
+      {
+        "id": "info-penting",
+        "label": "Info Penting"
+      },
+      {
+        "id": "sejarah",
+        "label": "Sejarah"
+      },
+      {
+        "id": "budaya",
+        "label": "Budaya"
+      },
+      {
+        "id": "makanan",
+        "label": "Makanan"
+      },
+      {
+        "id": "pengangkutan",
+        "label": "Pengangkutan"
+      },
+      {
+        "id": "berhampiran",
+        "label": "Berhampiran"
+      },
+      {
+        "id": "galeri",
+        "label": "Galeri"
+      },
+      {
+        "id": "senarai",
+        "label": "Senarai"
+      },
+      {
+        "id": "faq",
+        "label": "FAQ"
+      }
     ]
   },
   "hero": {
@@ -29,18 +56,36 @@
     "imgAlt": "Pemandangan Chew Jetty, jambatan kayu yang memanjang ke laut"
   },
   "keyInfo": [
-    { "label": "Alamat", "value": "Pengkalan Weld, 10300 George Town, Pulau Pinang, Malaysia" },
-    { "label": "Waktu Operasi", "value": "Setiap hari 09:00 – 21:00" },
-    { "label": "Yuran Masuk", "value": "Percuma" },
-    { "label": "Tempoh Cadangan", "value": "1 – 2 jam" },
-    { "label": "Penilaian Google Maps", "value": "4.1 / 5" },
-    { "label": "Koordinat", "value": "5.4127° N, 100.3398° E" }
+    {
+      "label": "Alamat",
+      "value": "59A, Chew Jetty, Weld Quay, George Town, Penang, Malaysia"
+    },
+    {
+      "label": "Waktu Operasi",
+      "value": "09:00–21:00; Khamis hingga 21:30 (Google Maps)"
+    },
+    {
+      "label": "Yuran Masuk",
+      "value": "Percuma"
+    },
+    {
+      "label": "Tempoh Cadangan",
+      "value": "1 – 2 jam"
+    },
+    {
+      "label": "Penilaian Google Maps",
+      "value": "4.1 / 5 · 10,733 ulasan Google Maps · disemak 19 Okt 2026"
+    },
+    {
+      "label": "Koordinat",
+      "value": "5.4127° N, 100.3398° E"
+    }
   ],
   "keyInfoTitle": "Waktu Operasi, Yuran Masuk & Info Penting Chew Jetty",
   "intro": {
     "title": "Kampung Atas Air Warisan Cina",
-    "p1": "Chew Jetty dibina pada pertengahan abad ke-19 oleh nenek moyang keluarga Chew yang berhijrah dari Kampung Xinglingshe, Daerah TongAn, Quanzhou, Fujian, China. Ia merupakan salah satu daripada enam jeti puak di George Town yang masih kekal hingga kini.",
-    "p2": "Jeti ini terdiri daripada dua bahagian dengan jumlah panjang lebih 300 meter dan menempatkan kira-kira 75 unit rumah. Setiap rumah dipasang pada tiang-tiang kayu di atas air, membentuk sebuah kampung atas air yang unik dan menjadi sebahagian daripada Tapak Warisan Dunia UNESCO George Town.",
+    "p1": "Chew Jetty ialah kawasan kediaman di pesisir Pengkalan Weld, George Town, Pulau Pinang. Terokai laluan kayu awam sambil menghormati rumah atas air dan penduduk.",
+    "p2": "Direktori rasmi pelancongan Pulau Pinang menyenaraikan Chew Jetty di 59A, Chew Jetty, Weld Quay. Ia salah satu jeti puak di kawasan pesisir bersejarah George Town.",
     "bullets": [
       "Saksi sejarah hidup imigran Cina Hokkien",
       "Rumah palafit, tokong, dan gerai cenderamata",
@@ -73,29 +118,24 @@
         "text": "George Town, bersama-sama dengan Melaka, diiktiraf sebagai Tapak Warisan Dunia UNESCO (\"Historic Cities of the Straits of Malacca\"). Jeti-jeti puak termasuk Chew Jetty diiktiraf sebagai warisan hidup yang dilindungi di bawah zon teras tapak warisan."
       },
       {
-        "year": "5 September 2026",
-        "title": "Kebakaran berhampiran — Chew Jetty selamat",
-        "text": "Kebakaran awal pagi memusnahkan kira-kira 10 bengkel kayu berhampiran laut, kurang 50 meter dari pintu masuk jeti. Pasukan bomba berjaya menyelamatkan Chew Jetty itu sendiri yang tidak terjejas dan kekal dibuka kepada pelawat; kerajaan negeri Pulau Pinang berikrar membantu pemilik kedai yang terkesan."
-      },
-      {
         "year": "Hari ini",
         "title": "Komuniti hidup di tengah-tengah pelancongan",
-        "text": "Kira-kira 75 unit rumah masih didiami. Penduduk meneruskan rutin harian — mencuci, menjemur pakaian, membaiki bot — sambil berkongsi ruang jeti dengan pelancong dari seluruh dunia."
+        "text": "Chew Jetty ialah kawasan kediaman di pesisir Pengkalan Weld, George Town, Pulau Pinang. Terokai laluan kayu awam sambil menghormati rumah atas air dan penduduk."
       }
     ]
   },
   "fireUpdate": {
-    "navLabel": "Info Kebakaran",
-    "title": "Kebakaran Chew Jetty: Apa Yang Berlaku & Masih Dibuka?",
-    "intro": "Ramai pelawat bimbang Chew Jetty ditutup selepas kebakaran berhampiran. Ini situasi sebenar peristiwa 5 September 2026 dan status semasa untuk pelawat.",
-    "statusLabel": "Dibuka seperti biasa",
+    "title": "Waktu lawatan & perkara untuk disemak",
+    "navLabel": "Waktu & akses",
+    "statusLabel": "Disemak 19 Oktober 2026",
+    "intro": "Google Maps menyenaraikan Chew Jetty 09:00–21:00 pada Isnin, Selasa, Rabu, Jumaat, Sabtu dan Ahad; Khamis 09:00–21:30.",
     "points": [
-      "Kebakaran berlaku pada awal pagi di kira-kira 10 bengkel kayu yang padat di tepi laut, kurang 50 meter dari pintu masuk jeti.",
-      "Anggota bomba berjaya menghalang api daripada merebak; laluan papan, rumah palafit dan tokong di Chew Jetty tidak rosak.",
-      "Chew Jetty kekal dibuka setiap hari 09:00–21:00, dengan kedai dan gerai beroperasi seperti biasa.",
-      "Kawasan terbabit ialah deretan bengkel yang berasingan — ikut halangan di tapak dan arahan penduduk."
+      "Direktori pelancongan Pulau Pinang bagi kawasan Clan Jetties yang lebih luas menyenaraikan 11:00–21:00 setiap hari. Skop ini merangkumi kumpulan jeti, bukan penyenaraian khusus Chew Jetty.",
+      "Gunakan penyenaraian khusus Chew Jetty untuk merancang dan patuhi papan tanda, arahan penduduk serta penutupan setempat. Kedai individu mungkin mempunyai waktu berbeza.",
+      "Google Maps menyenaraikan kemasukan umum percuma. Pembelian, lawatan berpandu dan perkhidmatan lain mungkin berbayar.",
+      "Jangan anggap akses pelawat 24 jam. Chew Jetty kawasan kediaman; rumah persendirian dan kawasan larangan bukan laluan pelawat."
     ],
-    "note": "Sumber: laporan berita kebakaran 5 September 2026. Ini panduan pelancongan bebas — semak pengumuman rasmi sebelum melawat jika keadaan berubah."
+    "note": "Sumber disemak 19 Oktober 2026. Panduan bebas ini membezakan penyenaraian khusus Chew Jetty daripada kawasan Clan Jetties. Semak waktu dan akses semula sebelum bertolak."
   },
   "folkFaith": {
     "title": "Kepercayaan & Pesta Tradisi",
@@ -107,7 +147,7 @@
       },
       {
         "title": "Tokong di hujung jeti",
-        "text": "Di hujung jeti terdapat tokong kecil yang didedikasikan kepada dewa laut seperti Mazu (Mak Co), dewi pelindung nelayan. Penduduk dan nelayan berdoa di sini sebelum memulakan perjalanan ke laut — sebuah amalan yang berusia lebih satu abad."
+        "text": "Tempat ibadat perlu dihormati. Ikut arahan setempat, kurangkan bunyi dan minta izin sebelum mengambil gambar."
       },
       {
         "title": "Pesta Hantu Lapar",
@@ -121,7 +161,7 @@
   },
   "architecture": {
     "title": "Seni Bina Rumah Palafit",
-    "intro": "Bentuk seni bina Chew Jetty lahir daripada keperluan hidup di muara laut — sederhana tetapi penuh kebijaksanaan adaptasi.",
+    "intro": "Rumah bertiang dan laluan kayu bersama membentuk kawasan kediaman pesisir yang unik. Kekal di laluan awam dan jangan halang pintu masuk.",
     "features": [
       {
         "title": "Tiang kayu ke dasar laut",
@@ -129,7 +169,7 @@
       },
       {
         "title": "Laluan kayu berjalin",
-        "text": "Jambatan utama terdiri daripada papan kayu berjalin yang memanjang lebih 300 meter. Sebahagian laluan telah diperluas dan diberi bumbung bagi keselesaan penduduk dan peniaga."
+        "text": "Laluan kayu bersama menghubungkan rumah pesisir. Patuhi sekatan akses dan jangan halang bahagian sempit."
       },
       {
         "title": "Ruang komuniti yang lengkap",
@@ -147,7 +187,7 @@
     "sites": [
       {
         "title": "Ice Kacang Puppy Love (2010)",
-        "text": "Filem tempatan ikonik arahan Aniu yang dirakam sebahagian besarnya di Chew Jetty. Rumah penyanyi Eric Moo di 59A Chew Jetty menjadi antara lokasi penggambaran. Kejayaan filem ini memperkenalkan jeti kepada khalayak yang lebih luas."
+        "text": "Lokasi penggambaran juga sebahagian kawasan kediaman. Nikmati pemandangan laluan awam tanpa masuk ke rumah atau ruang dalaman persendirian."
       },
       {
         "title": "Penggambaran filem, drama & iklan",
@@ -171,7 +211,7 @@
       },
       {
         "time": "Petang (17:00 – 19:30)",
-        "description": "Cahaya lembut, kedai hidangan ringan buka, dan anda boleh melihat matahari terbenam di atas air.",
+        "description": "Lawatan lewat petang menawarkan cahaya yang berubah di pesisir. Pemandangan matahari terbenam bergantung pada cuaca, sudut pandangan dan akses yang dibenarkan.",
         "rating": "Sangat disyorkan"
       }
     ],
@@ -179,29 +219,45 @@
   },
   "ticketInfo": {
     "title": "Tiket & Yuran",
-    "intro": "Chew Jetty ialah kawasan kejiranan hidup yang terbuka untuk umum. Anda boleh berjalan di sepanjang jambatan kayu dan menikmati suasana tepi laut tanpa sebarang yuran masuk.",
+    "intro": "Google Maps menyenaraikan kemasukan umum percuma; pembelian, lawatan berpandu dan perkhidmatan lain tidak termasuk.",
     "items": [
-      { "label": "Kemasukan ke jeti", "price": "Percuma", "note": "Akses 24 jam ke laluan utama; kedai buka 09:00–21:00" },
-      { "label": "Lawatan kendiri", "price": "Percuma", "note": "Tiada pakej lawatan berpandu rasmi di jeti" },
-      { "label": "Fotografi", "price": "Percuma", "note": "Ambil gambar pemandangan, perahu dan rumah palafit" },
-      { "label": "Tandas awam", "price": "Percuma / sedikit sumbangan", "note": "Bergantung kepada kemudahan tempatan" }
+      {
+        "label": "Lawatan umum",
+        "price": "Kemasukan umum percuma",
+        "note": "Patuhi waktu akses dan sekatan setempat."
+      },
+      {
+        "label": "Makanan & cenderamata",
+        "price": "Harga berbeza",
+        "note": "Bayar peniaga bagi pembelian anda."
+      },
+      {
+        "label": "Lawatan & perkhidmatan",
+        "price": "Semak penyedia",
+        "note": "Tanya penyedia tentang caj dan perkara yang termasuk."
+      },
+      {
+        "label": "Kemudahan",
+        "price": "Semak di lokasi",
+        "note": "Jangan anggap tandas, laluan tanpa anak tangga atau parking tersedia."
+      }
     ]
   },
   "parkingInfo": {
     "title": "Maklumat Tempat Letak Kereta",
-    "intro": "George Town sentiasa sesak. Parkir berhampiran Chew Jetty adalah terhad, jadi rancang awal atau gunakan pengangkutan awam.",
+    "intro": "Parking sekitar Pengkalan Weld mungkin terhad. Semak papan tanda, cara bayaran dan sekatan semasa.",
     "options": [
       {
         "name": "Letak kereta tepi jalan",
-        "detail": "Boleh didapati di sepanjang Jalan Pantai / Weld Quay. Tempat adalah terhad dan biasanya memerlukan kupon parking (RM0.60–RM2.00 sejam pada hari bekerja)."
+        "detail": "Gunakan petak sah sahaja; semak kadar dan kaedah bayaran yang dipaparkan."
       },
       {
         "name": "Tempat letak kereta berbayar berhampiran",
-        "detail": "Terdapat beberapa lot persendirian dalam lingkungan 5–10 minit berjalan kaki. Yuran biasanya RM3–RM5 untuk tempoh singkat."
+        "detail": "Semak kadar, waktu buka dan laluan berjalan kaki sebelum menggunakan parking persendirian."
       },
       {
         "name": "Garis bas CAT Percuma",
-        "detail": "Bas CAT (Central Area Transit) Rapid Penang yang percuma mempunyai perhentian berhampiran. Ini adalah pilihan terbaik untuk mengelakkan tekanan memandu."
+        "detail": "Semak laluan serta hentian semasa Rapid Penang bagi kawasan Pengkalan Weld."
       }
     ],
     "tips": [
@@ -215,33 +271,51 @@
     "spots": [
       {
         "name": "Penang Asam Laksa",
-        "description": "Laksa masam berperisa ikan yang merupakan hidangan ikonik Pulau Pinang. Boleh didapati di gerai berhampiran jeti dan Jalan Balik Pulau.",
-        "tags": ["Makanan ikonik", "Berhampiran"]
+        "description": "Asam laksa berkuah ikan yang masam ialah antara hidangan untuk dicari di George Town. Semak menu dan waktu semasa peniaga.",
+        "tags": [
+          "Makanan ikonik",
+          "Berhampiran"
+        ]
       },
       {
         "name": "Char Koay Teow",
         "description": "Mee kicap goreng dengan taugeh, udang, kerang dan telur, dimasak dengan api senggang untuk rasa \"wok hei\".",
-        "tags": ["Wajib cuba", "Jalanan"]
+        "tags": [
+          "Wajib cuba",
+          "Jalanan"
+        ]
       },
       {
         "name": "Cendol Pulau Pinang",
         "description": "Pencuci mulut sejuk dengan cendol hijau, santan, gula Melaka dan ais kacang — penawar cuaca panas.",
-        "tags": ["Pencuci mulut", "Segar"]
+        "tags": [
+          "Pencuci mulut",
+          "Segar"
+        ]
       },
       {
         "name": "Hainanese Chicken Rice",
         "description": "Nasi ayam Hainan yang ringkas tetapi lazat, mudah didapati di kedai kopi sekitar George Town.",
-        "tags": ["Kedai kopi", "Santai"]
+        "tags": [
+          "Kedai kopi",
+          "Santai"
+        ]
       },
       {
         "name": "Nyonya Kuih",
         "description": "Pelbagai kuih tradisional berwarna-warni yang mencerminkan warisan Baba Nyonya Pulau Pinang.",
-        "tags": ["Tradisional", "Snek"]
+        "tags": [
+          "Tradisional",
+          "Snek"
+        ]
       },
       {
         "name": "Wantan Mee",
         "description": "Mee kuning dengan sayur-sayuran, wantan, dan daging babi panggang atau ayam.",
-        "tags": ["Mee", "Tempatan"]
+        "tags": [
+          "Mee",
+          "Tempatan"
+        ]
       }
     ]
   },
@@ -252,28 +326,28 @@
       {
         "mode": "Dari Lapangan Terbang Antarabangsa Pulau Pinang (PEN)",
         "icon": "plane",
-        "summary": "Jarak kira-kira 20 km; perjalanan 30–45 minit bergantung pada trafik.",
+        "summary": "Masa perjalanan dan tambang bergantung pada trafik serta perkhidmatan pilihan.",
         "options": [
-          "Grab / Teksi: Paling mudah, kos kira-kira RM25–RM40.",
-          "Bas Rapid Penang 401E: Dari lapangan terbang ke George Town; turun berhampiran Pengkalan Weld, kemudian berjalan kaki."
+          "Tempah teksi atau e-hailing ke Chew Jetty, Weld Quay; sahkan tambang sebelum bertolak.",
+          "Untuk bas, semak perkhidmatan lapangan terbang dan sambungan semasa dengan Rapid Penang."
         ]
       },
       {
         "mode": "Bas Rapid Penang",
         "icon": "bus",
-        "summary": "Pelbagai laluan menghubungkan George Town. Berhenti berhampiran Weld Quay dan berjalan kaki 5 minit.",
+        "summary": "Semak laluan semasa dan turun di hentian Pengkalan Weld yang sesuai.",
         "options": [
-          "CAT Percuma: Bas perkhidmatan percuma di pusat bandar dengan perhentian berhampiran jeti.",
-          "Laluan 10, 11, 12, 101, 102, 103, 104, 201, 202, 203, 204, 301, 302, 303, 401, 401E, 502."
+          "Gunakan perancang perjalanan Rapid Penang untuk maklumat laluan dan perkhidmatan terkini.",
+          "Sediakan masa berjalan kaki dari hentian; gunakan lintasan dan ikut papan tanda."
         ]
       },
       {
         "mode": "Feri Pulau Pinang",
         "icon": "ferry",
-        "summary": "Dari Butterworth ke George Town melalui Feri Pulau Pinang. Sesuai untuk pelancong dari tanah besar.",
+        "summary": "Semak jadual semasa feri penumpang Butterworth–George Town sebelum bertolak.",
         "options": [
-          "Berjalan kaki dari Jeti Swettenham ke Pengkalan Weld (10–15 minit).",
-          "Sambung dengan bas CAT Percuma untuk perjalanan percuma ke jeti."
+          "Di pulau, semak laluan berjalan kaki dari terminal feri George Town ke Pengkalan Weld.",
+          "Gunakan maklumat jadual dan tambang terkini pengendali."
         ]
       },
       {
@@ -332,7 +406,7 @@
   },
   "etiquette": {
     "title": "Etika Pelawat",
-    "intro": "Chew Jetty ialah rumah kepada kira-kira 75 keluarga. Ia bukan taman tema — penduduk benar-benar tinggal di sini. Hormati ruang mereka supaya hubungan harmoni antara penduduk dan pelancong dapat dikekalkan.",
+    "intro": "Chew Jetty ialah kawasan kediaman di pesisir Pengkalan Weld, George Town, Pulau Pinang. Terokai laluan kayu awam sambil menghormati rumah atas air dan penduduk.",
     "items": [
       "Layanlah jeti sebagai kejiranan kediaman; kekalkan suasana tenang, terutamanya awal pagi dan lewat petang.",
       "Jangan mengambil gambar penduduk secara peribadi, bahagian dalam rumah, atau barang peribadi tanpa kebenaran.",
@@ -346,14 +420,38 @@
     "title": "Senarai Perjalanan Saya",
     "intro": "Tandakan aktiviti yang ingin anda lakukan. Data disimpan di pelayar anda sahaja dan tidak dihantar ke mana-mana pihak.",
     "items": [
-      { "id": "walk-jetty", "title": "Berjalan di sepanjang jambatan kayu" },
-      { "id": "visit-shrine", "title": "Lihat tokong di hujung jeti" },
-      { "id": "try-laksa", "title": "Rasa Asam Laksa Pulau Pinang" },
-      { "id": "char-koay-teow", "title": "Makan Char Koay Teow" },
-      { "id": "sunset-photo", "title": "Ambil gambar matahari terbenam" },
-      { "id": "clan-jetties", "title": "Lawat Tan Jetty & Lee Jetty bersebelahan" },
-      { "id": "street-art", "title": "Jelajahi Street Art Lebuh Armenian" },
-      { "id": "khoo-kongsi", "title": "Lihat Khoo Kongsi" }
+      {
+        "id": "walk-jetty",
+        "title": "Berjalan di sepanjang jambatan kayu"
+      },
+      {
+        "id": "visit-shrine",
+        "title": "Lihat tokong di hujung jeti"
+      },
+      {
+        "id": "try-laksa",
+        "title": "Rasa Asam Laksa Pulau Pinang"
+      },
+      {
+        "id": "char-koay-teow",
+        "title": "Makan Char Koay Teow"
+      },
+      {
+        "id": "sunset-photo",
+        "title": "Ambil gambar matahari terbenam"
+      },
+      {
+        "id": "clan-jetties",
+        "title": "Lawat Tan Jetty & Lee Jetty bersebelahan"
+      },
+      {
+        "id": "street-art",
+        "title": "Jelajahi Street Art Lebuh Armenian"
+      },
+      {
+        "id": "khoo-kongsi",
+        "title": "Lihat Khoo Kongsi"
+      }
     ],
     "countLabel": "dipilih",
     "reset": "Tetapkan semula",
@@ -371,61 +469,61 @@
     "items": [
       {
         "question": "Berapa waktu operasi Chew Jetty?",
-        "answer": "Kedai, gerai dan kafe di Chew Jetty lazimnya beroperasi setiap hari dari 09:00 hingga 21:00, manakala laluan papan kayu boleh dilalui pada bila-bila masa. Untuk cahaya lebih lembut dan kurang sesak, datang antara 09:00–11:00 atau selepas 17:00."
+        "answer": "Google Maps menyenaraikan 09:00–21:00 kecuali Khamis, 09:00–21:30 (disemak 19 Oktober 2026). Direktori pelancongan kawasan Clan Jetties menyenaraikan 11:00–21:00 setiap hari. Skop berbeza; semak penyenaraian khusus serta papan tanda di lokasi."
       },
       {
         "question": "Adakah Chew Jetty dibuka kepada orang ramai?",
-        "answer": "Ya, Chew Jetty ialah komuniti kediaman hidup yang dibuka kepada pelancong. Laluan utama boleh dilalui pada bila masa, tetapi kedai dan gerai biasanya beroperasi dari 09:00 hingga 21:00."
+        "answer": "Pelawat boleh menggunakan laluan awam tertakluk pada waktu dan sekatan setempat. Ini komuniti kediaman; jangan masuk rumah persendirian atau anggap akses sepanjang malam."
       },
       {
         "question": "Berapa kos tiket masuk ke Chew Jetty?",
-        "answer": "Tiada yuran masuk. Chew Jetty percuma untuk dilawati. Anda hanya perlu membayar jika membeli makanan, minuman, atau cenderamata di kedai tempatan."
+        "answer": "Google Maps menyenaraikan kemasukan umum percuma. Makanan, cenderamata, pengalaman berpandu dan perkhidmatan lain mungkin berbayar."
       },
       {
         "question": "Berapa lama masa yang disyorkan untuk melawat Chew Jetty?",
-        "answer": "Kebanyakan pelancong menghabiskan 1 hingga 2 jam. Masa tambahan diperlukan jika anda mahu berehat di kafe tepi air atau mengambil banyak gambar."
+        "answer": "Rancang lawatan singkat yang fleksibel, dengan masa tambahan untuk foto atau minuman. Cadangan 1–2 jam ialah anggaran perancangan."
       },
       {
         "question": "Adakah tempat letak kereta berhampiran Chew Jetty?",
-        "answer": "Terdapat letak kereta tepi jalan dan beberapa lot persendirian berhampiran. Walau bagaimanapun, tempat adalah terhad; bas CAT Percuma atau Grab adalah pilihan yang lebih mudah."
+        "answer": "Semak petak sah atau parking persendirian sekitar Pengkalan Weld. Kadar, ketersediaan dan sekatan berubah; sahkan arahan bayaran di lokasi."
       },
       {
         "question": "Bagaimana untuk ke Chew Jetty dari lapangan terbang Pulau Pinang?",
-        "answer": "Pilihan termasuk Grab/teksi (30–45 minit), atau bas Rapid Penang 401E ke George Town diikuti dengan berjalan kaki singkat."
+        "answer": "Gunakan teksi atau e-hailing ke Chew Jetty, Weld Quay, atau semak laluan dan sambungan lapangan terbang semasa Rapid Penang. Masa dan tambang berubah."
       },
       {
-        "question": "Adakah Chew Jetty masih dibuka selepas kebakaran September 2026?",
-        "answer": "Ya. Kebakaran pada 5 September 2026 berlaku di bengkel kayu kurang 50 meter dari pintu masuk jeti. Chew Jetty itu sendiri tidak terjejas dan telah disahkan selamat serta dibuka seperti biasa — jambatan kayu, tokong dan kedai-kedai terus menyambut pelawat."
+        "question": "Perlukah saya menghormati kawasan kediaman?",
+        "answer": "Ya. Kekal di laluan awam, kurangkan bunyi dan minta izin sebelum mengambil foto orang atau rumah. Patuhi penghadang dan arahan penduduk."
       },
       {
         "question": "Bolehkah saya melihat matahari terbenam di Chew Jetty?",
-        "answer": "Ya, bahagian hujung jeti menawarkan pemandangan air terbuka dan adalah lokasi yang popular untuk menikmati matahari terbenam."
+        "answer": "Lawatan lewat petang menawarkan cahaya yang berubah di pesisir. Pemandangan matahari terbenam bergantung pada cuaca, sudut pandangan dan akses yang dibenarkan."
       }
     ]
   },
   "sources": {
     "title": "Rujukan & Sumber",
-    "intro": "Maklumat dalam laman ini disusun daripada sumber yang boleh disemak berikut. Laman ini ialah panduan bebas dan bukan laman rasmi Chew Jetty.",
+    "intro": "Sumber disemak 19 Oktober 2026. Panduan bebas ini membezakan penyenaraian khusus Chew Jetty daripada kawasan Clan Jetties. Semak waktu dan akses semula sebelum bertolak.",
     "items": [
+      {
+        "label": "Google Maps — Chew Jetty",
+        "url": "https://maps.app.goo.gl/fa5EV5aNcFuW1jhL8",
+        "note": "09:00–21:00; Khamis hingga 21:30 (Google Maps)"
+      },
+      {
+        "label": "Penang Global Tourism — Chew Jetty",
+        "url": "https://www.mypenang.gov.my/view_directory.php?id=UXpDS1dXTStObzMrODdtcHBYQkJLZz09",
+        "note": "59A, Chew Jetty, Weld Quay · +60 11-6246 2884"
+      },
+      {
+        "label": "Penang Global Tourism — Clan Jetties",
+        "url": "https://www.mypenang.gov.my/view_directory.php?id=ZW5mTlJKcWR2RXZ5eDkyS29yOVRWdz09",
+        "note": "Kawasan Clan Jetties: setiap hari 11:00–21:00; skop berbeza daripada penyenaraian khusus."
+      },
       {
         "label": "UNESCO World Heritage Centre",
         "url": "https://whc.unesco.org/en/list/1223/",
         "note": "Melaka and George Town: Historic Cities of the Straits of Malacca"
-      },
-      {
-        "label": "George Town World Heritage Incorporated (GTWHI)",
-        "url": "https://gtwhi.com.my/",
-        "note": "Penerbitan rasmi mengenai sejarah dan pemuliharaan jeti-jeti puak George Town"
-      },
-      {
-        "label": "Google Maps",
-        "url": "https://maps.app.goo.gl/fa5EV5aNcFuW1jhL8",
-        "note": "Maklumat lokasi, waktu operasi dan ulasan pengunjung"
-      },
-      {
-        "label": "The Star",
-        "url": "https://www.thestar.com.my/news/nation/2026/09/06/firemen-race-to-save-chew-jetty-from-blaze",
-        "note": "Laporan kebakaran 5 September 2026 di bengkel kayu berhampiran — Chew Jetty sendiri tidak terjejas"
       }
     ]
   },
@@ -441,9 +539,18 @@
           "heading": "Maklumat yang Kami Kumpul",
           "intro": "Kami hanya mengumpul data minimum yang diperlukan untuk menyediakan perkhidmatan. Data ini mungkin termasuk:",
           "items": [
-            { "title": "Data pelayaran", "text": "Alamat IP, jenis pelayar, halaman yang dilawati" },
-            { "title": "Kuki dan teknologi serupa", "text": "Digunakan untuk meningkatkan fungsi laman web dan mengukur trafik serta penggunaan (lihat halaman Tetapan Kuki)." },
-            { "title": "Maklumat yang anda berikan secara sukarela", "text": "Sebarang maklumat yang anda berikan secara sukarela melalui borang hubungan atau e-mel." }
+            {
+              "title": "Data pelayaran",
+              "text": "Alamat IP, jenis pelayar, halaman yang dilawati"
+            },
+            {
+              "title": "Kuki dan teknologi serupa",
+              "text": "Digunakan untuk meningkatkan fungsi laman web dan mengukur trafik serta penggunaan (lihat halaman Tetapan Kuki)."
+            },
+            {
+              "title": "Maklumat yang anda berikan secara sukarela",
+              "text": "Sebarang maklumat yang anda berikan secara sukarela melalui borang hubungan atau e-mel."
+            }
           ]
         },
         {
@@ -460,9 +567,18 @@
           "heading": "Perkhidmatan Pihak Ketiga",
           "intro": "Laman web kami mungkin menggunakan perkhidmatan pihak ketiga, seperti Google Maps (untuk peta terbenam dan data lokasi), Google Analytics (untuk analisis trafik) dan Unsplash (untuk imej). Perkhidmatan ini masing-masing mempunyai dasar privasi mereka sendiri.",
           "items": [
-            { "title": "Google Maps", "text": "Untuk peta terbenam dan data lokasi." },
-            { "title": "Google Analytics", "text": "Untuk analisis trafik." },
-            { "title": "Unsplash", "text": "Untuk imej laman web." }
+            {
+              "title": "Google Maps",
+              "text": "Untuk peta terbenam dan data lokasi."
+            },
+            {
+              "title": "Google Analytics",
+              "text": "Untuk analisis trafik."
+            },
+            {
+              "title": "Unsplash",
+              "text": "Untuk imej laman web."
+            }
           ]
         },
         {
@@ -483,10 +599,22 @@
       "metaDescription": "Terma perkhidmatan laman panduan pelancong Chew Jetty — penggunaan kandungan, ketepatan maklumat, harta intelek dan had liabiliti.",
       "intro": "Dengan mengakses dan menggunakan laman web ini, anda bersetuju untuk terikat dengan terma perkhidmatan ini.",
       "sections": [
-        { "heading": "Penggunaan Kandungan", "text": "Semua kandungan di laman web ini disediakan untuk rujukan sahaja. Kami ialah laman web maklumat pelancongan pihak ketiga yang bebas dan tiada kaitan dengan mana-mana tarikan pelancong, agensi kerajaan atau pengendali komersial." },
-        { "heading": "Ketepatan Maklumat", "text": "Kami berusaha untuk menyediakan maklumat yang tepat dan terkini, tetapi tidak dapat menjamin kesempurnaan atau ketepatannya. Jadual, syarat dan perkhidmatan mungkin berubah tanpa notis terlebih dahulu. Sila sahkan maklumat penting melalui saluran rasmi sebelum melakukan perjalanan." },
-        { "heading": "Harta Intelek", "text": "Reka bentuk dan kandungan asal laman web ini dilindungi hak cipta. Imej daripada Unsplash digunakan dengan lesennya. Penggunaan data Google Maps mematuhi terma perkhidmatan Google." },
-        { "heading": "Had Liabiliti", "text": "Laman web ini disediakan \"seadanya\" tanpa sebarang jaminan. Kami tidak bertanggungjawab atas sebarang kerugian yang disebabkan oleh penggunaan maklumat di laman web ini, termasuk tetapi tidak terhad kepada keputusan perjalanan yang dibuat berdasarkan kandungan laman web ini." }
+        {
+          "heading": "Penggunaan Kandungan",
+          "text": "Semua kandungan di laman web ini disediakan untuk rujukan sahaja. Kami ialah laman web maklumat pelancongan pihak ketiga yang bebas dan tiada kaitan dengan mana-mana tarikan pelancong, agensi kerajaan atau pengendali komersial."
+        },
+        {
+          "heading": "Ketepatan Maklumat",
+          "text": "Kami berusaha untuk menyediakan maklumat yang tepat dan terkini, tetapi tidak dapat menjamin kesempurnaan atau ketepatannya. Jadual, syarat dan perkhidmatan mungkin berubah tanpa notis terlebih dahulu. Sila sahkan maklumat penting melalui saluran rasmi sebelum melakukan perjalanan."
+        },
+        {
+          "heading": "Harta Intelek",
+          "text": "Reka bentuk dan kandungan asal laman web ini dilindungi hak cipta. Imej daripada Unsplash digunakan dengan lesennya. Penggunaan data Google Maps mematuhi terma perkhidmatan Google."
+        },
+        {
+          "heading": "Had Liabiliti",
+          "text": "Laman web ini disediakan \"seadanya\" tanpa sebarang jaminan. Kami tidak bertanggungjawab atas sebarang kerugian yang disebabkan oleh penggunaan maklumat di laman web ini, termasuk tetapi tidak terhad kepada keputusan perjalanan yang dibuat berdasarkan kandungan laman web ini."
+        }
       ]
     },
     "cookie": {
@@ -503,10 +631,36 @@
       "rejectBtn": "Tolak Semua",
       "savedMsg": "Keutamaan anda telah disimpan.",
       "categories": [
-        { "id": "necessary", "name": "Kuki Perlu", "desc": "Kuki ini penting untuk fungsi laman web yang betul dan tidak boleh dilumpuhkan.", "alwaysActive": true },
-        { "id": "analytics", "name": "Kuki Analitis", "desc": "Kuki ini membantu kami memahami cara pelawat berinteraksi dengan laman web kami dengan mengumpul data penggunaan tanpa nama.", "checked": true, "subName": "Google Analytics", "subDesc": "Ia mengumpul maklumat tanpa nama tentang cara pelawat menggunakan laman web kami." },
-        { "id": "preferences", "name": "Kuki Keutamaan", "desc": "Kuki ini mengingati tetapan anda, seperti bahasa dan pilihan tema.", "checked": true, "subName": "Keutamaan Pengguna", "subDesc": "Menyimpan pilihan bahasa dan tetapan laman web anda." },
-        { "id": "marketing", "name": "Kuki Pemasaran", "desc": "Kuki ini digunakan untuk memaparkan iklan berkaitan dan mengukur keberkesanan kempen iklan.", "checked": false, "subName": "Iklan Diperibadikan", "subDesc": "Ia boleh memaparkan iklan yang berkaitan mengikut minat anda." }
+        {
+          "id": "necessary",
+          "name": "Kuki Perlu",
+          "desc": "Kuki ini penting untuk fungsi laman web yang betul dan tidak boleh dilumpuhkan.",
+          "alwaysActive": true
+        },
+        {
+          "id": "analytics",
+          "name": "Kuki Analitis",
+          "desc": "Kuki ini membantu kami memahami cara pelawat berinteraksi dengan laman web kami dengan mengumpul data penggunaan tanpa nama.",
+          "checked": true,
+          "subName": "Google Analytics",
+          "subDesc": "Ia mengumpul maklumat tanpa nama tentang cara pelawat menggunakan laman web kami."
+        },
+        {
+          "id": "preferences",
+          "name": "Kuki Keutamaan",
+          "desc": "Kuki ini mengingati tetapan anda, seperti bahasa dan pilihan tema.",
+          "checked": true,
+          "subName": "Keutamaan Pengguna",
+          "subDesc": "Menyimpan pilihan bahasa dan tetapan laman web anda."
+        },
+        {
+          "id": "marketing",
+          "name": "Kuki Pemasaran",
+          "desc": "Kuki ini digunakan untuk memaparkan iklan berkaitan dan mengukur keberkesanan kempen iklan.",
+          "checked": false,
+          "subName": "Iklan Diperibadikan",
+          "subDesc": "Ia boleh memaparkan iklan yang berkaitan mengikut minat anda."
+        }
       ]
     }
   },

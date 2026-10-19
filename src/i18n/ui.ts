@@ -1,7 +1,7 @@
 export const LANGUAGES = [
   { code: 'ms', label: 'Bahasa Melayu', htmlLang: 'ms', hreflangs: ['ms-MY', 'ms'], dir: 'ltr' },
   { code: 'en', label: 'English', htmlLang: 'en', hreflangs: ['en'], dir: 'ltr' },
-  { code: 'zh', label: '中文', htmlLang: 'zh-CN', hreflangs: ['zh-Hans', 'zh-Hant', 'zh'], dir: 'ltr' },
+  { code: 'zh', label: '中文', htmlLang: 'zh-CN', hreflangs: ['zh-CN', 'zh-Hans', 'zh'], dir: 'ltr' },
 ] as const;
 
 export type Lang = (typeof LANGUAGES)[number]['code'];
@@ -19,7 +19,8 @@ export function getLangFromUrl(url: URL): Lang {
 
 /** URL relatif bagi sesuatu halaman dalam bahasa tertentu (ms = tanpa awalan). */
 export function getLocalizedPath(lang: Lang, path: string): string {
-  const clean = path.startsWith('/') ? path : `/${path}`;
+  const raw = path.startsWith('/') ? path : `/${path}`;
+  const clean = raw.endsWith('/') || raw.split('/').pop()?.includes('.') ? raw : `${raw}/`;
   if (lang === defaultLang) return clean;
   if (clean === '/') return `/${lang}/`;
   return `/${lang}${clean}`;
