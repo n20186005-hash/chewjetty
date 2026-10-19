@@ -89,38 +89,28 @@
     "bullets": [
       "A living witness to Hokkien Chinese immigrant history",
       "Stilt houses, a shrine and souvenir stalls",
-      "Filming location of a popular movie"
+      "A residential waterfront to explore respectfully"
     ],
     "imgAlt": "Perspective view of the Chew Jetty wooden boardwalk lined with stilt houses"
   },
   "history": {
     "title": "History & Heritage",
-    "intro": "From Hokkien migration in the 19th century to UNESCO recognition, here is the historical journey of Chew Jetty.",
+    "intro": "Chew Jetty belongs to George Town’s historic waterfront. The official tourism directory introduces it as part of the clan jetty visitor area.",
     "timeline": [
       {
-        "year": "Mid-19th century",
-        "title": "Hokkien migration from Fujian",
-        "text": "The ancestors of the Chew family migrated from Xinglingshe Village, TongAn District, Quanzhou, Fujian, China to George Town. They worked as port coolies, fishermen and small traders along Weld Quay."
+        "year": "Waterfront heritage",
+        "title": "George Town’s clan jetties",
+        "text": "Chew Jetty is one of the clan jetties on Weld Quay. The homes and shared walkways form part of the waterfront’s living community."
       },
       {
-        "year": "Late 19th century",
-        "title": "Construction of the clan jetty — \"one surname, one jetty\"",
-        "text": "Clans sharing the same surname built wooden jetties stretching into the sea and set up stilt houses on both sides. This concept is considered among the last of its kind in the world; several clan jetties once existed, with six remaining today including Chew Jetty."
-      },
-      {
-        "year": "20th century",
-        "title": "Generations of life on water",
-        "text": "Dozens of families raised children on the jetty. The water village was complete with a shrine, sundry shops and mooring for fishing boats. Other jetties were dismantled over time to make way for urban development."
-      },
-      {
-        "year": "7 July 2008",
-        "title": "UNESCO World Heritage recognition",
-        "text": "George Town, together with Melaka, was inscribed as a UNESCO World Heritage Site (\"Historic Cities of the Straits of Malacca\"). The clan jetties, including Chew Jetty, are recognised as living heritage protected under the core zone of the heritage site."
+        "year": "2008",
+        "title": "George Town’s World Heritage context",
+        "text": "UNESCO lists Melaka and George Town together as the Historic Cities of the Straits of Malacca. This recognition provides context for exploring George Town’s historic neighbourhoods."
       },
       {
         "year": "Today",
-        "title": "A living community in the midst of tourism",
-        "text": "Chew Jetty is a living waterfront neighbourhood on Weld Quay in George Town, Penang. Explore the public wooden walkways while respecting the stilt homes and residents."
+        "title": "A residential community",
+        "text": "People live and work here. Keep to public paths, leave doorways clear and follow residents’ instructions."
       }
     ]
   },
@@ -139,11 +129,11 @@
   },
   "folkFaith": {
     "title": "Beliefs & Traditional Festivals",
-    "intro": "The life of the jetty residents is rooted in Hokkien folk beliefs. Several festivals and practices are still carried on from generation to generation.",
+    "intro": "Religious observances belong to the community. Public access and visitor arrangements depend on the community’s plans for the year.",
     "items": [
       {
         "title": "Pai Thian Kong — Birthday of the Jade Emperor",
-        "text": "On the eve of the 9th day of the Chinese New Year, the Hokkien community celebrates the birthday of Thian Kong (Jade Emperor) with a grand ceremony. In front of Chew Jetty, a long table is laid with offerings — roasted pigs wrapped in red paper, fruits, gift platters and joss paper. This collective ritual is considered one of the most vibrant celebrations in Penang."
+        "text": "If you hope to observe Pai Thian Kong celebrations, check current community announcements for dates, access and visitor guidance. Do not assume a public programme or a particular ceremony."
       },
       {
         "title": "Shrine at the end of the jetty",
@@ -151,11 +141,11 @@
       },
       {
         "title": "Hungry Ghost Festival",
-        "text": "In the 7th lunar month, residents hold rituals to honour ancestral spirits: burning joss paper, preparing sacrificial offerings, and occasionally staging opera or wayang performances near the jetty."
+        "text": "For Hungry Ghost Festival observances, check the community’s arrangements for the year. Keep worship areas clear and ask before photographing rituals."
       },
       {
         "title": "Chinese New Year & Chap Goh Meh",
-        "text": "During Chinese New Year, the jetty is decorated with lanterns and red banners. On Chap Goh Meh (15th night), grand celebrations with fireworks and processions take place along Weld Quay, attracting thousands of visitors."
+        "text": "Check the year’s community or official event announcements for Chinese New Year and Chap Goh Meh. Fireworks, processions and public programmes are not guaranteed."
       }
     ]
   },
@@ -182,16 +172,16 @@
     ]
   },
   "film": {
-    "title": "Filming Locations",
-    "intro": "The unique atmosphere of the water village makes Chew Jetty a favourite of local and international filmmakers.",
+    "title": "Photography & the Waterfront",
+    "intro": "Enjoy the waterfront from public routes while respecting the people who live here.",
     "sites": [
       {
-        "title": "Ice Kacang Puppy Love (2010)",
-        "text": "Film locations are also part of a lived-in neighbourhood. Enjoy the public streetscape without entering homes or seeking access to private interiors."
+        "title": "Views from public paths",
+        "text": "Photograph the waterfront and streetscape only from permitted public areas. Do not enter homes or seek access to private interiors."
       },
       {
-        "title": "Films, dramas & commercials",
-        "text": "The unique water-village atmosphere makes Chew Jetty a preferred filming location for various films, TV dramas, music videos and commercials by local and international productions throughout the year."
+        "title": "Photographing people & worship",
+        "text": "Ask permission before taking close-up photos of residents or religious activities. Follow signs and any instructions on site."
       }
     ]
   },
@@ -256,7 +246,7 @@
         "detail": "Check the operator’s current rates, opening times and walking route before using a private car park."
       },
       {
-        "name": "Free CAT bus line",
+        "name": "Public transport planning",
         "detail": "Check current Rapid Penang routes and stops for the Weld Quay area before travelling."
       }
     ],
@@ -363,36 +353,36 @@
   },
   "nearby": {
     "title": "Nearby Attractions",
-    "intro": "Combine your visit to Chew Jetty with George Town heritage attractions within walking distance.",
+    "intro": "Plan a wider George Town visit around these places. Check the current walking route, crossings, opening arrangements and weather before setting out.",
     "attractions": [
       {
         "name": "Armenian Street Street Art",
-        "distance": "5 min walk",
+        "distance": "Check the walking route",
         "description": "Iconic murals by Ernest Zacharevic and the atmosphere of George Town's heritage lanes."
       },
       {
         "name": "Khoo Kongsi (Leong San Tong)",
-        "distance": "10 min walk",
+        "distance": "Check the walking route",
         "description": "A Chinese clanhouse adorned with intricate wood carvings and majestic Chinese architecture."
       },
       {
         "name": "Fort Cornwallis",
-        "distance": "12 min walk",
+        "distance": "Check the walking route",
         "description": "An 18th-century fort with landmark cannons and a historic park."
       },
       {
         "name": "Kapitan Keling Mosque",
-        "distance": "12 min walk",
+        "distance": "Check the walking route",
         "description": "A beautiful Mughal-style mosque and one of George Town's historic religious landmarks."
       },
       {
         "name": "Little India",
-        "distance": "10 min walk",
+        "distance": "Check the walking route",
         "description": "Spice shops, jewellery, Indian food, and colourful temples."
       },
       {
         "name": "Other Clan Jetties",
-        "distance": "Adjacent",
+        "distance": "Check the walking route",
         "description": "Explore Tan Jetty, Lee Jetty and Lim Jetty for a different perspective on the water villages."
       }
     ]

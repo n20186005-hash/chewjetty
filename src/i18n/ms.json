@@ -89,38 +89,28 @@
     "bullets": [
       "Saksi sejarah hidup imigran Cina Hokkien",
       "Rumah palafit, tokong, dan gerai cenderamata",
-      "Lokasi penggambaran filem popular"
+      "Kawasan kediaman pesisir untuk diterokai dengan hormat"
     ],
     "imgAlt": "Perspektif jambatan kayu Chew Jetty diapit rumah-rumah palafit"
   },
   "history": {
     "title": "Sejarah & Warisan",
-    "intro": "Dari penghijrahan orang Hokkien pada abad ke-19 hingga pengiktirafan UNESCO, berikut adalah perjalanan sejarah Chew Jetty.",
+    "intro": "Chew Jetty berada di pesisir bersejarah George Town. Direktori pelancongan rasmi memperkenalkannya sebagai sebahagian kawasan lawatan jeti puak.",
     "timeline": [
       {
-        "year": "Pertengahan abad ke-19",
-        "title": "Penghijrahan orang Hokkien dari Fujian",
-        "text": "Nenek moyang keluarga Chew berhijrah dari Kampung Xinglingshe, Daerah TongAn, Quanzhou, Fujian, China ke George Town. Mereka bekerja sebagai kuli pelabuhan, nelayan dan peniaga kecil di sepanjang Pengkalan Weld."
+        "year": "Warisan pesisir",
+        "title": "Jeti puak George Town",
+        "text": "Chew Jetty ialah salah satu jeti puak di Pengkalan Weld. Rumah dan laluan bersama membentuk sebahagian komuniti pesisir yang masih hidup."
       },
       {
-        "year": "Akhir abad ke-19",
-        "title": "Pembinaan jeti puak — \"satu nama keluarga, satu jeti\"",
-        "text": "Kerabat daripada nama keluarga yang sama membina jambatan kayu memanjang ke laut dan mendirikan rumah palafit di kedua-dua belahnya. Konsep sebegini dianggap antara yang terakhir seumpamanya di dunia; dahulunya terdapat beberapa buah jeti puak, kini enam yang kekal termasuk Chew Jetty."
-      },
-      {
-        "year": "Abad ke-20",
-        "title": "Kehidupan turun-temurun di atas air",
-        "text": "Berpuluh-puluh keluarga membesarkan anak di atas jeti. Kampung atas air ini lengkap dengan tokong, kedai runcit dan tempat berlabuh bot nelayan. Sebahagian jeti lain dibongkar dari semasa ke semasa bagi memberi laluan kepada pembangunan bandar."
-      },
-      {
-        "year": "7 Julai 2008",
-        "title": "Pengiktirafan Tapak Warisan Dunia UNESCO",
-        "text": "George Town, bersama-sama dengan Melaka, diiktiraf sebagai Tapak Warisan Dunia UNESCO (\"Historic Cities of the Straits of Malacca\"). Jeti-jeti puak termasuk Chew Jetty diiktiraf sebagai warisan hidup yang dilindungi di bawah zon teras tapak warisan."
+        "year": "2008",
+        "title": "Konteks Warisan Dunia George Town",
+        "text": "UNESCO menyenaraikan Melaka dan George Town bersama sebagai Historic Cities of the Straits of Malacca. Pengiktirafan ini memberikan konteks untuk menerokai kawasan bersejarah George Town."
       },
       {
         "year": "Hari ini",
-        "title": "Komuniti hidup di tengah-tengah pelancongan",
-        "text": "Chew Jetty ialah kawasan kediaman di pesisir Pengkalan Weld, George Town, Pulau Pinang. Terokai laluan kayu awam sambil menghormati rumah atas air dan penduduk."
+        "title": "Komuniti kediaman",
+        "text": "Penduduk tinggal dan bekerja di sini. Kekal di laluan awam, jangan halang pintu masuk dan patuhi arahan penduduk."
       }
     ]
   },
@@ -139,11 +129,11 @@
   },
   "folkFaith": {
     "title": "Kepercayaan & Pesta Tradisi",
-    "intro": "Kehidupan penduduk jeti berakar pada kepercayaan masyarakat Hokkien. Beberapa perayaan dan amalan masih diamalkan secara turun-temurun sehingga kini.",
+    "intro": "Amalan keagamaan ialah urusan komuniti. Akses awam dan aturan pelawat bergantung pada rancangan komuniti bagi tahun berkenaan.",
     "items": [
       {
         "title": "Pai Thian Kong — Hari jadi Maharaja Jade",
-        "text": "Pada malam sebelum hari ke-9 Tahun Baru Cina, masyarakat Hokkien meraikan hari jadi Thian Kong (Maharaja Jade) dengan upacara besar. Di hadapan Chew Jetty, satu meja panjang disusun penuh dengan korban — babi panggang yang disalut kertas merah, buah-buahan, dulang hadiah dan kertas sembahyang. Upacara kolektif ini dianggap antara perayaan paling meriah di Pulau Pinang."
+        "text": "Jika ingin menyaksikan sambutan Pai Thian Kong, semak pengumuman komuniti semasa tentang tarikh, akses dan panduan pelawat. Jangan anggap ada program awam atau upacara tertentu."
       },
       {
         "title": "Tokong di hujung jeti",
@@ -151,11 +141,11 @@
       },
       {
         "title": "Pesta Hantu Lapar",
-        "text": "Pada bulan ke-7 kalendar Cina, penduduk mengadakan upacara menghormati roh nenek moyang: membakar kertas sembahyang, menyediakan hidangan korban, dan kadangkala menganjurkan persembahan opera atau wayang di kawasan jeti."
+        "text": "Bagi Pesta Hantu Lapar, semak aturan komuniti untuk tahun berkenaan. Jangan halang kawasan ibadat dan minta izin sebelum mengambil gambar upacara."
       },
       {
         "title": "Tahun Baru Cina & Chap Goh Meh",
-        "text": "Semasa Tahun Baru Cina, jeti dihiasi lampu dan sepanduk merah. Pada Chap Goh Meh (malam ke-15), perayaan besar dengan pertunjukan bunga api dan perarakan diadakan di sepanjang Weld Quay, menarik ribuan pengunjung."
+        "text": "Semak pengumuman komuniti atau acara rasmi tahun berkenaan bagi Tahun Baru Cina dan Chap Goh Meh. Bunga api, perarakan dan program awam tidak dijamin."
       }
     ]
   },
@@ -182,16 +172,16 @@
     ]
   },
   "film": {
-    "title": "Lokasi Penggambaran",
-    "intro": "Suasana unik kampung atas air menjadikan Chew Jetty pilihan para pembikin filem tempatan dan antarabangsa.",
+    "title": "Fotografi & Pesisir",
+    "intro": "Nikmati pesisir dari laluan awam sambil menghormati penduduk.",
     "sites": [
       {
-        "title": "Ice Kacang Puppy Love (2010)",
-        "text": "Lokasi penggambaran juga sebahagian kawasan kediaman. Nikmati pemandangan laluan awam tanpa masuk ke rumah atau ruang dalaman persendirian."
+        "title": "Pemandangan dari laluan awam",
+        "text": "Ambil gambar pesisir dan suasana jalan hanya dari kawasan awam yang dibenarkan. Jangan masuk rumah atau meminta akses ke ruang persendirian."
       },
       {
-        "title": "Penggambaran filem, drama & iklan",
-        "text": "Suasana unik kampung atas air menjadikan Chew Jetty pilihan penggambaran pelbagai filem, drama televisyen, video muzik dan iklan daripada produksi tempatan dan luar negara sepanjang tahun."
+        "title": "Foto penduduk & ibadat",
+        "text": "Minta izin sebelum mengambil foto dekat penduduk atau kegiatan keagamaan. Patuhi papan tanda serta arahan di lokasi."
       }
     ]
   },
@@ -256,7 +246,7 @@
         "detail": "Semak kadar, waktu buka dan laluan berjalan kaki sebelum menggunakan parking persendirian."
       },
       {
-        "name": "Garis bas CAT Percuma",
+        "name": "Perancangan pengangkutan awam",
         "detail": "Semak laluan serta hentian semasa Rapid Penang bagi kawasan Pengkalan Weld."
       }
     ],
@@ -363,36 +353,36 @@
   },
   "nearby": {
     "title": "Tempat Menarik Berhampiran",
-    "intro": "Gabungkan lawatan ke Chew Jetty dengan tarikan warisan George Town yang terletak dalam lingkungan berjalan kaki.",
+    "intro": "Rancang lawatan George Town dengan tempat berikut. Semak laluan berjalan kaki, lintasan, aturan kemasukan dan cuaca sebelum bertolak.",
     "attractions": [
       {
         "name": "Street Art Lebuh Armenian",
-        "distance": "5 minit berjalan kaki",
+        "distance": "Semak laluan berjalan kaki",
         "description": "Mural ikonik Ernest Zacharevic dan suasana lorong-lorong warisan George Town."
       },
       {
         "name": "Khoo Kongsi (Leong San Tong)",
-        "distance": "10 minit berjalan kaki",
+        "distance": "Semak laluan berjalan kaki",
         "description": "Rumah ibu kaum Cina yang dihiasi ukiran kayu dan seni bina Cina yang megah."
       },
       {
         "name": "Kubu Cornwallis",
-        "distance": "12 minit berjalan kaki",
+        "distance": "Semak laluan berjalan kaki",
         "description": "Kubu abad ke-18 dengan mercu tanda bertembakan meriam dan taman bersejarah."
       },
       {
         "name": "Masjid Kapitan Keling",
-        "distance": "12 minit berjalan kaki",
+        "distance": "Semak laluan berjalan kaki",
         "description": "Masjid Mughal yang indah, salah satu mercu tanda agama bersejarah George Town."
       },
       {
         "name": "Little India",
-        "distance": "10 minit berjalan kaki",
+        "distance": "Semak laluan berjalan kaki",
         "description": "Kedai rempah, perhiasan, makanan India, dan kuil berwarna-warni."
       },
       {
         "name": "Jeti-Jeti Puak (Clan Jetties) Lain",
-        "distance": "Bersebelahan",
+        "distance": "Semak laluan berjalan kaki",
         "description": "Jelajahi Tan Jetty, Lee Jetty dan Lim Jetty untuk perspektif berbeza kampung atas air."
       }
     ]
