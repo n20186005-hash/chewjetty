@@ -3,7 +3,7 @@ import BaseHead from '@/components/BaseHead.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import GA4 from '@/components/GA4.astro';
-import { SITE, SITE_NAMES, SITE_ALT_NAMES, ADDRESS, GEO, OPENING_HOURS, AGGREGATE_RATING, TOURIST_TYPES } from '@/consts';
+import { SITE, SITE_NAMES, SITE_ALT_NAMES, ADDRESS, GEO, TOURIST_TYPES } from '@/consts';
 import { getTranslation } from '@/i18n';
 import { getLocalizedPath, LANGUAGES, type Lang } from '@/i18n/ui';
 
@@ -26,7 +26,7 @@ const {
   lang,
   title,
   description,
-  image = '/gallery/chew-jetty-14.jpg',
+  image = '/images/chew-jetty-social.jpg',
   canonical,
   pathname,
   preloadImage,
@@ -76,13 +76,9 @@ const touristAttractionLd = {
   inLanguage: current.htmlLang,
   address: ADDRESS,
   geo: GEO,
-  openingHoursSpecification: [OPENING_HOURS],
-  aggregateRating: AGGREGATE_RATING,
   touristType: [...TOURIST_TYPES],
-  isAccessibleForFree: true,
-  publicAccess: true,
   sameAs: [SITE.mapsUrl],
-  mainEntityOfPage: { '@id': `${baseUrl}#website` },
+  mainEntityOfPage: pageUrl,
 };
 
 const faqPageLd = hasFaq
@@ -113,7 +109,7 @@ const breadcrumbLd = breadcrumb
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@graph': [organizationLd, websiteLd, touristAttractionLd, faqPageLd, breadcrumbLd].filter(Boolean),
+  '@graph': [organizationLd, websiteLd, hasFaq ? touristAttractionLd : null, faqPageLd, breadcrumbLd].filter(Boolean),
 };
 ---
 

@@ -1,13 +1,14 @@
 # Chew Jetty (Jeti Chew) — Panduan Pelancong
 
-Laman web satu halaman (single-page) dalam Bahasa Melayu untuk Chew Jetty (Jeti Chew), kampung atas air warisan Cina di George Town, Pulau Pinang, Malaysia. Dibina dengan **Astro + Tailwind CSS + TypeScript**, di-deploy sebagai **Cloudflare Worker Static Assets**.
+Panduan dalam Bahasa Melayu, English dan 中文 untuk Chew Jetty (Jeti Chew), kampung atas air warisan Cina di George Town, Pulau Pinang, Malaysia. Dibina dengan **Astro + Tailwind CSS + TypeScript**, di-deploy sebagai **Cloudflare Worker Static Assets**.
 
 ## Ciri
 
 - Satu halaman dengan semua bahagian: Hero, Info Penting, Sejarah, Masa Terbaik, Tiket & Yuran, Tempat Letak Kereta, Makanan Berhampiran, Pengangkutan Terperinci, Tempat Berhampiran, Galeri Foto (lightbox), Senarai Perjalanan (localStorage), Peta Google & FAQ.
+- Varian WebP dan imej sosial dijana oleh `scripts/optimize-images.mjs` semasa build.
 - Galeri foto sebenar Chew Jetty (19 gambar) dalam `public/gallery/`, disusun dengan grid responsif, lazy-loading dan klik-untuk-besarkan.
 - Senarai perjalanan interaktif: pengunjung boleh menanda aktiviti; data disimpan dalam `localStorage` sahaja, tidak dihantar ke pelayan.
-- JSON-LD struktur data: `TouristAttraction`, `LocalBusiness`, `FAQPage`.
+- JSON-LD: `Organization`, `WebSite`; `TouristAttraction` dan `FAQPage` pada laman utama sahaja.
 - GA4: `G-HXM22WWPKP`.
 - Logo & favicon SVG tempatan dengan simbol jambatan kampung atas air yang konsisten.
 
@@ -35,13 +36,16 @@ corepack pnpm check     # astro check (tiada ralat)
 corepack pnpm build     # bina ke dist/
 ```
 
-## Deploy ke Cloudflare Pages
+## Deploy ke Cloudflare Workers
 
-Fail `wrangler.toml` disediakan (nama `chew-jetty`, `pages_build_output_dir = "./dist"`). Deploy:
+`wrangler.toml` menggunakan Worker `src/index.ts` dan binding `ASSETS` bagi `dist/`.
+Worker mengalihkan HTTP dan www ke HTTPS domain utama sambil mengekalkan laluan dan query, serta mengekalkan status 404 bagi URL yang tiada.
+Nama projek sedia ada kekal `chew-jetty`; sahkan projek serta domain pada akaun sebelum deploy.
 
 ```bash
 corepack pnpm build
-npx wrangler pages deploy dist --project-name=chew-jetty
+corepack pnpm exec wrangler deploy --dry-run
+corepack pnpm exec wrangler deploy
 ```
 
 ## Domain

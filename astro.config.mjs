@@ -1,6 +1,5 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
-import cloudflare from '@astrojs/cloudflare';
 import sitemap from '@astrojs/sitemap';
 
 // Domain utama: chewjetty.org.
@@ -10,7 +9,7 @@ const SITE_URL = process.env.CURRENT_SITE_DOMAIN || 'https://chewjetty.org';
 
 export default defineConfig({
   output: 'static',
-  adapter: cloudflare({ imageService: 'cloudflare' }),
+  trailingSlash: 'always',
   site: SITE_URL || undefined,
   i18n: {
     defaultLocale: 'ms',
@@ -25,6 +24,7 @@ export default defineConfig({
     // memetakan versi bahasa yang setara.
     SITE_URL
       ? sitemap({
+          filter: (page) => !/\/404(?:\.html|\/)?$/.test(page),
           i18n: {
             defaultLocale: 'ms',
             locales: { ms: 'ms-MY', en: 'en', zh: 'zh-CN' },
