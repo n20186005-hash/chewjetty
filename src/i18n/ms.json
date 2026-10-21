@@ -610,8 +610,8 @@
     "cookie": {
       "title": "Tetapan Kuki",
       "metaTitle": "Tetapan Kuki | Chew Jetty",
-      "metaDescription": "Tetapan kuki laman web Chew Jetty — uruskan kuki perlu, kuki analitis, kuki keutamaan dan kuki pemasaran.",
-      "intro": "Kami menggunakan kuki untuk meningkatkan pengalaman melayari anda. Anda boleh menguruskan pilihan anda di bawah.",
+      "metaDescription": "Tetapan kuki Chew Jetty — urus Google Analytics pilihan dan baca tentang storan setempat serta skrip prestasi hosting.",
+      "intro": "Urus Google Analytics pilihan di bawah. Senarai semak lawatan bebas menyimpan pilihannya sendiri secara setempat apabila digunakan; bahasa mengikut URL halaman.",
       "alwaysActive": "Sentiasa aktif",
       "labelOn": "Aktif",
       "labelOff": "Nyahaktif",
@@ -624,7 +624,7 @@
         {
           "id": "necessary",
           "name": "Kuki Perlu",
-          "desc": "Kuki ini penting untuk fungsi laman web yang betul dan tidak boleh dilumpuhkan.",
+          "desc": "Storan setempat menyimpan persetujuan dan pilihan senarai semak lawatan apabila digunakan. Halaman masih boleh dibaca jika storan disekat.",
           "alwaysActive": true
         },
         {
@@ -638,20 +638,25 @@
         {
           "id": "preferences",
           "name": "Kuki Keutamaan",
-          "desc": "Kuki ini mengingati tetapan anda, seperti bahasa dan pilihan tema.",
-          "checked": true,
-          "subName": "Keutamaan Pengguna",
-          "subDesc": "Menyimpan pilihan bahasa dan tetapan laman web anda."
+          "desc": "Tidak digunakan. Bahasa mengikut URL halaman; laman ini tidak menyediakan tetapan tema. Kawalan ini tidak aktif.",
+          "checked": false,
+          "subName": "Tidak digunakan",
+          "subDesc": "Tiada kuki bahasa atau tema diaktifkan oleh kawalan ini."
         },
         {
           "id": "marketing",
           "name": "Kuki Pemasaran",
-          "desc": "Kuki ini digunakan untuk memaparkan iklan berkaitan dan mengukur keberkesanan kempen iklan.",
+          "desc": "Tidak digunakan. Laman ini tidak menyediakan iklan peribadi atau penjejakan pemasaran. Kawalan ini tidak aktif.",
           "checked": false,
-          "subName": "Iklan Diperibadikan",
-          "subDesc": "Ia boleh memaparkan iklan yang berkaitan mengikut minat anda."
+          "subName": "Tidak digunakan",
+          "subDesc": "Tiada perkhidmatan iklan diaktifkan oleh kawalan ini."
         }
       ]
+    },
+    "hosting": {
+      "title": "Skrip prestasi hosting",
+      "body": "Hosting Cloudflare mungkin menyisipkan skrip prestasi Cloudflare Web Analytics (Cloudflare Insights/RUM) secara berasingan daripada Google Analytics. Dokumentasi Cloudflare menyatakan beacon ini boleh menghantar metrik prestasi halaman, URL halaman dan perujuk tanpa kuki atau storan pelayar. Tetapan pelayar, penyekat kandungan atau dasar keselamatan kandungan (CSP) boleh menyekat skrip atau permintaan. Tag skrip tidak membuktikan pelaksanaan atau penghantaran metrik yang berjaya. Pilihan Google Analytics pada halaman ini tidak mengawal skrip hosting.",
+      "source": "Dokumentasi rasmi Cloudflare RUM · diperiksa 21 Oktober 2026"
     }
   },
   "footer": {

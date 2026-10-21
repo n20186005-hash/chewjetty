@@ -610,8 +610,8 @@
     "cookie": {
       "title": "Cookie 设置",
       "metaTitle": "Cookie 设置 | 姓周桥",
-      "metaDescription": "姓周桥网站的 Cookie 设置——管理必要 Cookie、分析型 Cookie、偏好 Cookie 与营销 Cookie。",
-      "intro": "我们使用 Cookie 来改善您的浏览体验。您可以在下方管理您的偏好设置。",
+      "metaDescription": "姓周桥Cookie设置：管理可选的Google Analytics，并了解本地存储及托管性能脚本。",
+      "intro": "在下方管理可选的Google Analytics。独立的游览清单会在使用时自行保存本地选择；语言由页面URL决定。",
       "alwaysActive": "始终保持活跃",
       "labelOn": "激活",
       "labelOff": "停用",
@@ -624,7 +624,7 @@
         {
           "id": "necessary",
           "name": "必要 Cookie",
-          "desc": "这些 Cookie 对于网站正常运行至关重要，无法禁用。",
+          "desc": "使用相关功能时，本地存储会保存同意设置和游览清单选择。存储被阻止时仍可阅读页面。",
           "alwaysActive": true
         },
         {
@@ -638,20 +638,25 @@
         {
           "id": "preferences",
           "name": "偏好 Cookie",
-          "desc": "它们会记住您的设置，例如语言和主题偏好。",
-          "checked": true,
-          "subName": "用户偏好",
-          "subDesc": "保存您的语言偏好和网站设置。"
+          "desc": "未使用。语言由页面URL决定；本站没有主题设置。此控件不可用。",
+          "checked": false,
+          "subName": "未使用",
+          "subDesc": "此控件不会启用语言或主题Cookie。"
         },
         {
           "id": "marketing",
           "name": "营销 Cookie",
-          "desc": "它们用于展示相关广告并衡量广告活动的有效性。",
+          "desc": "未使用。本站没有个性化广告或营销追踪功能。此控件不可用。",
           "checked": false,
-          "subName": "个性化广告",
-          "subDesc": "它可以根据你的兴趣为你展示相关的广告。"
+          "subName": "未使用",
+          "subDesc": "此控件不会启用任何广告服务。"
         }
       ]
+    },
+    "hosting": {
+      "title": "托管性能脚本",
+      "body": "Cloudflare托管可能独立于Google Analytics注入Cloudflare Web Analytics（Cloudflare Insights/RUM）性能脚本。Cloudflare文档说明，该beacon可发送页面性能指标、页面URL和来源页面，而不使用Cookie或浏览器存储。浏览器设置、内容拦截器或内容安全策略（CSP）可能阻止脚本或请求。出现脚本标签不代表脚本已执行或指标已成功发送。本页的Google Analytics选择不会控制托管脚本。",
+      "source": "Cloudflare RUM官方文档 · 核查于2026年10月21日"
     }
   },
   "footer": {

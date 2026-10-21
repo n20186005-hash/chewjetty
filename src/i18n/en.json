@@ -610,8 +610,8 @@
     "cookie": {
       "title": "Cookie Settings",
       "metaTitle": "Cookie Settings | Chew Jetty",
-      "metaDescription": "Cookie settings for the Chew Jetty website — manage necessary cookies, analytics cookies, preference cookies and marketing cookies.",
-      "intro": "We use cookies to improve your browsing experience. You can manage your preferences below.",
+      "metaDescription": "Cookie settings for Chew Jetty — manage optional Google Analytics and read about local storage and hosting performance scripts.",
+      "intro": "Manage optional Google Analytics below. The independent visit checklist stores its own selections locally when used; language follows the page URL.",
       "alwaysActive": "Always active",
       "labelOn": "Active",
       "labelOff": "Inactive",
@@ -624,7 +624,7 @@
         {
           "id": "necessary",
           "name": "Necessary Cookies",
-          "desc": "These cookies are essential for the website to function properly and cannot be disabled.",
+          "desc": "Local storage retains consent and visit-checklist selections when used. Pages remain readable when storage is blocked.",
           "alwaysActive": true
         },
         {
@@ -638,20 +638,25 @@
         {
           "id": "preferences",
           "name": "Preference Cookies",
-          "desc": "These cookies remember your settings, such as language and theme preferences.",
-          "checked": true,
-          "subName": "User Preferences",
-          "subDesc": "Saves your language preference and website settings."
+          "desc": "Not used. Language follows the page URL; this site has no theme setting. This control is inactive.",
+          "checked": false,
+          "subName": "Not used",
+          "subDesc": "No language or theme cookie is enabled by this control."
         },
         {
           "id": "marketing",
           "name": "Marketing Cookies",
-          "desc": "These cookies are used to display relevant ads and measure the effectiveness of advertising campaigns.",
+          "desc": "Not used. This site has no personalised advertising or marketing tracking feature. This control is inactive.",
           "checked": false,
-          "subName": "Personalised Ads",
-          "subDesc": "It can show you relevant ads based on your interests."
+          "subName": "Not used",
+          "subDesc": "No advertising service is enabled by this control."
         }
       ]
+    },
+    "hosting": {
+      "title": "Hosting performance scripts",
+      "body": "Cloudflare hosting may inject a Cloudflare Web Analytics (Cloudflare Insights/RUM) performance script independently of Google Analytics. Cloudflare documents that this beacon can send page performance metrics, page URLs and referrers without cookies or browser storage. Browser settings, content blockers or the content security policy (CSP) may block the script or requests. A script tag does not establish execution or successful metric delivery. The Google Analytics choice on this page does not control the hosting script.",
+      "source": "Official Cloudflare RUM documentation · checked 21 October 2026"
     }
   },
   "footer": {
