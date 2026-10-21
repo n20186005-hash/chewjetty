@@ -1,7 +1,8 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import FaqAccordion from '@/components/FaqAccordion.astro';
-import { SITE, GALLERY_COUNT, HERO_IMAGE, MAP_EMBED_SRC } from '@/consts';
+import PhotoCredit from '@/components/PhotoCredit.astro';
+import { SITE, PHOTOS, SOCIAL_IMAGE, HERO_IMAGE, MAP_EMBED_SRC } from '@/consts';
 import { getTranslation } from '@/i18n';
 import type { Lang } from '@/i18n/ui';
 
@@ -12,10 +13,11 @@ interface Props {
 const { lang } = Astro.props;
 const t = getTranslation(lang);
 
-const gallery = Array.from({ length: GALLERY_COUNT }, (_, i) => ({
-  src: `/images/chew-jetty-${i + 1}-1600.webp`,
-  thumbnail: `/images/chew-jetty-${i + 1}-640.webp`,
-  alt: `${t.gallery.altPrefix} (${i + 1})`,
+const gallery = PHOTOS.map((photo) => ({
+  ...photo,
+  src: `/images/${photo.basename}-1600.webp`,
+  thumbnail: `/images/${photo.basename}-640.webp`,
+  alt: photo.copy[lang].alt,
 }));
 
 // Ikon kad info mengikut urutan tetap: 0=Alamat, 1=Waktu, 2=Yuran, 3=Tempoh, 4=Penilaian, 5=Koordinat
@@ -43,18 +45,18 @@ const transportIcons: Record<string, string> = {
 };
 ---
 
-<BaseLayout lang={lang} title={t.site.title} description={t.site.description} image="/images/chew-jetty-social.jpg" pathname={Astro.url.pathname} preloadImage={HERO_IMAGE} hasFaq>
+<BaseLayout lang={lang} title={t.site.title} description={t.site.description} image={SOCIAL_IMAGE} pathname={Astro.url.pathname} preloadImage={HERO_IMAGE} hasFaq>
   {/* Hero */}
-  <section class="relative flex min-h-[85vh] items-center justify-center overflow-hidden pt-20">
+  <section class="hero-photo-section relative flex min-h-[85vh] items-center justify-center overflow-hidden pb-28 pt-28">
     <div class="absolute inset-0">
       <img
         src={HERO_IMAGE}
         alt={t.hero.imgAlt}
-        class="h-full w-full object-cover"
+        class="hero-photo-image h-full w-full object-cover"
         loading="eager"
         decoding="async"
         fetchpriority="high"
-        width="1600" height="1067"
+        width="1600" height="900"
       />
       <div class="absolute inset-0 bg-gradient-to-b from-ocean/80 via-ocean/50 to-sand"></div>
     </div>
@@ -78,6 +80,7 @@ const transportIcons: Record<string, string> = {
           {t.hero.ctaGallery}
         </a>
       </div>
+      <PhotoCredit photo={PHOTOS[0]} lang={lang} compact />
     </div>
 
     <div class="absolute bottom-6 left-1/2 z-10 hidden -translate-x-1/2 animate-bounce text-white/70 sm:block">
@@ -124,15 +127,19 @@ const transportIcons: Record<string, string> = {
           ))}
         </ul>
       </div>
-      <div class="img-zoom rounded-3xl shadow-float">
+      <figure>
+        <div class="img-zoom rounded-3xl shadow-float">
         <img
-          src="/images/chew-jetty-8-640.webp"
-          alt={t.intro.imgAlt}
+          src={gallery[1].thumbnail}
+          alt={gallery[1].alt}
+          width="640" height="360"
           class="h-full w-full rounded-3xl object-cover"
           loading="lazy"
           decoding="async"
         />
-      </div>
+        </div>
+        <figcaption><PhotoCredit photo={PHOTOS[1]} lang={lang} compact /></figcaption>
+      </figure>
     </div>
   </section>
 
@@ -378,11 +385,12 @@ const transportIcons: Record<string, string> = {
         <h2 class="font-display text-3xl font-bold text-ocean sm:text-4xl">{t.gallery.title}</h2>
         <p class="mx-auto mt-4 max-w-2xl text-ink/70">{t.gallery.intro}</p>
       </div>
-      <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+      <div id="photo-credits" class="grid gap-8 md:grid-cols-3">
         {gallery.map((img, idx) => (
+          <figure id={'photo-' + img.id}>
           <button
             type="button"
-            class="gallery-thumb img-zoom group relative aspect-[4/3] overflow-hidden rounded-2xl bg-wood-100 shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-lantern"
+            class="gallery-thumb img-zoom group relative block w-full aspect-[4/3] overflow-hidden rounded-2xl bg-wood-100 shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-lantern"
             data-index={idx}
             aria-label={`${t.gallery.openLabel} ${idx + 1}`}
           >
@@ -399,6 +407,8 @@ const transportIcons: Record<string, string> = {
               </svg>
             </span>
           </button>
+          <figcaption><p class="mt-4 font-semibold">{img.copy[lang].caption}</p><PhotoCredit photo={img} lang={lang} /></figcaption>
+          </figure>
         ))}
       </div>
     </div>
@@ -533,7 +543,10 @@ const transportIcons: Record<string, string> = {
     <button id="lightbox-next" type="button" class="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white backdrop-blur hover:bg-white/20">
       <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
     </button>
-    <img id="lightbox-img" src="" alt="" class="max-h-[85vh] max-w-[90vw] rounded-2xl object-contain shadow-2xl" />
+    <figure class="lightbox-figure">
+      <img id="lightbox-img" src="" alt="" class="rounded-2xl object-contain shadow-2xl" />
+      {gallery.map((photo, idx) => <figcaption data-lightbox-credit={idx} hidden><p>{photo.copy[lang].caption}</p><PhotoCredit photo={photo} lang={lang} /></figcaption>)}
+    </figure>
   </div>
 
   <script is:inline define:vars={{ images: gallery.map((g) => g.src), alts: gallery.map((g) => g.alt) }}>
@@ -541,15 +554,21 @@ const transportIcons: Record<string, string> = {
       const thumbs = document.querySelectorAll('.gallery-thumb');
       const lightbox = document.getElementById('lightbox');
       const lbImg = document.getElementById('lightbox-img');
+      const credits = document.querySelectorAll('[data-lightbox-credit]');
       const closeBtn = document.getElementById('lightbox-close');
       const prevBtn = document.getElementById('lightbox-prev');
       const nextBtn = document.getElementById('lightbox-next');
       let current = 0;
 
-      function open(index) {
-        current = index;
+      function updatePhoto() {
         lbImg.src = images[current];
         lbImg.alt = alts[current] || '';
+        credits.forEach((credit, index) => { credit.hidden = index !== current; });
+      }
+
+      function open(index) {
+        current = index;
+        updatePhoto();
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
       }
@@ -561,8 +580,7 @@ const transportIcons: Record<string, string> = {
 
       function move(dir) {
         current = (current + dir + images.length) % images.length;
-        lbImg.src = images[current];
-        lbImg.alt = alts[current] || '';
+        updatePhoto();
       }
 
       thumbs.forEach((t) => {

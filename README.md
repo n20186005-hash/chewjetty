@@ -6,7 +6,7 @@ Panduan dalam Bahasa Melayu, English dan 中文 untuk Chew Jetty (Jeti Chew), ka
 
 - Satu halaman dengan semua bahagian: Hero, Info Penting, Sejarah, Masa Terbaik, Tiket & Yuran, Tempat Letak Kereta, Makanan Berhampiran, Pengangkutan Terperinci, Tempat Berhampiran, Galeri Foto (lightbox), Senarai Perjalanan (localStorage), Peta Google & FAQ.
 - Varian WebP dan imej sosial dijana oleh `scripts/optimize-images.mjs` semasa build.
-- Galeri foto sebenar Chew Jetty (19 gambar) dalam `public/gallery/`, disusun dengan grid responsif, lazy-loading dan klik-untuk-besarkan.
+- Tiga foto Chew Jetty bertarikh dalam `public/gallery/`, setiap satu dengan rekod sumber dan lesen dalam `src/data/photos.json`; galeri responsif dan lightbox dikekalkan.
 - Senarai perjalanan interaktif: pengunjung boleh menanda aktiviti; data disimpan dalam `localStorage` sahaja, tidak dihantar ke pelayan.
 - JSON-LD: `Organization`, `WebSite`; `TouristAttraction` dan `FAQPage` pada laman utama sahaja.
 - GA4: `G-HXM22WWPKP`.
@@ -58,7 +58,7 @@ Apabila `site` kosong, projek tetap boleh dibina; pautan canonical / Open Graph 
 
 ```
 public/
-  gallery/chew-jetty-1..19.jpg   # Foto sebenar
+  gallery/chew-jetty-*-<hash>.jpg   # Tiga sumber foto dengan rekod masing-masing
   favicon.svg / favicon-16.svg / favicon-32.svg / apple-touch-icon.svg / logo.svg
   robots.txt / _headers / _redirects
 src/
@@ -73,3 +73,12 @@ src/
 ## Penafian
 
 Laman web ini bukan laman web rasmi Chew Jetty; ia merupakan panduan pelancong bebas.
+
+
+## Photograph sources and licences
+
+The three current photographs have separate records in `src/data/photos.json`: an entrance and a walkway view by Philip Mallis (30 April 2024, CC BY-SA 2.0), and a sea/mainland view attributed to Yuliarhm (18 May 2025, Commons own-work CC0 1.0 declaration). The third image is portrait-oriented through EXIF; the optimizer normalizes orientation before resizing. These dated views do not establish present conditions.
+
+`PHOTO_CREDITS.md` maps the original file bytes to each source. Visible credits, source links, licence links, dates and transformation notices are served in all three homepage galleries and in the lightbox. Hero and introduction credits link to those records. The two BY-SA photographs and their resized/cropped/WebP/JPEG derivatives remain under CC BY-SA 2.0; the third retains its CC0 terms. Copyright language elsewhere applies to original site text/design, not to exclusive rights over these photographs. Attribution does not imply endorsement.
+
+The optimizer verifies each original SHA256 and generates two WebPs per photo plus one entrance social crop under fresh names. The previous numbered originals and derivatives are removed from the current public tree; no claim is made about their photographers, source platform or reuse authority, and Git history is not rewritten.

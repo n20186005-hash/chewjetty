@@ -53,7 +53,7 @@
     "subtitle": "Chew Jetty is one of the surviving Chinese clan jetties in George Town, Penang. Its wooden boardwalk stretching into the sea, stilt houses, and red lanterns make it a must-visit destination.",
     "ctaMaps": "Open Google Maps",
     "ctaGallery": "View Gallery",
-    "imgAlt": "View of Chew Jetty, a wooden boardwalk stretching into the sea"
+    "imgAlt": "Entrance to Chew Jetty in George Town, 30 April 2024"
   },
   "keyInfo": [
     {
@@ -91,7 +91,7 @@
       "Stilt houses, a shrine and souvenir stalls",
       "A residential waterfront to explore respectfully"
     ],
-    "imgAlt": "Perspective view of the Chew Jetty wooden boardwalk lined with stilt houses"
+    "imgAlt": "Buildings and walkway on Chew Jetty, 30 April 2024"
   },
   "history": {
     "title": "History & Heritage",
@@ -389,7 +389,7 @@
   },
   "gallery": {
     "title": "Photo Gallery",
-    "intro": "See the atmosphere, wooden architecture, traditional boats and colours of life at Chew Jetty.",
+    "intro": "Three dated views of Chew Jetty: the entrance, the walkway and the waterfront. Photographs may not reflect current conditions.",
     "altPrefix": "Photo of Chew Jetty, George Town",
     "openLabel": "Open photo",
     "lightboxLabel": "Large photo view"
@@ -555,7 +555,7 @@
         },
         {
           "heading": "Third-Party Services",
-          "intro": "Our website may use third-party services, such as Google Maps (for embedded maps and location data), Google Analytics (for traffic analysis) and Unsplash (for images). These services each have their own privacy policies.",
+          "intro": "The website uses Google Maps for the embedded map and Google Analytics when permitted. These services have their own privacy policies. Photographs load from this website; their source links lead to external sites.",
           "items": [
             {
               "title": "Google Maps",
@@ -566,8 +566,8 @@
               "text": "Google Analytics loads only after you enable analytics and save your choice on Cookie Settings. Rejecting immediately disables further Google Analytics measurement; data already sent is not recalled. Analytics is off by default."
             },
             {
-              "title": "Unsplash",
-              "text": "For website images."
+              "title": "Photographs and credits",
+              "text": "Each photograph has an individual author, date, source and licence record in the Photo Gallery. Source links take you to third-party websites."
             }
           ]
         },
@@ -599,7 +599,7 @@
         },
         {
           "heading": "Intellectual Property",
-          "text": "The design and original content of this website are protected by copyright. Images from Unsplash are used under its licence. Use of Google Maps data complies with Google's terms of service."
+          "text": "Copyright in the original site design and text is reserved. Photographs have separate CC BY-SA 2.0 or CC0 1.0 terms shown with their individual credits in the Photo Gallery; those licences also apply to the corresponding image derivatives."
         },
         {
           "heading": "Limitation of Liability",
@@ -669,6 +669,6 @@
       "cookies": "Cookie Settings"
     },
     "disclaimer": "Disclaimer: This website is not the official website of Chew Jetty. It is provided as an independent travel guide. Information is subject to change; please verify directly with local authorities or Google Maps before visiting.",
-    "copyright": "All rights reserved."
+    "copyright": "Original text and design rights reserved; photographs retain their credited licences."
   }
 }

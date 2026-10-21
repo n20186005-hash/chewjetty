@@ -1,0 +1,113 @@
+[
+  {
+    "id": "entrance",
+    "title": "Entrance to Chew Jetty in George Town, Penang",
+    "author": "Philip Mallis (philip.mallis)",
+    "date": "2024-04-30",
+    "filePage": "https://commons.wikimedia.org/wiki/File:Entrance_to_Chew_Jetty_in_George_Town,_Penang_-_53830180303.jpg",
+    "source": "https://www.flickr.com/photos/122687277@N03/53830180303/",
+    "originalURL": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Entrance_to_Chew_Jetty_in_George_Town%2C_Penang_-_53830180303.jpg",
+    "license": "CC BY-SA 2.0",
+    "licenseURL": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "shareAlike": true,
+    "originalSHA1": "f0a78c221b35c762d29b8f8e92585d70feed1487",
+    "originalSHA256": "1478820303248b14363a9ecc21acf401a51ad05591625349f7b0b11402426071",
+    "originalBytes": 2924095,
+    "basename": "chew-jetty-entrance-147882030324",
+    "copy": {
+      "ms": {
+        "alt": "Pintu masuk Chew Jetty di George Town, 30 April 2024",
+        "caption": "Pintu masuk Chew Jetty, George Town."
+      },
+      "en": {
+        "alt": "Entrance to Chew Jetty in George Town, 30 April 2024",
+        "caption": "Entrance to Chew Jetty, George Town."
+      },
+      "zh": {
+        "alt": "乔治市姓周桥入口，2024年4月30日",
+        "caption": "乔治市姓周桥入口。"
+      }
+    },
+    "checkedDate": "2026-10-21",
+    "displayWidth": 4032,
+    "displayHeight": 2268,
+    "storedWidth": 4032,
+    "storedHeight": 2268,
+    "exifOrientation": 1,
+    "derivativeOrientationNormalized": true
+  },
+  {
+    "id": "walkway",
+    "title": "Buildings and walkway on Chew Jetty at George Town, Penang",
+    "author": "Philip Mallis (philip.mallis)",
+    "date": "2024-04-30",
+    "filePage": "https://commons.wikimedia.org/wiki/File:Buildings_and_walkway_on_Chew_Jetty_at_George_Town,_Penang_-_53830275719.jpg",
+    "source": "https://www.flickr.com/photos/122687277@N03/53830275719/",
+    "originalURL": "https://upload.wikimedia.org/wikipedia/commons/5/57/Buildings_and_walkway_on_Chew_Jetty_at_George_Town%2C_Penang_-_53830275719.jpg",
+    "license": "CC BY-SA 2.0",
+    "licenseURL": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "shareAlike": true,
+    "originalSHA1": "2353b05a00765b543818399a10f1ccd9adffaaf7",
+    "originalSHA256": "8b63f3ea5fe3d4f4c3fc5ed846deb871c14418c0ea1ceb2d7b111dc41f128a38",
+    "originalBytes": 6325492,
+    "basename": "chew-jetty-walkway-8b63f3ea5fe3",
+    "copy": {
+      "ms": {
+        "alt": "Bangunan dan laluan pejalan kaki di Chew Jetty, 30 April 2024",
+        "caption": "Bangunan dan laluan pejalan kaki di Chew Jetty."
+      },
+      "en": {
+        "alt": "Buildings and walkway on Chew Jetty, 30 April 2024",
+        "caption": "Buildings and walkway on Chew Jetty."
+      },
+      "zh": {
+        "alt": "姓周桥的建筑和步道，2024年4月30日",
+        "caption": "姓周桥的建筑和步道。"
+      }
+    },
+    "checkedDate": "2026-10-21",
+    "displayWidth": 3839,
+    "displayHeight": 2159,
+    "storedWidth": 3839,
+    "storedHeight": 2159,
+    "exifOrientation": 1,
+    "derivativeOrientationNormalized": true
+  },
+  {
+    "id": "waterfront",
+    "title": "Chew Jetty, Pulau Pinang",
+    "author": "Yuliarhm",
+    "date": "2025-05-18",
+    "filePage": "https://commons.wikimedia.org/wiki/File:Chew_Jetty,_Pulau_Pinang.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Chew_Jetty,_Pulau_Pinang.jpg",
+    "originalURL": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Chew_Jetty%2C_Pulau_Pinang.jpg",
+    "license": "CC0 1.0",
+    "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "shareAlike": false,
+    "originalSHA1": "8fc1db109a5b0bb23d5051c0a29ae98deec9602f",
+    "originalSHA256": "44be243a1386987f03de907a26f085181f4f8ac15ad5c515ae8fb9bd4adc02fb",
+    "originalBytes": 4978129,
+    "basename": "chew-jetty-waterfront-44be243a1386",
+    "copy": {
+      "ms": {
+        "alt": "Pemandangan laut dan tanah besar dari Chew Jetty, 18 Mei 2025",
+        "caption": "Pemandangan laut dan tanah besar dari Chew Jetty."
+      },
+      "en": {
+        "alt": "Sea and mainland view from Chew Jetty, 18 May 2025",
+        "caption": "Sea and mainland view from Chew Jetty."
+      },
+      "zh": {
+        "alt": "从姓周桥望向海面和大陆，2025年5月18日",
+        "caption": "从姓周桥望向海面和大陆。"
+      }
+    },
+    "checkedDate": "2026-10-21",
+    "displayWidth": 2296,
+    "displayHeight": 4080,
+    "storedWidth": 4080,
+    "storedHeight": 2296,
+    "exifOrientation": 6,
+    "derivativeOrientationNormalized": true
+  }
+]

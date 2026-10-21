@@ -1,5 +1,5 @@
 ---
-import { SITE } from '@/consts';
+import { SITE, SOCIAL_IMAGE, PHOTOS } from '@/consts';
 import { buildAlternates, buildHreflangLinks, LANGUAGES, type Lang } from '@/i18n/ui';
 
 interface Props {
@@ -18,7 +18,7 @@ const {
   title,
   description,
   lang,
-  image = '/images/chew-jetty-social.jpg',
+  image = SOCIAL_IMAGE,
   canonical = Astro.url.pathname,
   preloadImage,
 } = Astro.props;
@@ -66,12 +66,12 @@ const hreflangLinks = buildHreflangLinks(canonicalPath);
 <meta property="og:description" content={description} />
 {site && <meta property="og:url" content={canonicalUrl} />}
 <meta property="og:image" content={ogImage} />
-<meta property="og:image:alt" content={title} />
+<meta property="og:image:alt" content={PHOTOS[0].copy[lang].alt} />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={ogImage} />
-<meta name="twitter:image:alt" content={title} />
+<meta name="twitter:image:alt" content={PHOTOS[0].copy[lang].alt} />
 
 {site && <link rel="sitemap" type="application/xml" href={new URL('/sitemap-index.xml', site).toString()} />}

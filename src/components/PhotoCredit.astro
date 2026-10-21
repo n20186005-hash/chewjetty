@@ -1,0 +1,12 @@
+---
+import type { Lang } from '@/i18n/ui';
+import photos from '@/data/photos.json';
+interface Props { photo: typeof photos[number]; lang: Lang; compact?: boolean; }
+const { photo, lang, compact = false } = Astro.props;
+const labels = {
+  ms: { source: 'Sumber asal', changes: 'Dikecilkan dan ditukar kepada WebP/JPEG; paparan dan pratonton sosial mungkin dipangkas.', shared: 'Terbitan foto ini juga di bawah CC BY-SA 2.0.', note: 'Foto bertarikh; bukan gambaran keadaan semasa.', details: 'Kredit foto' },
+  en: { source: 'Original source', changes: 'Resized and converted to WebP/JPEG; display and social previews may crop the image.', shared: 'These photo derivatives are also under CC BY-SA 2.0.', note: 'Dated photograph; not a statement of current conditions.', details: 'Photo credits' },
+  zh: { source: '原始来源', changes: '已缩小并转换为 WebP/JPEG；页面与社交预览可能裁切图片。', shared: '这些照片衍生版本同样采用 CC BY-SA 2.0 许可。', note: '照片有明确拍摄日期，不代表当前状况。', details: '照片来源与许可' },
+}[lang];
+---
+{compact ? <p class="photo-credit-compact">{photo.author} · {photo.date} · <a href={photo.licenseURL}>{photo.license}</a> · <a href={'#photo-' + photo.id}>{labels.details}</a></p> : <div class="photo-credit"><p><a href={photo.filePage}>{photo.title}</a> — {photo.author} · <time datetime={photo.date}>{photo.date}</time> · <a href={photo.licenseURL}>{photo.license}</a>{photo.source !== photo.filePage && <> · <a href={photo.source}>{labels.source}</a></>}</p><p>{labels.changes} {photo.shareAlike && labels.shared} {labels.note}</p></div>}

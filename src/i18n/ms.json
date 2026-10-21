@@ -53,7 +53,7 @@
     "subtitle": "Jeti Chew ialah salah satu jeti puak Cina yang masih hidup di George Town, Pulau Pinang. Jambatan kayunya yang memanjang ke laut, rumah-rumah palafit, dan lampu lentera merah menjadikannya destinasi wajib lawat.",
     "ctaMaps": "Buka Google Maps",
     "ctaGallery": "Lihat Galeri",
-    "imgAlt": "Pemandangan Chew Jetty, jambatan kayu yang memanjang ke laut"
+    "imgAlt": "Pintu masuk Chew Jetty di George Town, 30 April 2024"
   },
   "keyInfo": [
     {
@@ -91,7 +91,7 @@
       "Rumah palafit, tokong, dan gerai cenderamata",
       "Kawasan kediaman pesisir untuk diterokai dengan hormat"
     ],
-    "imgAlt": "Perspektif jambatan kayu Chew Jetty diapit rumah-rumah palafit"
+    "imgAlt": "Bangunan dan laluan pejalan kaki di Chew Jetty, 30 April 2024"
   },
   "history": {
     "title": "Sejarah & Warisan",
@@ -389,7 +389,7 @@
   },
   "gallery": {
     "title": "Galeri Foto",
-    "intro": "Lihat suasana, seni bina kayu, perahu tradisional dan warna-warna kehidupan di Chew Jetty.",
+    "intro": "Tiga foto bertarikh Chew Jetty: pintu masuk, laluan pejalan kaki dan pemandangan laut. Foto mungkin tidak menggambarkan keadaan semasa.",
     "altPrefix": "Gambar Chew Jetty, George Town",
     "openLabel": "Buka gambar",
     "lightboxLabel": "Paparan gambar besar"
@@ -555,7 +555,7 @@
         },
         {
           "heading": "Perkhidmatan Pihak Ketiga",
-          "intro": "Laman web kami mungkin menggunakan perkhidmatan pihak ketiga, seperti Google Maps (untuk peta terbenam dan data lokasi), Google Analytics (untuk analisis trafik) dan Unsplash (untuk imej). Perkhidmatan ini masing-masing mempunyai dasar privasi mereka sendiri.",
+          "intro": "Laman ini menggunakan Google Maps untuk peta terbenam dan Google Analytics apabila dibenarkan. Perkhidmatan ini mempunyai dasar privasi masing-masing. Foto dimuatkan daripada laman ini; pautan sumber membawa ke laman luar.",
           "items": [
             {
               "title": "Google Maps",
@@ -566,8 +566,8 @@
               "text": "Google Analytics hanya dimuatkan selepas anda mengaktifkan analitik dan menyimpan pilihan pada Tetapan Kuki. Penolakan segera mematikan pengukuran Google Analytics seterusnya; data yang telah dihantar tidak ditarik semula. Analitik dimatikan secara lalai."
             },
             {
-              "title": "Unsplash",
-              "text": "Untuk imej laman web."
+              "title": "Foto dan kredit",
+              "text": "Setiap foto mempunyai rekod pengarang, tarikh, sumber dan lesen sendiri dalam Galeri Foto. Pautan sumber membawa anda ke laman pihak ketiga."
             }
           ]
         },
@@ -599,7 +599,7 @@
         },
         {
           "heading": "Harta Intelek",
-          "text": "Reka bentuk dan kandungan asal laman web ini dilindungi hak cipta. Imej daripada Unsplash digunakan dengan lesennya. Penggunaan data Google Maps mematuhi terma perkhidmatan Google."
+          "text": "Hak cipta reka bentuk dan teks asal laman ini terpelihara. Foto mempunyai syarat CC BY-SA 2.0 atau CC0 1.0 yang dinyatakan dalam kredit masing-masing di Galeri Foto; lesen tersebut juga terpakai kepada terbitan imej yang sepadan."
         },
         {
           "heading": "Had Liabiliti",
@@ -669,6 +669,6 @@
       "cookies": "Tetapan Kuki"
     },
     "disclaimer": "Penafian: Laman web ini bukan laman web rasmi Chew Jetty. Ia disediakan sebagai panduan pelancong bebas. Maklumat tertakluk kepada perubahan; sila sahkan terus dengan pihak berkuasa tempatan atau Google Maps sebelum melawat.",
-    "copyright": "Hak cipta terpelihara."
+    "copyright": "Hak cipta teks dan reka bentuk asal terpelihara; foto mengikut lesen pada kreditnya."
   }
 }

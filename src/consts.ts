@@ -1,3 +1,4 @@
+import photos from './data/photos.json';
 // Pemalar tapak yang bebas bahasa (bukan berubah mengikut terjemahan).
 export const SITE = {
   name: 'Chew Jetty',
@@ -39,9 +40,11 @@ export const GEO = {
 
 export const TOURIST_TYPES = ['Cultural tourist', 'Family visitor', 'Photographer', 'History enthusiast'] as const;
 
-export const GALLERY_COUNT = 19;
+export const PHOTOS = photos;
+export const GALLERY_COUNT = photos.length;
+export const SOCIAL_IMAGE = `/images/${photos[0].basename}-social.jpg`;
 
-export const HERO_IMAGE = '/images/chew-jetty-14-1600.webp';
+export const HERO_IMAGE = `/images/${photos[0].basename}-1600.webp`;
 
 export const MAP_EMBED_SRC =
   'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.0279263081957!2d100.33719201213927!3d5.412717494543811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304ac38d0fb545e7%3A0xc1b12a535798fa94!2z5aeT5ZGo5qGl!5e0!3m2!1sen-US!2sus!4v1786584457500!5m2!1sen-US!2sus';

@@ -96,3 +96,15 @@ body {
     transition: none;
   }
 }
+
+/* Photo credits stay in normal flow, with room above the raised summary cards. */
+.photo-credit { margin-top: .65rem; font-size: .75rem; line-height: 1.6; overflow-wrap: anywhere; }
+.photo-credit p + p { margin-top: .4rem; }
+.photo-credit a, .photo-credit-compact a { text-decoration: underline; text-underline-offset: 3px; }
+.photo-credit-compact { margin-top: 1rem; font-size: .75rem; line-height: 1.7; }
+.hero-photo-section .photo-credit-compact { margin: 1.5rem auto 0; max-width: 42rem; color: #fff; }
+.lightbox-figure { width: min(900px, calc(100vw - 7rem)); max-height: calc(100dvh - 6rem); }
+.lightbox-figure > img { display: block; max-width: 100%; max-height: 60vh; margin: auto; }
+.lightbox-figure > figcaption { margin-top: .75rem; max-height: 24vh; overflow-y: auto; color: #fff; font-size: .75rem; line-height: 1.5; }
+
+.hero-photo-image { object-position: 35% center; }
