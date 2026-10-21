@@ -519,7 +519,7 @@
   },
   "legal": {
     "backHome": "Back to Home",
-    "updatedAt": "Last updated: August 2026",
+    "updatedAt": "Last updated: 21 October 2026",
     "privacy": {
       "title": "Privacy Policy",
       "metaTitle": "Privacy Policy | Chew Jetty",
@@ -538,8 +538,8 @@
               "text": "Used to improve website functionality and measure traffic and usage (see the Cookie Settings page)."
             },
             {
-              "title": "Information you provide voluntarily",
-              "text": "Any information you voluntarily provide through a contact form or email."
+              "title": "Site interfaces",
+              "text": "This website has no account, booking or contact form and provides no email submission channel."
             }
           ]
         },
@@ -563,7 +563,7 @@
             },
             {
               "title": "Google Analytics",
-              "text": "For traffic analysis."
+              "text": "Google Analytics loads only after you enable analytics and save your choice on Cookie Settings. Rejecting immediately disables further Google Analytics measurement; data already sent is not recalled. Analytics is off by default."
             },
             {
               "title": "Unsplash",
@@ -616,7 +616,7 @@
       "labelOn": "Active",
       "labelOff": "Inactive",
       "consentTitle": "Consent Management",
-      "consentDesc": "You can change your cookie settings at any time. Please note that disabling certain cookies may affect website functionality.",
+      "consentDesc": "Changes apply immediately. If local storage fails, denial can apply to this tab while session storage works; if both fail, only this page. Other tabs or browsers may differ.",
       "saveBtn": "Save Preferences",
       "rejectBtn": "Reject All",
       "savedMsg": "Your preferences have been saved.",
@@ -630,10 +630,10 @@
         {
           "id": "analytics",
           "name": "Analytics Cookies",
-          "desc": "These cookies help us understand how visitors interact with our website by collecting anonymous usage data.",
-          "checked": true,
+          "desc": "Optional Google Analytics is disabled until you explicitly enable it and save.",
+          "checked": false,
           "subName": "Google Analytics",
-          "subDesc": "It collects anonymous information about how visitors use our website."
+          "subDesc": "Google Analytics loads only after you enable analytics and save your choice on Cookie Settings. Rejecting immediately disables further Google Analytics measurement; data already sent is not recalled. Analytics is off by default."
         },
         {
           "id": "preferences",

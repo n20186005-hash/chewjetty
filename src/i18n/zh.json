@@ -519,7 +519,7 @@
   },
   "legal": {
     "backHome": "返回首页",
-    "updatedAt": "最后更新时间：2026年8月",
+    "updatedAt": "最后更新：2026年10月21日",
     "privacy": {
       "title": "隐私政策",
       "metaTitle": "隐私政策 | 姓周桥",
@@ -538,8 +538,8 @@
               "text": "用于改进网站功能并衡量流量与使用情况（参见 Cookie 设置页面）。"
             },
             {
-              "title": "您自愿提供的信息",
-              "text": "您通过联系表单或电子邮件自愿提供的任何信息。"
+              "title": "网站功能",
+              "text": "本网站不提供账户、预订、联系表单或电子邮件提交渠道。"
             }
           ]
         },
@@ -563,7 +563,7 @@
             },
             {
               "title": "谷歌分析",
-              "text": "用于流量分析。"
+              "text": "Google Analytics仅在您启用分析并保存后加载。拒绝会立即停用后续测量；已发送的数据无法撤回。分析默认关闭。"
             },
             {
               "title": "Unsplash",
@@ -616,7 +616,7 @@
       "labelOn": "激活",
       "labelOff": "停用",
       "consentTitle": "同意管理",
-      "consentDesc": "您可以随时更改您的 Cookie 设置。请注意，禁用某些 Cookie 可能会影响网站的功能。",
+      "consentDesc": "更改立即生效。如果本地存储失败，拒绝设置可在会话存储可用时保留于此标签页；两者均失败时仅对当前页面有效。其他标签页或浏览器可能不同。",
       "saveBtn": "保存偏好设置",
       "rejectBtn": "拒绝一切",
       "savedMsg": "您的偏好设置已保存。",
@@ -630,10 +630,10 @@
         {
           "id": "analytics",
           "name": "分析型 Cookie",
-          "desc": "它们通过收集匿名使用数据，帮助我们了解访客如何与我们的网站互动。",
-          "checked": true,
+          "desc": "可选的Google Analytics默认关闭，仅在您明确启用并保存后加载。",
+          "checked": false,
           "subName": "Google Analytics",
-          "subDesc": "它会收集访客如何使用我们网站的匿名信息。"
+          "subDesc": "仅当您在Cookie设置中启用分析并保存后才加载Google Analytics。拒绝会立即停用后续Google Analytics测量；已发送的数据无法撤回。分析默认关闭。"
         },
         {
           "id": "preferences",

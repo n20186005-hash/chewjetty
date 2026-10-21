@@ -4,7 +4,7 @@ dist/
 .astro/
 
 # dependencies
-node_modules/
+node_modules
 
 # logs
 npm-debug.log*
@@ -26,3 +26,6 @@ pnpm-debug.log*
 
 # Reproducible image variants generated during build
 public/images/
+
+# Local Worker emulator state
+.wrangler/

@@ -127,7 +127,7 @@ const content = type === 'privacy' ? legal.privacy : type === 'terms' ? legal.te
   </section>
 
   {type === 'cookie' && (
-    <script is:inline define:vars={{ labelOn: legal.cookie.labelOn, labelOff: legal.cookie.labelOff, savedMsg: legal.cookie.savedMsg }}>
+    <script is:inline define:vars={{ labelOn: legal.cookie.labelOn, labelOff: legal.cookie.labelOff, savedMsg: legal.cookie.savedMsg, lang }}>
       (function () {
         const KEY = 'chewjetty_cookie_prefs';
         const toggles = Array.from(document.querySelectorAll('[data-cookie-toggle]'));
@@ -146,33 +146,36 @@ const content = type === 'privacy' ? legal.privacy : type === 'terms' ? legal.te
           showMsg._t = setTimeout(() => msg.classList.add('hidden'), 3000);
         }
 
-        function save() {
-          const prefs = {};
-          toggles.forEach((t) => {
-            prefs[t.dataset.cookieToggle] = t.checked;
-            syncLabel(t);
-          });
-          localStorage.setItem(KEY, JSON.stringify(prefs));
-          showMsg(savedMsg);
-        }
-
-        function rejectAll() {
-          toggles.forEach((t) => {
-            if (t.dataset.cookieToggle === 'necessary') return;
-            t.checked = false;
-            syncLabel(t);
-          });
-          save();
-        }
-
-        try {
-          const prefs = JSON.parse(localStorage.getItem(KEY) || '{}');
+        const notices = {
+          en: { tab:'Google Analytics disabled for this tab; permanent storage failed. Other tabs or browsers may differ.', page:'Choice applies to this page; persistence for navigation, reloads, other tabs or browsers is not guaranteed.', denied:'Google Analytics disabled after a change in another tab.' },
+          ms: { tab:'Google Analytics dimatikan untuk tab ini; storan kekal gagal. Tab atau pelayar lain mungkin berbeza.', page:'Pilihan terpakai pada halaman ini; penyimpanan untuk navigasi, muat semula, tab atau pelayar lain tidak dijamin.', denied:'Google Analytics dimatikan selepas perubahan pada tab lain.' },
+          zh: { tab:'Google Analytics已在此标签页停用；持久存储失败。其他标签页或浏览器可能不同。', page:'选择在当前页面生效；无法保证导航、刷新、其他标签页或浏览器会保留。', denied:'其他标签页的设置已改变，Google Analytics已停用。' }
+        }[lang] || {tab:'Google Analytics disabled for this tab.',page:'Choice applies to this page only.',denied:'Google Analytics disabled.'};
+        function sync() {
+          const prefs = window.readChewConsent?.() || {};
           toggles.forEach((t) => {
             const id = t.dataset.cookieToggle;
-            if (typeof prefs[id] === 'boolean') t.checked = prefs[id];
+            if (id === 'analytics') t.checked = prefs.analytics === true;
+            else if (typeof prefs[id] === 'boolean') t.checked = prefs[id];
             syncLabel(t);
           });
-        } catch (e) {}
+        }
+        function save() {
+          const prefs = {};
+          toggles.forEach(t => { prefs[t.dataset.cookieToggle] = t.checked; });
+          const sessionSaved = window.setChewAnalytics?.(prefs.analytics === true);
+          prefs.analytics = window.readChewConsent?.().analytics === true;
+          let saved = false;
+          try { localStorage.setItem(KEY, JSON.stringify(prefs)); saved = true; } catch {}
+          sync();
+          showMsg(saved && sessionSaved ? savedMsg : !prefs.analytics && sessionSaved ? notices.tab : notices.page);
+        }
+        function rejectAll() {
+          toggles.forEach(t => { if (t.dataset.cookieToggle !== 'necessary') t.checked = false; });
+          save();
+        }
+        sync();
+        window.addEventListener('chew:consent-change', () => { sync(); if(window.readChewConsent?.().analytics !== true)showMsg(notices.denied); });
 
         toggles.forEach((t) => t.addEventListener('change', () => syncLabel(t)));
         document.getElementById('save-cookie-preferences').addEventListener('click', save);

@@ -519,7 +519,7 @@
   },
   "legal": {
     "backHome": "Kembali ke Laman Utama",
-    "updatedAt": "Tarikh dikemas kini terakhir: Ogos 2026",
+    "updatedAt": "Dikemas kini: 21 Oktober 2026",
     "privacy": {
       "title": "Dasar Privasi",
       "metaTitle": "Dasar Privasi | Chew Jetty",
@@ -538,8 +538,8 @@
               "text": "Digunakan untuk meningkatkan fungsi laman web dan mengukur trafik serta penggunaan (lihat halaman Tetapan Kuki)."
             },
             {
-              "title": "Maklumat yang anda berikan secara sukarela",
-              "text": "Sebarang maklumat yang anda berikan secara sukarela melalui borang hubungan atau e-mel."
+              "title": "Fungsi laman",
+              "text": "Laman ini tidak menyediakan akaun, tempahan, borang hubungan atau saluran penyerahan e-mel."
             }
           ]
         },
@@ -563,7 +563,7 @@
             },
             {
               "title": "Google Analytics",
-              "text": "Untuk analisis trafik."
+              "text": "Google Analytics hanya dimuatkan selepas anda mengaktifkan analitik dan menyimpan pilihan pada Tetapan Kuki. Penolakan segera mematikan pengukuran Google Analytics seterusnya; data yang telah dihantar tidak ditarik semula. Analitik dimatikan secara lalai."
             },
             {
               "title": "Unsplash",
@@ -616,7 +616,7 @@
       "labelOn": "Aktif",
       "labelOff": "Nyahaktif",
       "consentTitle": "Pengurusan Persetujuan",
-      "consentDesc": "Anda boleh menukar tetapan kuki pada bila-bila masa. Sila ambil perhatian bahawa melumpuhkan kuki tertentu mungkin menjejaskan fungsi laman web.",
+      "consentDesc": "Perubahan berkuat kuasa serta-merta. Jika storan setempat gagal, penolakan boleh terpakai pada tab ini selagi storan sesi berfungsi; jika kedua-duanya gagal, hanya halaman ini. Tab atau pelayar lain mungkin berbeza.",
       "saveBtn": "Simpan Keutamaan",
       "rejectBtn": "Tolak Semua",
       "savedMsg": "Keutamaan anda telah disimpan.",
@@ -630,10 +630,10 @@
         {
           "id": "analytics",
           "name": "Kuki Analitis",
-          "desc": "Kuki ini membantu kami memahami cara pelawat berinteraksi dengan laman web kami dengan mengumpul data penggunaan tanpa nama.",
-          "checked": true,
+          "desc": "Google Analytics pilihan dimatikan sehingga anda mengaktifkannya secara jelas dan menyimpan pilihan.",
+          "checked": false,
           "subName": "Google Analytics",
-          "subDesc": "Ia mengumpul maklumat tanpa nama tentang cara pelawat menggunakan laman web kami."
+          "subDesc": "Google Analytics hanya dimuatkan selepas anda mengaktifkan analitik dan menyimpan pilihan pada Tetapan Kuki. Penolakan segera mematikan pengukuran Google Analytics seterusnya; data yang telah dihantar tidak ditarik semula. Analitik dimatikan secara lalai."
         },
         {
           "id": "preferences",

@@ -2,15 +2,58 @@
 import { SITE } from '@/consts';
 const ga4Id = SITE.ga4Id;
 ---
-
-{ga4Id && (
-  <>
-    <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${ga4Id}`}></script>
-    <script is:inline define:vars={{ ga4Id }}>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', ga4Id, { anonymize_ip: true });
-    </script>
-  </>
-)}
+<script is:inline define:vars={{ ga4Id }}>
+      (() => {
+        const key = 'chewjetty_cookie_prefs';
+        const vetoKey = key + '-denied';
+        const id = ga4Id;
+        if (window.setChewAnalytics) return;
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = window.gtag || function(){ window.dataLayer.push(arguments); };
+        let loaded = false;
+        let currentAllow = null;
+        window.readChewConsent = () => {
+          let data = {};
+          try { data = JSON.parse(localStorage.getItem(key) || '{}') || {}; } catch {}
+          try { if (sessionStorage.getItem(vetoKey) === '1') data.analytics = false; } catch { data.analytics = false; }
+          if (currentAllow !== null) data.analytics = currentAllow;
+          return data;
+        };
+        window.setChewAnalytics = (allow) => {
+          let sessionSaved = false;
+          try {
+            if (allow) {
+              sessionStorage.removeItem(vetoKey);
+              if (sessionStorage.getItem(vetoKey) === '1') throw new Error('Veto retained');
+            } else sessionStorage.setItem(vetoKey, '1');
+            sessionSaved = true;
+          } catch {
+            if (allow) {
+              try { if (sessionStorage.getItem(vetoKey) === '1') allow = false; } catch { allow = false; }
+            }
+          }
+          currentAllow = allow;
+          window['ga-disable-' + id] = !allow;
+          window.gtag('consent', 'update', { analytics_storage: allow ? 'granted' : 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
+          if (allow && id && !loaded) {
+            loaded = true;
+            window.gtag('js', new Date());
+            window.gtag('config', id, { anonymize_ip: true });
+            const s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
+            document.head.appendChild(s);
+          }
+          return sessionSaved;
+        };
+        window.addEventListener('storage', (event) => {
+          if (event.key !== key) return;
+          let granted = false;
+          try { granted = JSON.parse(event.newValue || '{}').analytics === true; } catch {}
+          if (!granted) window.setChewAnalytics(false);
+          window.dispatchEvent(new Event('chew:consent-change'));
+        });
+        window.gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
+        window.setChewAnalytics(window.readChewConsent().analytics === true);
+      })();
+</script>
