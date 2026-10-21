@@ -3,6 +3,7 @@ import vm from 'node:vm';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import sharp from 'sharp';
+import postcss from 'postcss';
 const photos=JSON.parse(fs.readFileSync('src/data/photos.json','utf8'));
 assert.equal(photos.length,3);assert.equal(new Set(photos.map(p=>p.originalSHA256)).size,3);
 const publicOriginals=fs.readdirSync('public/gallery').filter(f=>f.endsWith('.jpg')).sort();assert.deepEqual(publicOriginals,photos.map(p=>p.basename+'.jpg').sort());
@@ -17,14 +18,21 @@ const expectedOutputs=photos.flatMap(p=>[`${p.basename}-640.webp`,`${p.basename}
 for(const lang of ['ms','en','zh']){
  const html=fs.readFileSync(lang==='ms'?'dist/index.html':`dist/${lang}/index.html`,'utf8');assert.equal((html.match(/class="gallery-thumb /g)||[]).length,3);assert(!/chew-jetty-\d+-(640|1600)\.webp|chew-jetty-social\.jpg/.test(html));
  const script=[...html.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/g)].map(m=>m[1]).find(s=>s.includes("querySelectorAll('.gallery-thumb')"));assert(script);
- const events={},thumbs=photos.map((_,i)=>({dataset:{index:String(i)},addEventListener(type,fn){this[type]=fn}})),credits=photos.map(()=>({hidden:true})),nodes={};const classes=new Set();
- for(const name of ['lightbox','lightbox-close','lightbox-prev','lightbox-next'])nodes[name]={addEventListener(type,fn){this[type]=fn},classList:{add:x=>classes.add(x),remove:x=>classes.delete(x),contains:x=>classes.has(x)}};
+ const events={},focused={current:null},thumbs=photos.map((_,i)=>({dataset:{index:String(i)},focus(){focused.current=this},addEventListener(type,fn){this[type]=fn}})),credits=photos.map(()=>({hidden:true})),nodes={};const classes=new Set();
+ for(const name of ['lightbox','lightbox-close','lightbox-prev','lightbox-next'])nodes[name]={hidden:name==='lightbox',focus(){focused.current=this},addEventListener(type,fn){this[type]=fn},classList:{add:x=>classes.add(x),remove:x=>classes.delete(x),contains:x=>classes.has(x)}};
  nodes['lightbox-img']={src:'',alt:''};const body={style:{overflow:''}};
  const document={body,querySelectorAll:q=>q==='.gallery-thumb'?thumbs:credits,getElementById:id=>nodes[id],addEventListener:(type,fn)=>events[type]=fn};vm.runInNewContext(script,{document});
  const check=index=>{assert.equal(nodes['lightbox-img'].src,`/images/${photos[index].basename}-1600.webp`);assert.equal(nodes['lightbox-img'].alt,photos[index].copy[lang].alt);assert.deepEqual(credits.map(c=>c.hidden),photos.map((_,i)=>i!==index));};
- for(let i=0;i<3;i++){thumbs[i].click();check(i);assert(classes.has('active'));assert.equal(body.style.overflow,'hidden');nodes['lightbox-close'].click();assert(!classes.has('active'));assert.equal(body.style.overflow,'');}
+ for(let i=0;i<3;i++){thumbs[i].click();check(i);assert(classes.has('active'));assert.equal(nodes.lightbox.hidden,false);assert.equal(focused.current,nodes['lightbox-close']);assert.equal(body.style.overflow,'hidden');nodes['lightbox-close'].click();assert(!classes.has('active'));assert.equal(nodes.lightbox.hidden,true);assert.equal(focused.current,thumbs[i]);assert.equal(body.style.overflow,'');}
  thumbs[0].click();nodes['lightbox-prev'].click({stopPropagation(){}});check(2);nodes['lightbox-next'].click({stopPropagation(){}});check(0);events.keydown({key:'ArrowRight'});check(1);events.keydown({key:'Escape'});assert(!classes.has('active'));
  thumbs[2].click();nodes.lightbox.click({target:nodes['lightbox-img']});assert(classes.has('active'));nodes.lightbox.click({target:nodes.lightbox});assert(!classes.has('active'));
+ const translations=JSON.parse(fs.readFileSync(`src/i18n/${lang}.json`,'utf8')).gallery;
+ for(const [id,label] of [['close','closeLabel'],['prev','previousLabel'],['next','nextLabel']])assert(html.includes(`id="lightbox-${id}" type="button" aria-label="${translations[label]}"`));
+ const sheets=[...html.matchAll(/<link[^>]+href="([^"]+\.css)"[^>]*>/g)].map(m=>m[1]);assert(sheets.length);
+ const linkedCSS=sheets.map(href=>fs.readFileSync('dist'+href,'utf8')).concat([...html.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/g)].map(m=>m[1])).join('\n');const rules={};
+ postcss.parse(linkedCSS).walkRules(rule=>{if(!rule.selector.startsWith('.lightbox'))return;const decls={};rule.walkDecls(d=>decls[d.prop]=d.value);rules[rule.selector]={...(rules[rule.selector]||{}),...decls};});
+ assert.equal(rules['.lightbox-backdrop'].position,'fixed');assert.equal(rules['.lightbox-backdrop'].inset,'0');assert.equal(rules['.lightbox-backdrop']['z-index'],'60');assert.equal(rules['.lightbox-backdrop'].display,'none');assert.equal(rules['.lightbox-backdrop.active'].display,'flex');assert.equal(rules['.lightbox-backdrop[hidden]'].display,'none');assert.equal(rules['.lightbox-figure>img']['object-fit'],'contain');assert.equal(rules['.lightbox-figure>img']['max-width'],'100%');assert.match(rules['.lightbox-figure>img']['max-height'],/dvh/);assert.equal(rules['.lightbox-figure>figcaption']['overflow-y'],'auto');assert.equal(rules['.lightbox-backdrop>button']['min-height'],'44px');
+ console.log(`${lang}: PASS homepage-included compiled modal CSS fixed/inset/z60/active flex, hidden state, portrait containment, scrollable attribution, localized buttons, focus and gallery callback state. Layout awaits actual browser verification.`);
  for(const photo of photos){assert(html.includes(photo.filePage));assert(html.includes(photo.licenseURL));assert(html.includes(photo.author));assert(html.includes(photo.date));assert(html.includes(photo.copy[lang].caption));}
  console.log(`${lang}: PASS three actual gallery callbacks, exact src/alt/visible credit mapping, prev/next wrapping, keyboard, backdrop/close, scroll restoration and served source/licence/author/date captions.`);
 }

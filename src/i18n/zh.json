@@ -392,7 +392,10 @@
     "intro": "三张有拍摄日期的姓周桥照片：入口、步道和海滨景观。照片不一定反映当前状况。",
     "altPrefix": "姓周桥照片，乔治市",
     "openLabel": "打开照片",
-    "lightboxLabel": "大图查看"
+    "lightboxLabel": "大图查看",
+    "closeLabel": "关闭照片",
+    "previousLabel": "上一张照片",
+    "nextLabel": "下一张照片"
   },
   "etiquette": {
     "title": "游客须知",

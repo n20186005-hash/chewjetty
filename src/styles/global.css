@@ -73,14 +73,6 @@ body {
   @apply h-8 w-full bg-no-repeat;
 }
 
-/* Lightbox backdrop */
-.lightbox-backdrop {
-  @apply fixed inset-0 z-50 flex items-center justify-center bg-ink/90 p-4 opacity-0 transition-opacity duration-300 pointer-events-none;
-}
-.lightbox-backdrop.active {
-  @apply opacity-100 pointer-events-auto;
-}
-
 /* Itinerary checkbox */
 .itinerary-check:checked + label {
   @apply bg-ocean text-white border-ocean;
@@ -91,8 +83,7 @@ body {
   html {
     scroll-behavior: auto;
   }
-  .img-zoom img,
-  .lightbox-backdrop {
+  .img-zoom img {
     transition: none;
   }
 }
@@ -103,8 +94,5 @@ body {
 .photo-credit a, .photo-credit-compact a { text-decoration: underline; text-underline-offset: 3px; }
 .photo-credit-compact { margin-top: 1rem; font-size: .75rem; line-height: 1.7; }
 .hero-photo-section .photo-credit-compact { margin: 1.5rem auto 0; max-width: 42rem; color: #fff; }
-.lightbox-figure { width: min(900px, calc(100vw - 7rem)); max-height: calc(100dvh - 6rem); }
-.lightbox-figure > img { display: block; max-width: 100%; max-height: 60vh; margin: auto; }
-.lightbox-figure > figcaption { margin-top: .75rem; max-height: 24vh; overflow-y: auto; color: #fff; font-size: .75rem; line-height: 1.5; }
 
 .hero-photo-image { object-position: 35% center; }

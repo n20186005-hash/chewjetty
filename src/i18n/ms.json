@@ -392,7 +392,10 @@
     "intro": "Tiga foto bertarikh Chew Jetty: pintu masuk, laluan pejalan kaki dan pemandangan laut. Foto mungkin tidak menggambarkan keadaan semasa.",
     "altPrefix": "Gambar Chew Jetty, George Town",
     "openLabel": "Buka gambar",
-    "lightboxLabel": "Paparan gambar besar"
+    "lightboxLabel": "Paparan gambar besar",
+    "closeLabel": "Tutup gambar",
+    "previousLabel": "Gambar sebelumnya",
+    "nextLabel": "Gambar seterusnya"
   },
   "etiquette": {
     "title": "Etika Pelawat",

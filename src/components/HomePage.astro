@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import '@/styles/lightbox.css';
 import FaqAccordion from '@/components/FaqAccordion.astro';
 import PhotoCredit from '@/components/PhotoCredit.astro';
 import { SITE, PHOTOS, SOCIAL_IMAGE, HERO_IMAGE, MAP_EMBED_SRC } from '@/consts';
@@ -533,14 +534,14 @@ const transportIcons: Record<string, string> = {
   </section>
 
   {/* Lightbox */}
-  <div id="lightbox" class="lightbox-backdrop" role="dialog" aria-modal="true" aria-label={t.gallery.lightboxLabel}>
-    <button id="lightbox-close" type="button" class="absolute right-4 top-4 rounded-full bg-white/10 p-2 text-white backdrop-blur hover:bg-white/20">
+  <div id="lightbox" class="lightbox-backdrop" role="dialog" aria-modal="true" aria-label={t.gallery.lightboxLabel} hidden>
+    <button id="lightbox-close" type="button" aria-label={t.gallery.closeLabel} class="absolute right-4 top-4 rounded-full bg-white/10 p-2 text-white backdrop-blur hover:bg-white/20">
       <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
     </button>
-    <button id="lightbox-prev" type="button" class="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white backdrop-blur hover:bg-white/20">
+    <button id="lightbox-prev" type="button" aria-label={t.gallery.previousLabel} class="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white backdrop-blur hover:bg-white/20">
       <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
     </button>
-    <button id="lightbox-next" type="button" class="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white backdrop-blur hover:bg-white/20">
+    <button id="lightbox-next" type="button" aria-label={t.gallery.nextLabel} class="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white backdrop-blur hover:bg-white/20">
       <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
     </button>
     <figure class="lightbox-figure">
@@ -559,6 +560,7 @@ const transportIcons: Record<string, string> = {
       const prevBtn = document.getElementById('lightbox-prev');
       const nextBtn = document.getElementById('lightbox-next');
       let current = 0;
+      let returnFocus;
 
       function updatePhoto() {
         lbImg.src = images[current];
@@ -568,14 +570,19 @@ const transportIcons: Record<string, string> = {
 
       function open(index) {
         current = index;
+        returnFocus = thumbs[index];
         updatePhoto();
+        lightbox.hidden = false;
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
+        closeBtn.focus();
       }
 
       function close() {
         lightbox.classList.remove('active');
+        lightbox.hidden = true;
         document.body.style.overflow = '';
+        returnFocus?.focus();
       }
 
       function move(dir) {

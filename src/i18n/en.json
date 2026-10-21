@@ -392,7 +392,10 @@
     "intro": "Three dated views of Chew Jetty: the entrance, the walkway and the waterfront. Photographs may not reflect current conditions.",
     "altPrefix": "Photo of Chew Jetty, George Town",
     "openLabel": "Open photo",
-    "lightboxLabel": "Large photo view"
+    "lightboxLabel": "Large photo view",
+    "closeLabel": "Close photo",
+    "previousLabel": "Previous photo",
+    "nextLabel": "Next photo"
   },
   "etiquette": {
     "title": "Visitor Etiquette",
